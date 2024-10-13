@@ -1,42 +1,38 @@
 <?php
-include_once('config.php'); // Inclui o arquivo de configuração do banco de dados
+session_start(); // Inicia a sessão
+include_once('config.php'); // Inclui o arquivo de configuração
 
-if(isset($_POST["submit"]) && !empty($_POST['usuario']) && !empty($_POST['senha'])) { // Verifica se o formulário foi enviado e se os campos de usuário e senha não estão vazios
+// Verifica se o formulário foi submetido
+if (isset($_POST['submit'])) {
+    $usuario = $_POST['usuario']; // Nome de usuário
+    $email = $_POST['email']; // Email
+    $senha = $_POST['senha'];
 
-    $usuario = $_POST['usuario'];// Obtém o valor do campo de usuário do formulário
-    $senha = $_POST['senha']; // Obtém o valor do campo de senha do formulário
+    // Prepara a consulta para verificar se o usuário e o email existem
+    $loginQuery = "SELECT * FROM usuarios WHERE usuario = ? AND email = ?";
+    $stmt = $conexao->prepare($loginQuery);
+    $stmt->bind_param("ss", $usuario, $email);
+    $stmt->execute();
+    $result = $stmt->get_result();
 
-    echo "Usuário: " . $usuario . "<br>"; // Exibe o usuário para depuração
-    echo "Senha: " . $senha . "<br>"; // Exibe a senha para depuração
+    // Verifica se o usuário foi encontrado
+    if ($result->num_rows > 0) {
+        $user = $result->fetch_assoc();
 
-    $sql = "SELECT * FROM usuarios WHERE usuario = '$usuario' AND senha = '$senha'"; // Cria uma consulta SQL para verificar as credenciais do usuário
-
-    echo "SQL: " . $sql . "<br>"; // Exibe a consulta SQL para depuração
-
-    $result = $conexao->query($sql);
-    // Executa a consulta SQL no banco de dados
-
-    if($result) {
-        // Verifica se a consulta foi bem-sucedida
-
-        if($result->num_rows > 0) {
-            // Verifica se foram encontradas linhas correspondentes no banco de dados
-
-            // Login bem-sucedido, redirecionar para a página de sistema
-            header("Location: sistema.html");
+        // Verifica se a senha está correta
+        if (password_verify($senha, $user['senha'])) {
+            $_SESSION['usuario'] = $user['usuario']; // Define a sessão do usuário
+            header('Location: profile.php'); // Redireciona para o perfil
             exit();
         } else {
-            // Login falhou, redirecionar para a página de login com mensagem de erro
-            header("Location: signin.html?error=invalid");
-            exit();
+            echo "<script>alert('Senha incorreta!');</script>";
         }
     } else {
-        // Erro na consulta SQL, exibe mensagem de erro
-        echo "Erro na consulta SQL: " . $conexao->error;
+        echo "<script>alert('Usuário ou e-mail não encontrados!');</script>";
     }
-} else {
-    // Dados de login não foram enviados corretamente, redirecionar para a página de login com mensagem de erro
-    header('Location: signin.html?error=missing');
-    exit();
+
+    // Fecha a conexão
+    $stmt->close();
+    $conexao->close();
 }
 ?>

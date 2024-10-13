@@ -9,7 +9,15 @@ if (isset($_POST['submit'])) {
     $email = $_POST['email'];
     $senha = $_POST['senha'];
     $confisenha = $_POST['confirmSenha'];
-    $dataNascimento = $_POST['dataNascimento']; // Nova variável para a data de nascimento
+    $dataNascimento = $_POST['dataNascimento'];
+
+    // Verifica se o campo tipoUsuario foi enviado
+    if (isset($_POST['tipoUsuario'])) {
+        $tipoUsuario = $_POST['tipoUsuario'];
+    } else {
+        echo "<script>alert('Por favor, selecione o tipo de usuário!');</script>";
+        exit;
+    }
 
     // Verifica se as senhas coincidem
     if ($senha !== $confisenha) {
@@ -17,30 +25,31 @@ if (isset($_POST['submit'])) {
         exit;
     }
 
-    // Verifica se o usuário ou e-mail já estão cadastrados
-    $checkQuery = "SELECT * FROM usuarios WHERE usuario = ? OR email = ?";
+    // Verifica se o usuário ou e-mail já estão cadastrados em ambas as tabelas
+    $checkQuery = "SELECT * FROM professores WHERE usuario = ? OR email = ? UNION SELECT * FROM administradores WHERE usuario = ? OR email = ?";
     $stmt = $conexao->prepare($checkQuery);
-    $stmt->bind_param("ss", $usuario, $email);
+    $stmt->bind_param("ssss", $usuario, $email, $usuario, $email);
     $stmt->execute();
     $result = $stmt->get_result();
 
     if ($result->num_rows > 0) {
-        // Se o nome de usuário já existe, exibe uma mensagem de erro
-        echo "<script>alert('O nome de usuário já existe. Escolha outro.');</script>";
+        echo "<script>alert('O nome de usuário ou e-mail já está cadastrado.');</script>";
     } else {
         // Hash da senha para segurança
         $senhaHash = password_hash($senha, PASSWORD_DEFAULT);
 
-        // Insere os dados no banco de dados
-        $insertQuery = "INSERT INTO usuarios (nome, usuario, email, senha, confsenha, data_nascimento) VALUES (?, ?, ?, ?, ?, ?)";
+        // Insere os dados na tabela correta com base no tipo de usuário
+        if ($tipoUsuario === 'professor') {
+            $insertQuery = "INSERT INTO professores (nome, usuario, email, senha, data_nascimento) VALUES (?, ?, ?, ?, ?)";
+        } else if ($tipoUsuario === 'administrador') {
+            $insertQuery = "INSERT INTO administradores (nome, usuario, email, senha, data_nascimento) VALUES (?, ?, ?, ?, ?)";
+        }
+
+        // Prepara e executa a inserção
         $stmt = $conexao->prepare($insertQuery);
-        $stmt->bind_param("ssssss", $nome, $usuario, $email, $senhaHash, $confisenha, $dataNascimento);
+        $stmt->bind_param("sssss", $nome, $usuario, $email, $senhaHash, $dataNascimento);
 
         if ($stmt->execute()) {
-            // Aguarda um momento para garantir que o banco de dados seja atualizado corretamente
-            sleep(1); // Adiciona uma pequena pausa para garantir a atualização do banco
-
-            // Exibe mensagem de sucesso e redireciona para home.html
             echo "<script>
                     alert('Usuário cadastrado com sucesso!');
                     window.location.href = 'home.html';
@@ -56,7 +65,6 @@ if (isset($_POST['submit'])) {
 }
 ?>
 
-
 <!DOCTYPE html>
 <html lang="pt-BR"> 
 <head>
@@ -68,7 +76,7 @@ if (isset($_POST['submit'])) {
 <body>
     <style>
         /* Importa a fonte Roboto do Google Fonts */
-        @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+        @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&display=swap");
 
         /* Reseta as margens e padding, define a fonte padrão */
         * {
@@ -79,7 +87,7 @@ if (isset($_POST['submit'])) {
 
         /* Estilo para o corpo da página */
         body {
-            background-image: url(images/cadastro99.jpg); /* Imagem de fundo */
+            background-image: url(../images/cadastro99.jpg); /* Imagem de fundo */
             background-repeat: no-repeat; /* Não repetir a imagem */
             background-size: cover; /* Cobre toda a área */
             background-attachment: fixed; /* Fixa a imagem no fundo */
@@ -110,7 +118,7 @@ if (isset($_POST['submit'])) {
         }
 
         /* Estilo para os inputs dentro do label-float */
-        .label-float input {
+        .label-float input, .label-float select {
             width: 100%; /* Largura total */
             padding: 5px 5px; /* Espaçamento interno */
             display: inline-block; /* Exibição em linha */
@@ -133,7 +141,7 @@ if (isset($_POST['submit'])) {
         }
 
         /* Estilo para os inputs focados */
-        .label-float input:focus {
+        .label-float input:focus, .label-float select:focus {
             border-bottom: 2px solid #4038a0; /* Borda inferior quando focado */
         }
 
@@ -148,9 +156,11 @@ if (isset($_POST['submit'])) {
             transition: all .3s ease-out; /* Transição suave */
         }
 
-        /* Estilo para labels quando o input está focado ou preenchido */
+        /* Estilo para labels quando o input ou select está focado ou preenchido */
         .label-float input:focus + label,
-        .label-float input:valid + label {
+        .label-float input:valid + label,
+        .label-float select:focus + label,
+        .label-float select:valid + label {
             font-size: 13px; /* Tamanho da fonte */
             margin-top: 0; /* Remove margem superior */
             color: #4038a0; /* Cor do texto */
@@ -183,34 +193,6 @@ if (isset($_POST['submit'])) {
             justify-content: center; /* Centraliza horizontalmente */
         }
 
-        /* Estilo para o ícone de olho */
-        .fa-eye {
-            position: absolute; /* Posicionamento absoluto */
-            top: 13px; /* Alinha ao topo */
-            right: 10px; /* Alinha à direita */
-            cursor: pointer; /* Cursor de ponteiro */
-            color: #272262; /* Cor do ícone */
-        }
-
-        /* Estilo para mensagens de erro */
-        #msgError {
-            text-align: center; /* Centraliza o texto */
-            color: #ff0000; /* Cor do texto */
-            background-color: #ffbbbb; /* Fundo */
-            padding: 10px; /* Espaçamento interno */
-            border-radius: 4px; /* Bordas arredondadas */
-            display: none; /* Esconde por padrão */
-        }
-
-        /* Estilo para mensagens de sucesso */
-        #msgSuccess {
-            text-align: center; /* Centraliza o texto */
-            color: #00bb00; /* Cor do texto */
-            background-color: #bbffbe; /* Fundo */
-            padding: 10px; /* Espaçamento interno */
-            border-radius: 4px; /* Bordas arredondadas */
-            display: none; /* Esconde por padrão */
-        }
     </style>
 
     <!-- Link para voltar à página inicial -->
@@ -218,7 +200,7 @@ if (isset($_POST['submit'])) {
     
     <!-- Container principal -->
     <div class="container">
-        <form action="signup.php" method="POST"> <!-- Formulário de cadastro -->
+    <form action="cadastroAdmTeacher.php" method="POST"> <!-- Formulário de cadastro -->
             <div class="card">
                 <h1>Cadastrar</h1> <!-- Título do formulário -->
 
@@ -261,6 +243,16 @@ if (isset($_POST['submit'])) {
                     <input type="password" name="confirmSenha" id="confirmSenha" placeholder=" " required /> 
                     <label id="labelConfirmSenha" for="confirmSenha">Confirmar Senha</label>
                     <i id="verConfirmSenha" class="fa fa-eye" aria-hidden="true"></i> <!-- Ícone de olho -->
+                </div>
+
+                <!-- Campo de tipo de usuário com label flutuante -->
+                <div class="label-float">
+                    <select name="tipoUsuario" id="tipoUsuario" required>
+                        <option value="" disabled selected></option>
+                        <option value="professor">Professor</option>
+                        <option value="administrador">Administrador</option>
+                    </select>
+                    <label for="tipoUsuario">Tipo de Usuário</label>
                 </div>
 
                 <!-- Botão de submit centralizado -->
