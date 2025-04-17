@@ -1,6 +1,6 @@
 <?php
 
-$dbHost = 'LocalHost'; // Define o hostname do servidor de banco de dados
+$dbHost = 'localhost'; // Define o hostname do servidor de banco de dados
 $dbUsername = 'root'; // Define o nome de usuário do banco de dados
 $dbPassword = ''; // Define a senha do banco de dados
 $dbName = 'aapcw_cadastro'; // Define o nome do banco de dados
