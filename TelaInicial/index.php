@@ -29,9 +29,9 @@
                 <input type="text" placeholder="O que você quer aprender?">
             </div>
             <nav>
-                <a href="../loginProf.html" class="planos-btn">Seja um Professor </a>
-                <a href="../signin.html"class="planos-btn">Entrar</a>
-                <a href="../signup.php"class="planos-btn">Cadastrar-se</a>
+                <a href="../cadastro_login/professor/loginProf.php" class="planos-btn">Seja um Professor </a>
+                <a href="../cadastro_login/aluno/signin.php"class="planos-btn">Entrar</a>
+                <a href="../cadastro_login/aluno/signup.php"class="planos-btn">Cadastrar-se</a>
                 
             </nav>
         </header>

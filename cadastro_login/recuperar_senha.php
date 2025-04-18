@@ -10,7 +10,7 @@ if (isset($_POST['SendRecupSenha'])) {
         $expiry = date("Y-m-d H:i:s", time() + 60 * 30); // Token válido por 30 minutos
 
         // Inclui a conexão com o banco de dados
-        $conn = require __DIR__ . "/../php/conexao.php";
+        $conn = require __DIR__ . "/../funcoes/conexao.php";
 
         // Array com as tabelas de usuários
         $tables = ['administrador', 'aluno', 'funcionarios'];
@@ -72,7 +72,7 @@ END;
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/cadastro_login/recuperar_senha.css">
+    <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <title>Recuperar Senha</title>
 </head>
@@ -82,19 +82,26 @@ END;
         <a href="../index.php"><i class="bi bi-arrow-left-circle"></i></a>
     </div>
     <!--Tela de Recuperação de Senha-->
-    <div class="page">
-        <form method="POST" action="" class="formLogin">
-            <div class="titulo">
-                <h1>CW Cursos</h1>
-            </div>
-            <h2>Redefinir Senha</h2>
+    <!-- Container principal -->
+    <div class="container">
+        <div class="card">
+            <h1>Redefinir Senha</h1> <!-- Título do formulário -->
             <p>Para redefinir sua senha, informe o e-mail cadastrado na sua conta e lhe enviaremos um link para realizar a alteração</p>
-            <label for="email">E-mail</label>
-            <input type="email" name="email" placeholder="Inserir e-mail" autofocus="true" required />
-            <div class="botoes">
-                <input type="submit" value="Enviar link para alteração" name="SendRecupSenha"></input>
-            </div>
-        </form>
+            <form action="testeLogin.php" method="POST"> <!-- Formulário de login -->
+                <div id="msgError"></div> <!-- Mensagem de erro -->
+
+                <!-- Campo de usuário com label flutuante -->
+                <div class="label-float">
+                    <input type="email" name="email" autofocus="true" required />
+                    <label for="email">E-mail</label>
+                </div>
+
+                <!-- Botão de submit centralizado -->
+                <div class="justify-center">
+                    <input class="inputSubmit" type="submit" name="submit" value="Enviar link para alteração">
+                </div>
+            </form>
+        </div>
     </div>
 </body>
 
