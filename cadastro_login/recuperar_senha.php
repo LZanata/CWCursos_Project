@@ -87,7 +87,7 @@ END;
         <div class="card">
             <h1>Redefinir Senha</h1> <!-- Título do formulário -->
             <p>Para redefinir sua senha, informe o e-mail cadastrado na sua conta e lhe enviaremos um link para realizar a alteração</p>
-            <form action="testeLogin.php" method="POST"> <!-- Formulário de login -->
+            <form action="recuperar_senha.php" method="POST"> <!-- Formulário de login -->
                 <div id="msgError"></div> <!-- Mensagem de erro -->
 
                 <!-- Campo de usuário com label flutuante -->
@@ -98,7 +98,7 @@ END;
 
                 <!-- Botão de submit centralizado -->
                 <div class="justify-center">
-                    <input class="inputSubmit" type="submit" name="submit" value="Enviar link para alteração">
+                    <input class="inputSubmit" type="submit" name="SendRecupSenha" value="Enviar link para alteração">
                 </div>
             </form>
         </div>
