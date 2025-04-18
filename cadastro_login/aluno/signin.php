@@ -1,3 +1,59 @@
+<?php
+// Inicia a sessão para poder usar variáveis de sessão
+session_start();
+
+// Inclui o arquivo de conexão com o banco de dados
+include_once('../../funcoes/conexao.php');
+
+// Verifica se o formulário foi enviado via POST e se o botão de submit foi clicado
+if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['submit'])) {
+
+    // Captura os dados enviados pelo formulário
+    $usuario = $_POST['usuario'];
+    $email = $_POST['email'];
+    $senha = $_POST['senha'];
+
+    // Prepara a consulta para buscar o usuário no banco com base no usuário e e-mail informados
+    $query = "SELECT * FROM usuarios WHERE usuario = ? AND email = ?";
+    $stmt = $conexao->prepare($query);
+    $stmt->bind_param("ss", $usuario, $email);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    // Verifica se encontrou exatamente um usuário com os dados fornecidos
+    if ($result->num_rows === 1) {
+        $user = $result->fetch_assoc();
+
+        // Verifica se a senha fornecida confere com o hash salvo no banco
+        if (password_verify($senha, $user['senha'])) {
+
+            // Se tudo estiver correto, armazena os dados do usuário na sessão
+            $_SESSION['id'] = $user['id'];
+            $_SESSION['nome'] = $user['nome'];
+            $_SESSION['usuario'] = $user['usuario'];
+            $_SESSION['tipo'] = $user['tipo'];
+            $_SESSION['status'] = $user['status'];
+
+            // Redireciona para a tela inicial
+            header("Location: http://localhost/AAP-CW_Cursos/aluno/sistema.php");
+            exit;
+
+        } else {
+            // Caso a senha esteja incorreta
+            echo "<script>alert('Senha incorreta.');</script>";
+        }
+
+    } else {
+        // Caso o usuário ou e-mail não existam no banco
+        echo "<script>alert('Usuário ou e-mail não encontrados.');</script>";
+    }
+
+    // Encerra o statement e a conexão com o banco
+    $stmt->close();
+    $conexao->close();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br"> 
     <meta charset="UTF-8"> 
@@ -12,7 +68,7 @@
     <div class="container">
         <div class="card">
             <h1>Entrar</h1> <!-- Título do formulário -->
-            <form action="testeLogin.php" method="POST"> <!-- Formulário de login -->
+            <form action="" method="POST"> <!-- Formulário de login -->
                 <div id="msgError"></div> <!-- Mensagem de erro -->
                 
                 <!-- Campo de usuário com label flutuante -->
