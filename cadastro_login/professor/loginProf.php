@@ -1,6 +1,6 @@
 <?php
 session_start(); // Inicia a sessão
-include_once('config.php'); // Inclui o arquivo de configuração
+include_once('../../funcoes/conexao.php'); // Inclui o arquivo de configuração
 
 // Verifica se o formulário foi submetido
 if (isset($_POST['submit'])) {
