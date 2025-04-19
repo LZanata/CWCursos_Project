@@ -125,7 +125,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                 <div class="label-float">
                     <input type="text" id="cpf" name="cpf" maxlength="11" pattern="\d{11}" inputmode="numeric" title="Digite apenas números (11 dígitos)" required>
-                    <label class="label-float" for="cpf">CPF:</label>
+                    <label for="cpf">CPF:</label>
                 </div>
 
                 <div class="label-float">
@@ -149,12 +149,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </div>
 
                 <div class="label-float">
-                    <input type="tel" id="telefone" name="telefone" maxlength="11" pattern="\d{10,11}" inputmode="numeric" title="Digite DDD + número (10 ou 11 dígitos)">
+                    <input type="tel" id="telefone" name="telefone" maxlength="11" pattern="\d{10,11}" inputmode="numeric" title="Digite DDD + número (10 ou 11 dígitos)" required>
                     <label for="telefone">Telefone:</label>
                 </div>
 
                 <div class="label-float">
-                    <input type="url" id="linkedin" name="linkedin">
+                    <input type="url" id="linkedin" name="linkedin" required>
                     <label for="linkedin">LinkedIn:</label>
                 </div>
 
@@ -162,27 +162,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <h3>Perguntas</h3>
 
                 <div class="label-float">
-                    <label for="experiencia">Qual sua experiência com Marketing Digital?</label>
                     <textarea id="experiencia" name="experiencia" rows="4" required></textarea>
+                    <label for="experiencia">Qual sua experiência com Marketing Digital?</label>
                 </div>
 
                 <div class="label-float">
                     <input type="text" id="area_conhecimento" name="area_conhecimento" required>
-                    <label for="area_conhecimento">Áreas de Conhecimento em Marketing (ex.: SEO, Redes Sociais, E-mail Marketing):</label>
+                    <label for="area_conhecimento">Áreas de Conhecimento em Marketing:</label>
                 </div>
 
                 <div class="label-float">
-                    <input type="text" id="disponibilidade" name="disponibilidade">
+                    <input type="text" id="disponibilidade" name="disponibilidade" required>
                     <label for="disponibilidade">Disponibilidade de Horas por Semana para Produção de Conteúdo:</label>
                 </div>
 
                 <!-- Envio de Currículo -->
                 <h3>Envio de Currículo</h3>
 
-                <div class="label-float">
+                <div class="custom-file">
+                    <span for="curriculo">Currículo (em PDF):</span>
                     <input type="file" id="curriculo" name="curriculo" accept=".pdf" required>
-                    <label for="curriculo">Currículo (em PDF):</label>
                 </div>
+
 
                 <div class="dados">
                     <!-- Termos de Uso LGPD -->

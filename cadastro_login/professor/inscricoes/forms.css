@@ -18,78 +18,180 @@
     }
     
     
-    /* Container do formulário com scroll */
-    form {
-        background-color: rgba(255, 255, 255, 0.9); /* Fundo semi-transparente */
-        max-width: 500px;
+        /* Container principal */
+    .container {
+        display: flex; /* Flexbox */
+        justify-content: center; /* Centraliza horizontalmente */
+        width: 100%; /* Largura total */
+        margin-top: 100px; /* Margem superior */
+    }
+
+    /* Cartão de cadastro */
+    .card {
+        background-color: #ffffff80; /* Fundo branco semitransparente */
+        padding: 30px; /* Espaçamento interno */
+        border-radius: 4%; /* Bordas arredondadas */
+        box-shadow: 3px 3px 1px 0px #00000060; /* Sombra */
+        width: 600px; /* Largura fixa */
+    }
+
+    /* Estilo para o título */
+    h1 {
+        text-align: center; /* Centraliza o texto */
+        margin-bottom: 20px; /* Margem inferior */
+        color: #272262; /* Cor do texto */
+    }
+
+    /* Estilo para os inputs dentro do label-float */
+    .label-float input {
+        width: 100%; /* Largura total */
+        padding: 5px 5px; /* Espaçamento interno */
+        display: inline-block; /* Exibição em linha */
+        border: 0; /* Remove borda */
+        border-bottom: 2px solid #272262; /* Borda inferior */
+        background-color: transparent; /* Fundo transparente */
+        outline: none; /* Remove outline */
+        min-width: 180px; /* Largura mínima */
+        font-size: 16px; /* Tamanho da fonte */
+        transition: all .3s ease-out; /* Transição suave */
+        border-radius: 0; /* Remove bordas arredondadas */
+    }
+
+    /* Container para os inputs e labels flutuantes */
+    .label-float {
+        position: relative; /* Posicionamento relativo */
+        padding-top: 13px; /* Espaçamento superior */
+        margin-top: 5%; /* Margem superior */
+        margin-bottom: 5%; /* Margem inferior */
+    }
+
+    /* Estilo para os inputs focados */
+    .label-float input:focus {
+        border-bottom: 2px solid #4038a0; /* Borda inferior quando focado */
+    }
+
+    /* Estilo para os labels */
+    .label-float label {
+        color: #272262; /* Cor do texto */
+        pointer-events: none; /* Desabilita eventos do mouse */
+        position: absolute; /* Posicionamento absoluto */
+        top: 0; /* Alinha ao topo */
+        left: 0; /* Alinha à esquerda */
+        margin-top: 13px; /* Margem superior */
+        transition: all .3s ease-out; /* Transição suave */
+    }
+
+    /* Estilo para labels quando o input está focado ou preenchido */
+    .label-float input:focus + label,
+    .label-float input:valid + label {
+        font-size: 13px; /* Tamanho da fonte */
+        margin-top: 0; /* Remove margem superior */
+        color: #4038a0; /* Cor do texto */
+    }
+
+    /* Adiciona tratamento para tipo date */
+    .label-float input[type="date"]:focus + label,
+    .label-float input[type="date"]:valid + label {
+        font-size: 13px;
+        margin-top: 0px;
+        color: #4038a0;
+    }
+
+    /* Garante que o label não fique sobreposto ao dd/mm/aaaa no início */
+    .label-float input[type="date"] + label {
+        margin-top: -5px; /* sobe um pouquinho o label */
+    }
+
+    .label-float input[type="date"] {
+        color: #000000;
+    }
+
+    .label-float textarea {
         width: 100%;
-        padding: 30px;
-        margin: 20px auto;
-        border-radius: 10px;
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-        overflow-y: auto;
-        max-height: 70vh;
-        transition: 0.3s ease;
+        padding: 5px 5px;
+        display: inline-block;
+        border: 0;
+        border-bottom: 2px solid #272262;
+        background-color: transparent;
+        outline: none;
+        min-width: 180px;
+        font-size: 16px;
+        transition: all .3s ease-out;
+        border-radius: 0;
+        resize: vertical; /* permite redimensionar só na vertical */
+        color: #000;
     }
     
-    form:hover {
-        box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+    .label-float textarea:focus {
+        border-bottom: 2px solid #4038a0;
     }
     
-    /* Títulos internos */
-    h3 {
-        color: #555555;
-        font-size: 18px;
-        margin-bottom: 10px;
+    /* Animação do label flutuante para textarea também */
+    .label-float textarea:focus + label,
+    .label-float textarea:valid + label {
+        font-size: 13px;
+        margin-top: 0;
+        color: #4038a0;
     }
     
-    /* Labels e campos */
-    label {
+
+    /* Estilo para o botão de submit */
+    button {
+        background-color: transparent; /* Fundo transparente */
+        border-color: #272262; /* Cor da borda */
+        color: #272262; /* Cor do texto */
+        padding: 7px; /* Espaçamento interno */
+        font-weight: bold; /* Texto em negrito */
+        font-size: 12pt; /* Tamanho da fonte */
+        margin-top: 20px; /* Margem superior */
+        border-radius: 4px; /* Bordas arredondadas */
+        cursor: pointer; /* Cursor de ponteiro */
+        outline: none; /* Remove outline */
+        transition: all .4s ease-out; /* Transição suave */
+    }
+
+    /* Estilo para o botão de submit quando o mouse está sobre ele */
+    button:hover {
+        background-color: #272262; /* Fundo azul */
+        color: #fff; /* Cor do texto */
+    }
+
+    /* Container para centralizar conteúdo */
+    .justify-center {
+        display: flex; /* Flexbox */
+        justify-content: center; /* Centraliza horizontalmente */
+    }
+    
+    .custom-file {
+        margin-top: 5%;
+        margin-bottom: 5%;
+        position: relative;
+    }
+    
+    .custom-file span {
         display: block;
-        font-weight: bold;
         margin-bottom: 5px;
-        color: #333333;
+        font-weight: bold;
+        color: #272262;
     }
     
-    input[type="text"], input[type="email"], input[type="tel"], input[type="url"], 
-    input[type="date"], textarea, input[type="file"] {
+    .custom-file input[type="file"] {
         width: 100%;
         padding: 10px;
-        margin-bottom: 15px;
-        border: 1px solid #cccccc;
-        border-radius: 5px;
-        font-size: 16px;
-        transition: border-color 0.2s;
-    }
-    
-    input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, 
-    input[type="url"]:focus, input[type="date"]:focus, textarea:focus {
-        border-color: #0d6efd;
-        outline: none;
-    }
-    
-    textarea {
-        resize: vertical;
-    }
-    
-    /* Botão de envio */
-    button[type="submit"] {
-        width: 100%;
-        padding: 12px;
-        background-color: #0d6efd;
-        border: none;
-        border-radius: 5px;
-        color: white;
-        font-size: 16px;
+        border: 2px dashed #272262;
+        background-color: #ffffffa0;
+        border-radius: 8px;
         cursor: pointer;
-        font-weight: bold;
-        transition: background-color 0.2s ease;
+        transition: all 0.3s ease;
+        color: #272262;
     }
     
-    button[type="submit"]:hover {
-        background-color: #084bbf;
+    .custom-file input[type="file"]:hover {
+        background-color: #f0f0f0;
+        border-color: #4038a0;
     }
     
+
     /* Aviso LGPD */
     .lgpd {
         font-size: 14px;
