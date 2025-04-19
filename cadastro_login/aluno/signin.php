@@ -35,13 +35,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['submit'])) {
                 header("Location: http://localhost/AAP-CW_Cursos/aluno/sistema.php");
                 exit;
             } else {
-                echo "<script>alert('Apenas usuários do tipo aluno podem acessar esta área.');</script>";
+                $mensagemErro = "Apenas usuários do tipo aluno podem acessar esta área.";
             }
         } else {
-            echo "<script>alert('Senha incorreta.');</script>";
+            $mensagemErro = "Senha incorreta.";
         }
     } else {
-        echo "<script>alert('Usuário ou e-mail não encontrados.');</script>";
+        $mensagemErro = "Usuário ou e-mail não encontrados.";
     }
 
     $stmt->close();
@@ -65,7 +65,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['submit'])) {
         <div class="card">
             <h1>Entrar</h1> <!-- Título do formulário -->
             <form action="" method="POST"> <!-- Formulário de login -->
-                <div id="msgError"></div> <!-- Mensagem de erro -->
 
                 <!-- Campo de usuário com label flutuante -->
                 <div class="label-float">
@@ -90,6 +89,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['submit'])) {
                     </div>
                 </div>
 
+                <!-- Mensagem de erro -->
+                <div id="msgError">
+                    <?php if (!empty($mensagemErro)) : ?>
+                        <p class="erro"><?php echo $mensagemErro; ?></p>
+                    <?php endif; ?>
+                </div>
+
                 <!-- Botão de submit centralizado -->
                 <div class="justify-center">
                     <input class="inputSubmit" type="submit" name="submit" value="Entrar">
@@ -99,6 +105,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['submit'])) {
             <!-- Link para a página de cadastro -->
             <p>Não tem uma conta? <a href="signup.php">Cadastre-se</a></p>
         </div>
+
     </div>
     <script>
         function toggleSenha(id, el) {
