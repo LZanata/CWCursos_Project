@@ -176,17 +176,17 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($usuario)) {
                 <div class="label-float">
                     <input type="password" name="new_password" id="new_password" maxlength="15" required />
                     <label for="new_password">Nova senha</label>
-                    <div class="mostrar-senha" onclick="toggleSenha('new_password', this)">
+                    <span class="mostrar-senha" onclick="toggleSenha('new_password', this)">
                         <i class="bi bi-eye" aria-hidden="true"></i>
-                    </div>
+                    </span>
                     <div id="forcaSenha" class="forca-senha"></div>
                 </div>
                 <div class="label-float">
                     <input type="password" name="confirm_password" id="confirm_password" maxlength="15" required />
                     <label for="confirm_password">Confirme a nova senha</label>
-                    <div class="mostrar-senha" onclick="toggleSenha('confirm_password', this)">
+                    <span class="mostrar-senha" onclick="toggleSenha('confirm_password', this)">
                         <i class="bi bi-eye" aria-hidden="true"></i>
-                    </div>
+                    </span>
                 </div>
                 <div class="justify-center">
                     <input class="inputSubmit" type="submit" value="Alterar Senha" name="Alterar Senha" />

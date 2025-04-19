@@ -87,6 +87,24 @@ h1 {
     color: #4038a0; /* Cor do texto */
 }
 
+/* Adiciona tratamento para tipo date */
+.label-float input[type="date"]:focus + label,
+.label-float input[type="date"]:valid + label {
+    font-size: 13px;
+    margin-top: 0px;
+    color: #4038a0;
+}
+
+/* Garante que o label não fique sobreposto ao dd/mm/aaaa no início */
+.label-float input[type="date"] + label {
+    margin-top: -5px; /* sobe um pouquinho o label */
+}
+
+.label-float input[type="date"] {
+    color: #000000;
+}
+
+
 /* Estilo para o botão de submit */
 button {
     background-color: transparent; /* Fundo transparente */
@@ -115,8 +133,17 @@ button:hover {
 }
 
 /* Estilo para o ícone de olho */
-.fa-eye {
-    position: absolute; /* Posicionamento absoluto */
+.bi-eye {
+    
+    top: 13px; /* Alinha ao topo */
+    right: 10px; /* Alinha à direita */
+    cursor: pointer; /* Cursor de ponteiro */
+    color: #272262; /* Cor do ícone */
+}
+
+/* Estilo para o ícone de olho */
+.bi-eye-slash {
+    
     top: 13px; /* Alinha ao topo */
     right: 10px; /* Alinha à direita */
     cursor: pointer; /* Cursor de ponteiro */

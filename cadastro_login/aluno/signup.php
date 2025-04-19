@@ -70,65 +70,136 @@ if (isset($_POST['submit'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="signup.css">
+    <style>
+        .mostrar-senha {
+            position: absolute;
+            right: 10px;
+            top: 12px;
+            cursor: pointer;
+            color: #272262;
+        }
+
+        .label-float {
+            position: relative;
+        }
+
+        .forca-senha {
+            font-size: 0.9em;
+            margin-top: 4px;
+        }
+
+        .fraca {
+            color: red;
+        }
+
+        .media {
+            color: orange;
+        }
+
+        .forte {
+            color: green;
+        }
+    </style>
 </head>
 
 <body>
-    <!-- Container principal -->
     <div class="container">
-        <form action="signup.php" method="POST"> <!-- Formulário de cadastro -->
+        <form action="signup.php" method="POST">
             <div class="card">
-                <h1>Cadastrar</h1> <!-- Título do formulário -->
+                <h1>Cadastrar</h1>
 
-                <div id="msgError"></div> <!-- Mensagem de erro -->
-                <div id="msgSuccess"></div> <!-- Mensagem de sucesso -->
+                <div id="msgError"></div>
+                <div id="msgSuccess"></div>
 
-                <!-- Campo de nome com label flutuante -->
                 <div class="label-float">
                     <input type="text" name="nome" id="nome" placeholder=" " required />
                     <label id="labelNome" for="nome">Nome</label>
                 </div>
 
-                <!-- Campo de usuário com label flutuante -->
                 <div class="label-float">
                     <input type="text" name="usuario" id="usuario" placeholder=" " required />
-                    <label id="labelUsuario" for="usuario">Usuario</label>
+                    <label id="labelUsuario" for="usuario">Usuário</label>
                 </div>
 
-                <!-- Campo de e-mail com label flutuante -->
                 <div class="label-float">
                     <input type="email" name="email" required placeholder=" " />
                     <label for="email">E-mail</label>
                 </div>
 
-                <!-- Campo de data de nascimento com label flutuante -->
                 <div class="label-float">
-                    <input type="date" name="dataNascimento" id="dataNascimento" placeholder=" " required />
-                    <label id="labelDataNascimento" for="dataNascimento">Data de Nascimento</label>
+                    <input type="date" name="dataNascimento" id="dataNascimento" required />
+                    <label for="dataNascimento">Data de Nascimento</label>
                 </div>
 
-                <!-- Campo de senha com label flutuante -->
+
                 <div class="label-float">
                     <input type="password" name="senha" id="senha" placeholder=" " required />
                     <label id="labelSenha" for="senha">Senha</label>
-                    <i id="verSenha" class="fa fa-eye" aria-hidden="true"></i> <!-- Ícone de olho -->
+                    <span class="mostrar-senha" onclick="toggleSenha('senha', this)">
+                        <i class="bi bi-eye" aria-hidden="true"></i>
+                    </span>
+                    <div id="forcaSenha" class="forca-senha"></div>
                 </div>
 
-                <!-- Campo de confirmação de senha com label flutuante -->
                 <div class="label-float">
                     <input type="password" name="confirmSenha" id="confirmSenha" placeholder=" " required />
                     <label id="labelConfirmSenha" for="confirmSenha">Confirmar Senha</label>
-                    <i id="verConfirmSenha" class="fa fa-eye" aria-hidden="true"></i> <!-- Ícone de olho -->
+                    <span class="mostrar-senha" onclick="toggleSenha('confirmSenha', this)">
+                        <i class="bi bi-eye" aria-hidden="true"></i>
+                    </span>
                 </div>
 
-                <!-- Botão de submit centralizado -->
                 <div class="justify-center">
                     <button type="submit" name="submit">Cadastrar</button>
                 </div>
             </div>
         </form>
     </div>
+
+    <script>
+        function toggleSenha(id, el) {
+            const input = document.getElementById(id);
+            const icon = el.querySelector('i');
+
+            if (input.type === "password") {
+                input.type = "text";
+                icon.classList.remove("bi-eye");
+                icon.classList.add("bi-eye-slash");
+            } else {
+                input.type = "password";
+                icon.classList.remove("bi-eye-slash");
+                icon.classList.add("bi-eye");
+            }
+        }
+
+        // Força da senha
+        document.getElementById("senha").addEventListener("input", function() {
+            const valor = this.value;
+            const forca = document.getElementById("forcaSenha");
+
+            let nivel = 0;
+            if (valor.length >= 6) nivel++;
+            if (/[A-Z]/.test(valor)) nivel++;
+            if (/[0-9]/.test(valor)) nivel++;
+            if (/[^A-Za-z0-9]/.test(valor)) nivel++;
+
+            if (nivel <= 1) {
+                forca.textContent = "Senha fraca";
+                forca.className = "forca-senha fraca";
+            } else if (nivel === 2 || nivel === 3) {
+                forca.textContent = "Senha média";
+                forca.className = "forca-senha media";
+            } else if (nivel >= 4) {
+                forca.textContent = "Senha forte";
+                forca.className = "forca-senha forte";
+            } else {
+                forca.textContent = "";
+            }
+        });
+    </script>
 </body>
 
 </html>
