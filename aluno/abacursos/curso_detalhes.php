@@ -1,18 +1,15 @@
 <?php
-$host = 'localhost';
-$user = 'root';
-$pass = '';
-$db = 'aapcw_cadastro'; // Banco principal
+include_once('../../funcoes/conexao.php');
 
-$conn = new mysqli($host, $user, $pass, $db);
+$conexao = new mysqli($host, $user, $pass, $db);
 
-if ($conn->connect_error) {
-    die("Falha na conexão: " . $conn->connect_error);
+if ($conexao->connect_error) {
+    die("Falha na conexão: " . $conexao->connect_error);
 }
 
 $id = intval($_GET['id']);
 $sql = "SELECT id, nome_curso AS titulo, descricao, imagem, video_url FROM cursos WHERE id = $id";
-$result = $conn->query($sql);
+$result = $conexao->query($sql);
 
 if ($result->num_rows > 0) {
     $curso = $result->fetch_assoc();
@@ -21,5 +18,5 @@ if ($result->num_rows > 0) {
     echo json_encode([]);
 }
 
-$conn->close();
+$conexao->close();
 ?>

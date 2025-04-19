@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once('config.php');
+include_once('../funcoes/conexao.php');
 
 // Verifica se o usuário está logado
 if (!isset($_SESSION['usuario'])) {
@@ -191,15 +191,15 @@ footer {
 
     <header>
         <div class="logo">
-            <img src="images/logotipocw.png" alt="Logo CW Cursos">
+            <img src="../images/logotipocw.png" alt="Logo CW Cursos">
         </div>
         <nav>
             <ul>
-                <li><a href="abacursos/abacursos.html">Cursos</a></li>
-                <li><a href="abatrofeus.html">Galeria de certificados</a></li>
-                <li><a href="Suporte/Suporte.html">Suporte</a></li>
+                <li><a href="abacursos/abacursos.php">Cursos</a></li>
+                <li><a href="abatrofeus.php">Galeria de certificados</a></li>
+                <li><a href="../suporte/suporte.php">Suporte</a></li>
                 <li><a href="profile.php">Perfil</a></li>
-                <li><a href="sistema.html">Sair</a></li>
+                <li><a href="sistema.php">Sair</a></li>
             </ul>
         </nav>
     </header>
@@ -213,15 +213,15 @@ footer {
             <div class="courses">
                 <div class="course">
                     <h3>SEO</h3>
-                    <img src="images/seoavançado.png" alt="Imagem do curso SEO">
+                    <img src="../images/seoavançado.png" alt="Imagem do curso SEO">
                     <p>Aprenda as melhores práticas de otimização para motores de busca.</p>
-                    <a href="abacursos/abacursos.html">Acessar</a>
+                    <a href="abacursos/abacursos.php">Acessar</a>
                 </div>
                 <div class="course">
                     <h3>Curso de Marketing de Redes Sociais</h3>
-                    <img src="images/cursodeMidiasDigitais_curso.png" alt="Imagem do curso de Marketing de Redes Sociais">
+                    <img src="../images/cursodeMidiasDigitais_curso.png" alt="Imagem do curso de Marketing de Redes Sociais">
                     <p>Crie conteúdo que engaja e converte.</p>
-                    <a href="abacursos/abacursos.html">Acessar</a>
+                    <a href="abacursos/abacursos.php">Acessar</a>
                 </div>
             </div>
         </section>
