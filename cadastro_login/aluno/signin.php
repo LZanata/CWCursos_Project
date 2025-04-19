@@ -1,52 +1,49 @@
 <?php
 // Inicia a sessão para poder usar variáveis de sessão
 session_start();
-
 // Inclui o arquivo de conexão com o banco de dados
 include_once('../../funcoes/conexao.php');
 
 // Verifica se o formulário foi enviado via POST e se o botão de submit foi clicado
 if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['submit'])) {
 
-    // Captura os dados enviados pelo formulário
-    $usuario = $_POST['usuario'];
-    $email = $_POST['email'];
+    $login = $_POST['login'];
     $senha = $_POST['senha'];
 
-    // Prepara a consulta para buscar o usuário no banco com base no usuário e e-mail informados
-    $query = "SELECT * FROM usuarios WHERE usuario = ? AND email = ?";
+    // Prepara a consulta com suporte a login via usuário OU email
+    $query = "SELECT * FROM usuarios WHERE usuario = ? OR email = ?";
     $stmt = $conexao->prepare($query);
-    $stmt->bind_param("ss", $usuario, $email);
+    $stmt->bind_param("ss", $login, $login);
     $stmt->execute();
     $result = $stmt->get_result();
 
-    // Verifica se encontrou exatamente um usuário com os dados fornecidos
     if ($result->num_rows === 1) {
         $user = $result->fetch_assoc();
 
-        // Verifica se a senha fornecida confere com o hash salvo no banco
+        // Verifica se a senha está correta
         if (password_verify($senha, $user['senha'])) {
 
-            // Se tudo estiver correto, armazena os dados do usuário na sessão
+            // Inicia as variáveis de sessão
             $_SESSION['id'] = $user['id'];
             $_SESSION['nome'] = $user['nome'];
             $_SESSION['usuario'] = $user['usuario'];
             $_SESSION['tipo'] = $user['tipo'];
             $_SESSION['status'] = $user['status'];
 
-            // Redireciona para a tela inicial
-            header("Location: http://localhost/AAP-CW_Cursos/aluno/sistema.php");
-            exit;
+            // Redireciona para a área do aluno
+            if ($user['tipo'] === 'aluno') {
+                header("Location: http://localhost/AAP-CW_Cursos/aluno/sistema.php");
+                exit;
+            } else {
+                echo "<script>alert('Apenas usuários do tipo aluno podem acessar esta área.');</script>";
+            }
         } else {
-            // Caso a senha esteja incorreta
             echo "<script>alert('Senha incorreta.');</script>";
         }
     } else {
-        // Caso o usuário ou e-mail não existam no banco
         echo "<script>alert('Usuário ou e-mail não encontrados.');</script>";
     }
 
-    // Encerra o statement e a conexão com o banco
     $stmt->close();
     $conexao->close();
 }
@@ -59,7 +56,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['submit'])) {
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 <link rel="stylesheet" href="signin.css">
-<link rel="stylesheet" href="../index.css">
 <title>Sign-in</title>
 </head>
 
@@ -73,14 +69,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['submit'])) {
 
                 <!-- Campo de usuário com label flutuante -->
                 <div class="label-float">
-                    <input type="text" name="usuario" id="usuario" placeholder=" " required />
-                    <label id="userLabel" for="usuario">Usuario</label>
+                    <input type="text" name="login" id="login" required />
+                    <label for="login">Usuário ou E-mail</label>
                 </div>
 
-                <div class="label-float">
-                    <input type="email" name="email" required placeholder=" " />
-                    <label for="email">E-mail</label>
-                </div>
 
                 <!-- Campo de senha com label flutuante -->
                 <div class="label-float">

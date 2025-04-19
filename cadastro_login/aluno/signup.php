@@ -73,7 +73,6 @@ if (isset($_POST['submit'])) {
     <title>Cadastro</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="signup.css">
-    <link rel="stylesheet" href="../index.css">
 </head>
 
 <body>
