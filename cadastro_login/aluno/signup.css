@@ -132,24 +132,6 @@ button:hover {
     justify-content: center; /* Centraliza horizontalmente */
 }
 
-/* Estilo para o ícone de olho */
-.bi-eye {
-    
-    top: 13px; /* Alinha ao topo */
-    right: 10px; /* Alinha à direita */
-    cursor: pointer; /* Cursor de ponteiro */
-    color: #272262; /* Cor do ícone */
-}
-
-/* Estilo para o ícone de olho */
-.bi-eye-slash {
-    
-    top: 13px; /* Alinha ao topo */
-    right: 10px; /* Alinha à direita */
-    cursor: pointer; /* Cursor de ponteiro */
-    color: #272262; /* Cor do ícone */
-}
-
 /* Estilo para mensagens de erro */
 #msgError {
     text-align: center; /* Centraliza o texto */
@@ -168,4 +150,33 @@ button:hover {
     padding: 10px; /* Espaçamento interno */
     border-radius: 4px; /* Bordas arredondadas */
     display: none; /* Esconde por padrão */
+}
+
+.mostrar-senha {
+    position: absolute;
+    right: 10px;
+    top: 12px;
+    cursor: pointer;
+    color: #272262;
+}
+
+.label-float {
+    position: relative;
+}
+
+.forca-senha {
+    font-size: 0.9em;
+    margin-top: 4px;
+}
+
+.fraca {
+    color: red;
+}
+
+.media {
+    color: orange;
+}
+
+.forte {
+    color: green;
 }

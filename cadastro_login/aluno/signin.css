@@ -140,3 +140,31 @@
      color: #272262; /* Cor do texto */
  }
  
+ .mostrar-senha {
+    position: absolute;
+    right: 10px;
+    top: 12px;
+    cursor: pointer;
+    color: #272262;
+}
+
+.label-float {
+    position: relative;
+}
+
+.forca-senha {
+    font-size: 0.9em;
+    margin-top: 4px;
+}
+
+.fraca {
+    color: red;
+}
+
+.media {
+    color: orange;
+}
+
+.forte {
+    color: green;
+}

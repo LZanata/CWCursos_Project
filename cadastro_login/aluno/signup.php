@@ -73,36 +73,7 @@ if (isset($_POST['submit'])) {
     <title>Cadastro</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="signup.css">
-    <style>
-        .mostrar-senha {
-            position: absolute;
-            right: 10px;
-            top: 12px;
-            cursor: pointer;
-            color: #272262;
-        }
-
-        .label-float {
-            position: relative;
-        }
-
-        .forca-senha {
-            font-size: 0.9em;
-            margin-top: 4px;
-        }
-
-        .fraca {
-            color: red;
-        }
-
-        .media {
-            color: orange;
-        }
-
-        .forte {
-            color: green;
-        }
-    </style>
+    <link rel="stylesheet" href="../index.css">
 </head>
 
 <body>
