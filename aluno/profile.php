@@ -1,10 +1,10 @@
 <?php
 session_start();
-include_once('config.php');
+include_once('../funcoes/conexao.php');
 
 // Verifica se o usuário está logado
 if (!isset($_SESSION['usuario'])) {
-    header('Location: signin.html');
+    header('Location: http://localhost/AAP-CW_Cursos/cadastro_login/aluno/signin.php');
     exit();
 }
 
@@ -18,7 +18,7 @@ $stmt->execute();
 $result = $stmt->get_result();
 $row = $result->fetch_assoc();
 
-$profile_photo = $row ? $row['photo'] : 'images/default_profile.jpg';
+$profile_photo = $row ? $row['photo'] : '../images/default_profile.jpg';
 $email = $row['email'];
 $data_nascimento = $row['data_nascimento'];
 ?>
@@ -366,7 +366,7 @@ $data_nascimento = $row['data_nascimento'];
 
         <!-- Formulário para upload de foto -->
         <div class="upload-section">
-            <form action="upload_photo.php" method="post" enctype="multipart/form-data">
+            <form action="../funcoes/usuario/upload_photo.php" method="post" enctype="multipart/form-data">
                 <input type="file" name="photo" id="upload" accept="image/*">
                 <label for="upload" class="upload-label">Carregar nova foto</label>
                 <input type="submit" value="Atualizar Foto" class="upload-btn">
@@ -422,8 +422,8 @@ $data_nascimento = $row['data_nascimento'];
 
         <!-- Botões de ação -->
         <div class="action-buttons">
-            <a href="sistema.html">Ir para a tela inicial</a>
-            <form action="logout.php" method="post">
+            <a href="sistema.php">Ir para a tela inicial</a>
+            <form action="../funcoes/sessoes/logout.php" method="post">
             <button type="submit" class="btn-sair">Sair</button>
         </form>
 </div>
