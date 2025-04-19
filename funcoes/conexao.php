@@ -12,5 +12,7 @@ if($conexao->connect_errno) {
     die("Erro ao conectar ao banco de dados: " . $conexao->connect_error); // Termina o script se houver um erro
 }
 
+return $conexao; // <-- ESSA LINHA é essencial!
+
 // A conexão é estabelecida sem mensagens na tela; qualquer tratamento de sucesso ou falha deve ser feito no script que utiliza esta conexão
 ?>
