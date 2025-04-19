@@ -114,6 +114,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
     <div class="container">
         <div class="card">
+            <h1>Formulário de Inscrição</h1>
             <form action="" method="POST" enctype="multipart/form-data">
                 <!-- Seção de Dados Pessoais -->
                 <h3>Dados Pessoais</h3>
