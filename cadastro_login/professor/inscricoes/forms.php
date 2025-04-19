@@ -48,7 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Verificação de CPF duplicado
-    $verificar = $conn->prepare("SELECT id FROM voluntarios WHERE cpf = ?");
+    $verificar = $conn->prepare("SELECT id FROM professores_voluntarios WHERE cpf = ?");
     $verificar->bind_param("s", $cpf);
     $verificar->execute();
     $verificar->store_result();
@@ -78,7 +78,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Inserção no banco
-    $sql = "INSERT INTO voluntarios (nome, cpf, rg, data_nascimento, endereco, email, telefone, linkedin, experiencia, area_conhecimento, disponibilidade, curriculo) 
+    $sql = "INSERT INTO professores_voluntarios (nome, cpf, rg, data_nascimento, endereco, email, telefone, linkedin, experiencia, area_conhecimento, disponibilidade, curriculo) 
             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
     $stmt = $conn->prepare($sql);
 
