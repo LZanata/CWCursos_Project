@@ -122,6 +122,27 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['submit'])) {
                 icon.classList.add("bi-eye");
             }
         }
+        // Aguarda o DOM carregar
+        document.addEventListener("DOMContentLoaded", function() {
+            const msgError = document.querySelector("#msgError .erro");
+
+            if (msgError) {
+                // Aplica efeito de fade-in
+                msgError.style.opacity = 0;
+                msgError.style.transition = "opacity 0.5s ease-in-out";
+                setTimeout(() => {
+                    msgError.style.opacity = 1;
+                }, 100);
+
+                // Depois de 4 segundos, aplica fade-out e remove do DOM
+                setTimeout(() => {
+                    msgError.style.opacity = 0;
+                    setTimeout(() => {
+                        msgError.remove();
+                    }, 500); // Tempo do fade-out
+                }, 4000); // Tempo de exibição antes de sumir
+            }
+        });
     </script>
 </body>
 

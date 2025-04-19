@@ -168,3 +168,11 @@
 .forte {
     color: green;
 }
+
+#msgError .erro {
+    color: #e63946;
+    padding: 10px;
+    border-radius: 8px;
+    display: inline-block;
+    opacity: 1;
+}
