@@ -77,9 +77,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($usuario)) {
 <!-- HTML da página de redefinição de senha -->
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Redefinir Senha</title>
     <link rel="stylesheet" href="index.css">
     <style>
@@ -107,9 +108,17 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($usuario)) {
             margin-top: 4px;
         }
 
-        .fraca { color: red; }
-        .media { color: orange; }
-        .forte { color: green; }
+        .fraca {
+            color: red;
+        }
+
+        .media {
+            color: orange;
+        }
+
+        .forte {
+            color: green;
+        }
 
         .mostrar-senha {
             cursor: pointer;
@@ -123,34 +132,34 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($usuario)) {
 </head>
 
 <body>
-    <div class="page">
-        <form method="POST" class="formLogin">
-            <div class="titulo">
-                <h1>CW Cursos</h1>
-            </div>
-
-            <h2>Redefinir Senha</h2>
-
-            <!-- Exibe mensagens de sucesso ou erro -->
-            <?php if ($mensagem): ?>
-                <div class="mensagem <?= $classeMensagem ?>">
-                    <?= $mensagem ?>
+    <div class="container">
+        <div class="card">
+            <form method="POST" class="formLogin">
+                <div class="titulo">
+                    <h1>Redefinir Senha</h1>
                 </div>
-            <?php endif; ?>
-
-            <label for="new_password">Nova senha</label>
-            <input type="password" name="new_password" id="new_password" maxlength="15" required />
-            <div class="mostrar-senha" onclick="toggleSenha('new_password')">👁️ Mostrar senha</div>
-            <div id="forcaSenha" class="forca-senha"></div>
-
-            <label for="confirm_password">Confirme a nova senha</label>
-            <input type="password" name="confirm_password" id="confirm_password" maxlength="15" required />
-            <div class="mostrar-senha" onclick="toggleSenha('confirm_password')">👁️ Mostrar senha</div>
-
-            <div class="botoes">
-                <input type="submit" value="Alterar Senha" name="AlteraSenha" />
-            </div>
-        </form>
+                <!-- Exibe mensagens de sucesso ou erro -->
+                <?php if ($mensagem): ?>
+                    <div class="mensagem <?= $classeMensagem ?>">
+                        <?= $mensagem ?>
+                    </div>
+                <?php endif; ?>
+                <div class="label-float">
+                    <input type="password" name="new_password" id="new_password" maxlength="15" required />
+                    <label for="new_password">Nova senha</label>
+                    <div class="mostrar-senha" onclick="toggleSenha('new_password')">👁️ Mostrar senha</div>
+                    <div id="forcaSenha" class="forca-senha"></div>
+                </div>
+                <div class="label-float">
+                    <input type="password" name="confirm_password" id="confirm_password" maxlength="15" required />
+                    <label for="confirm_password">Confirme a nova senha</label>
+                    <div class="mostrar-senha" onclick="toggleSenha('confirm_password')">👁️ Mostrar senha</div>
+                </div>
+                <div class="justify-center">
+                    <input class="inputSubmit" type="submit" value="Alterar Senha" name="Alterar Senha" />
+                </div>
+            </form>
+        </div>
     </div>
 
     <script>
@@ -161,7 +170,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($usuario)) {
         }
 
         // Analisa a força da senha digitada
-        document.getElementById("new_password").addEventListener("input", function () {
+        document.getElementById("new_password").addEventListener("input", function() {
             const valor = this.value;
             const forca = document.getElementById("forcaSenha");
 
@@ -186,4 +195,5 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($usuario)) {
         });
     </script>
 </body>
+
 </html>
