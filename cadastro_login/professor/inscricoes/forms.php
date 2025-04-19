@@ -48,7 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Verificação de CPF duplicado
-    $verificar = $conn->prepare("SELECT id FROM professores_voluntarios WHERE cpf = ?");
+    $verificar = $conexao->prepare("SELECT id FROM professores_voluntarios WHERE cpf = ?");
     $verificar->bind_param("s", $cpf);
     $verificar->execute();
     $verificar->store_result();
@@ -80,25 +80,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Inserção no banco
     $sql = "INSERT INTO professores_voluntarios (nome, cpf, rg, data_nascimento, endereco, email, telefone, linkedin, experiencia, area_conhecimento, disponibilidade, curriculo) 
             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
-    $stmt = $conn->prepare($sql);
+    $stmt = $conexao->prepare($sql);
 
     if (!$stmt) {
-        die("Erro ao preparar a consulta: " . $conn->error);
+        die("Erro ao preparar a consulta: " . $conexao->error);
     }
 
     $stmt->bind_param("ssssssssssss", $nome, $cpf, $rg, $data_nascimento, $endereco, $email, $telefone, $linkedin, $experiencia, $area_conhecimento, $disponibilidade, $curriculo_path);
 
     if ($stmt->execute()) {
-        echo "<script>alert('Cadastro realizado com sucesso!'); window.location.href='index.html';</script>";
+        echo "<script>alert('Cadastro realizado com sucesso!'); window.location.href='http://localhost/AAP-CW_Cursos/TelaInicial/index.php';</script>";
     } else {
         echo "Erro: " . $stmt->error;
     }
 
     $stmt->close();
-    $conn->close();
+    $conexao->close();
     exit;
 }
 ?>
+
 
 <!-- HTML do formulário -->
 <!DOCTYPE html>
