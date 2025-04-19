@@ -83,6 +83,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($usuario)) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Redefinir Senha</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <style>
         .mensagem {
             margin: 10px 0;
@@ -128,6 +129,34 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($usuario)) {
             margin-bottom: 10px;
             display: inline-block;
         }
+
+        /* Estilo para o ícone de olho aberto */
+        .bi-eye {
+            position: absolute;
+            /* Posicionamento absoluto */
+            top: 13px;
+            /* Alinha ao topo */
+            right: 10px;
+            /* Alinha à direita */
+            cursor: pointer;
+            /* Cursor de ponteiro */
+            color: #272262;
+            /* Cor do ícone */
+        }
+
+        /* Estilo para o ícone de olho fechado */
+        .bi-eye-slash {
+            position: absolute;
+            /* Posicionamento absoluto */
+            top: 13px;
+            /* Alinha ao topo */
+            right: 10px;
+            /* Alinha à direita */
+            cursor: pointer;
+            /* Cursor de ponteiro */
+            color: #272262;
+            /* Cor do ícone */
+        }
     </style>
 </head>
 
@@ -147,13 +176,17 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($usuario)) {
                 <div class="label-float">
                     <input type="password" name="new_password" id="new_password" maxlength="15" required />
                     <label for="new_password">Nova senha</label>
-                    <div class="mostrar-senha" onclick="toggleSenha('new_password')">👁️ Mostrar senha</div>
+                    <div class="mostrar-senha" onclick="toggleSenha('new_password', this)">
+                        <i class="bi bi-eye" aria-hidden="true"></i>
+                    </div>
                     <div id="forcaSenha" class="forca-senha"></div>
                 </div>
                 <div class="label-float">
                     <input type="password" name="confirm_password" id="confirm_password" maxlength="15" required />
                     <label for="confirm_password">Confirme a nova senha</label>
-                    <div class="mostrar-senha" onclick="toggleSenha('confirm_password')">👁️ Mostrar senha</div>
+                    <div class="mostrar-senha" onclick="toggleSenha('confirm_password', this)">
+                        <i class="bi bi-eye" aria-hidden="true"></i>
+                    </div>
                 </div>
                 <div class="justify-center">
                     <input class="inputSubmit" type="submit" value="Alterar Senha" name="Alterar Senha" />
@@ -164,10 +197,21 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($usuario)) {
 
     <script>
         // Alterna o tipo do campo de senha entre "password" e "text"
-        function toggleSenha(id) {
+        function toggleSenha(id, iconElement) {
             const input = document.getElementById(id);
-            input.type = input.type === "password" ? "text" : "password";
+            const icon = iconElement.querySelector("i");
+
+            if (input.type === "password") {
+                input.type = "text";
+                icon.classList.remove("bi-eye");
+                icon.classList.add("bi-eye-slash");
+            } else {
+                input.type = "password";
+                icon.classList.remove("bi-eye-slash");
+                icon.classList.add("bi-eye");
+            }
         }
+
 
         // Analisa a força da senha digitada
         document.getElementById("new_password").addEventListener("input", function() {
