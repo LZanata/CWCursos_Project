@@ -398,19 +398,19 @@
 
               <div class="main-container">
                 <div class="main-content">
-                  <a href="abasobre.php">Sobre</a>
-                </div>
-              </div>
-
-              <div class="main-container">
-                <div class="main-content">
                   <a href="abacursos/abacursos.php">Cursos</a>
                 </div>
               </div>
 
               <div class="main-container">
                 <div class="main-content">
-                  <a href="#">Material</a>
+                  <a href="abasobre.php">Sobre</a>
+                </div>
+              </div>
+
+              <div class="main-container">
+                <div class="main-content">
+                  <a href="#">Ajuda</a>
                 </div>
               </div>
             </div>

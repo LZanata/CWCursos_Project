@@ -24,7 +24,9 @@
 <body>
     <div class="container">
         <header class="navbar">
-            <div class="logo">CW Cursos</div>
+            <div class="logo"><a href="#">
+            <img src="../images/logotipodacw.png" alt="Logo da CW Cursos" />
+          </a></div>
             <div class="search-bar">
                 <input type="text" placeholder="O que você quer aprender?">
             </div>
