@@ -155,15 +155,16 @@
             </section>
             <!--sobre-->
         </main>
-        <script>
-            const menuToggle = document.getElementById("menuToggle");
-            const menuItems = document.getElementById("menuItems");
+    </div>
+    <script>
+        const menuToggle = document.getElementById("menuToggle");
+        const menuItems = document.getElementById("menuItems");
 
-            menuToggle.addEventListener("click", () => {
-                menuItems.classList.toggle("show");
-            });
-        </script>
-        <!--Script para ativar o dropdown do menu de navegação-->
+        menuToggle.addEventListener("click", () => {
+            menuItems.classList.toggle("show");
+        });
+    </script>
+    <!--Script para ativar o dropdown do menu de navegação-->
 </body>
 
 </html>

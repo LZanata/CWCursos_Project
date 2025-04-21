@@ -53,7 +53,7 @@
 
                     <div class="main-container">
                         <div class="main-content">
-                            <a href="abasobre.php">Sobre</a>
+                            <a href="sobre.php">Sobre</a>
                         </div>
                     </div>
 
