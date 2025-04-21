@@ -1,3 +1,8 @@
+.content-main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .courses {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -35,6 +40,7 @@
 /* Estilo para a seção de ondas */
 section .wave {
     position: absolute; /* Posicionamento absoluto */
+    top: 60rem;
     bottom: 0; /* Alinha ao fundo */
     left: 0; /* Alinha à esquerda */
     width: 100%; /* Largura total */
