@@ -15,45 +15,53 @@
 
     <main>
       <section id="about" class="about">
-        <h1>Sobre a CW Cursos</h1>
-        <p>
-          A CW Cursos é uma empresa dedicada a fornecer cursos online de alta
-          qualidade em marketing digital. Nosso diferencial é a acessibilidade
-          para pessoas surdas, garantindo que todos possam aprender e se
-          desenvolver em suas carreiras.
-        </p>
+        <div class="about-main">
+          <div class="sw-about">
+            <h1>Sobre a CW Cursos</h1>
+            <p>
+              A CW Cursos é uma empresa dedicada a fornecer cursos online de alta
+              qualidade em marketing digital. Nosso diferencial é a acessibilidade
+              para pessoas surdas, garantindo que todos possam aprender e se
+              desenvolver em suas carreiras.
+            </p>
+          </div>
 
-        <div class="executives">
-          <h2>Executivos</h2>
-          <ul>
-            <li>
-              Matheus Garcia Bertoi:
-              <span>Diretor Executivo. É o principal responsável pela nossa gestão,
-                tomando as principais decisões corporativas, gerenciando
-                operações e recursos da empresa.</span>
-            </li>
-            <li>
-              Jonathans Yoshioka Olsen:
-              <span>Diretor Financeiro. Responsável pela gestão financeira da
-                empresa, incluindo planejamento financeiro, gestão de riscos,
-                relatórios financeiros, e análise de dados financeiros para
-                orientar as decisões estratégicas da empresa.</span>
-            </li>
-            <li>
-              Denilson Conceição de Oliveira:
-              <span>Diretor de Operações. Responsável pelas operações diárias da
-                empresa, incluindo a produção, logística, recursos humanos, e
-                outros aspectos operacionais. Atua para garantir que as
-                operações da empresa sejam eficientes e eficazes.</span>
-            </li>
-            <li>
-              Leonardo Zanata de Jesus:
-              <span>Diretor de Tecnologia. Responsável por supervisionar a gestão e
-                as estratégias tecnológicas da empresa, além de estar
-                encarregado de implementar novas tecnologias que possam melhorar
-                os produtos ou serviços da empresa.</span>
-            </li>
-          </ul>
+          <div class="executives">
+            <h2>Executivos</h2>
+            <ul>
+              <li>
+                Matheus Garcia Bertoi:
+                <span>Diretor Executivo. É o principal responsável pela nossa gestão,
+                  tomando as principais decisões corporativas, gerenciando
+                  operações e recursos da empresa.</span>
+              </li>
+              <li>
+                Jonathans Yoshioka Olsen:
+                <span>Diretor Financeiro. Responsável pela gestão financeira da
+                  empresa, incluindo planejamento financeiro, gestão de riscos,
+                  relatórios financeiros, e análise de dados financeiros para
+                  orientar as decisões estratégicas da empresa.</span>
+              </li>
+              <li>
+                Denilson Conceição de Oliveira:
+                <span>Diretor de Operações. Responsável pelas operações diárias da
+                  empresa, incluindo a produção, logística, recursos humanos, e
+                  outros aspectos operacionais. Atua para garantir que as
+                  operações da empresa sejam eficientes e eficazes.</span>
+              </li>
+              <li>
+                Leonardo Zanata de Jesus:
+                <span>Diretor de Tecnologia. Responsável por supervisionar a gestão e
+                  as estratégias tecnológicas da empresa, além de estar
+                  encarregado de implementar novas tecnologias que possam melhorar
+                  os produtos ou serviços da empresa.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="img-office">
+          <img src="../images/homem-escritorio.png" alt="Homem sentado no Escritório">
         </div>
       </section>
 

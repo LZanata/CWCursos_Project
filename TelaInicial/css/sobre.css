@@ -22,7 +22,13 @@
   }
 
   .about{
+    display: flex;
     margin-top: 2rem;
+  }
+
+  .about-main{
+    flex-direction: column;
+    margin-right: 2rem;
   }
 
   .about img,
@@ -31,6 +37,14 @@
     height: auto;
     border-radius: 5px;
     margin-top: 20px;
+  }
+
+  .img-office img{
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
   }
 
   .about h1 {
@@ -64,7 +78,6 @@
   .about .executives ul li span {
     font-weight: normal;
   }
-
 
   .team h2{
     margin-bottom: 1rem;
