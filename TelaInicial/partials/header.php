@@ -1,3 +1,18 @@
+<!-- Chatra {literal} -->
+<script>
+    (function(d, w, c) {
+        w.ChatraID = 'igHEh7N4PEvoDEkR7';
+        var s = d.createElement('script');
+        w[c] = w[c] || function() {
+            (w[c].q = w[c].q || []).push(arguments);
+        };
+        s.async = true;
+        s.src = 'https://call.chatra.io/chatra.js';
+        if (d.head) d.head.appendChild(s);
+    })(document, window, 'Chatra');
+</script>
+<!-- /Chatra {/literal} -->
+
 <header class="navbar">
     <div class="nav-header">
         <div class="logo"><a href="#">
@@ -26,7 +41,7 @@
                 <div class="menu-items" id="menuItems">
                     <div class="main-container">
                         <div class="main-content">
-                            <a href="../TelaInicial/index.php"> Início </a>
+                            <a href="index.php"> Início </a>
                         </div>
                     </div>
 
