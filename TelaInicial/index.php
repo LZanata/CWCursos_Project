@@ -57,7 +57,7 @@
                                 flexível e personalizada.
                             </p>
 
-                            <div class="btn-alunos">
+                            <div class="btn-cursos">
                                 <a href="abacursos.html">
                                     <button>Acesse os cursos</button>
                                 </a>
