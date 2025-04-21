@@ -80,6 +80,10 @@ nav a:hover {
     color: #00e676; /* Efeito ao passar o mouse */
 }
 
+.nav-botoes a{
+    color: #000000;
+}
+
 header {
     padding: 40px 4%;
 }
