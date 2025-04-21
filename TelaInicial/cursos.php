@@ -15,28 +15,19 @@
     })(document, window, 'Chatra');
 </script>
 <!-- /Chatra {/literal} -->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CW Cursos - Marketing Digital</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/cursos.css">
+    <link rel="stylesheet" href="css/header.css">
 </head>
+
 <body>
     <div class="container">
-        <header class="navbar">
-            <div class="logo"><a href="#">
-            <img src="../images/logotipodacw.png" alt="Logo da CW Cursos" />
-          </a></div>
-            <div class="search-bar">
-                <input type="text" placeholder="O que você quer aprender?">
-            </div>
-            <nav>
-                <a href="../cadastro_login/professor/signin.php" class="planos-btn">Seja um Professor </a>
-                <a href="../cadastro_login/aluno/signin.php"class="planos-btn">Entrar</a>
-                <a href="../cadastro_login/aluno/signup.php"class="planos-btn">Cadastrar-se</a>
-                
-            </nav>
-        </header>
+
+        <?php include 'partials/header.php'; ?> <!-- Inclui o header -->
 
         <section class="header-text">
             <h1>Cursos de Marketing Digital!</h1>
@@ -95,7 +86,7 @@
             </div>
         </section>
     </div>
-    
+
     <!-- Seção de ondas animadas -->
     <section>
         <div class="wave wave1"></div> <!-- Primeira onda -->
