@@ -15,69 +15,27 @@
     })(document, window, 'Chatra');
 </script>
 <!-- /Chatra {/literal} -->
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CW Cursos - Marketing Digital</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
     <div class="container">
         <header class="navbar">
-            <div class="nav-header">
-                <div class="logo"><a href="#">
-                        <img src="../images/logotipodacw.png" alt="Logo da CW Cursos" />
-                    </a></div>
-                <div class="search-bar">
-                    <input type="text" placeholder="O que você quer aprender?">
-                </div>
-
-                <nav>
-                    <a href="../cadastro_login/professor/signin.php" class="planos-btn">Seja um Professor </a>
-                    <a href="../cadastro_login/aluno/signin.php" class="planos-btn">Entrar</a>
-                    <a href="../cadastro_login/aluno/signup.php" class="planos-btn">Cadastrar-se</a>
-                </nav>
+            <div class="logo"><a href="#">
+            <img src="../images/logotipodacw.png" alt="Logo da CW Cursos" />
+          </a></div>
+            <div class="search-bar">
+                <input type="text" placeholder="O que você quer aprender?">
             </div>
-
-            <div class="nav-main">
-                <nav class="menu-desktop">
-                    <div class="menu-container">
-                        <div class="menu-toggle" id="menuToggle">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-
-                        <div class="menu-items" id="menuItems">
-                            <div class="main-container">
-                                <div class="main-content">
-                                    <a href="../TelaInicial/index.php"> Início </a>
-                                </div>
-                            </div>
-
-                            <div class="main-container">
-                                <div class="main-content">
-                                    <a href="abacursos/abacursos.php">Cursos</a>
-                                </div>
-                            </div>
-
-                            <div class="main-container">
-                                <div class="main-content">
-                                    <a href="abasobre.php">Sobre</a>
-                                </div>
-                            </div>
-
-                            <div class="main-container">
-                                <div class="main-content">
-                                    <a href="#">Ajuda</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </nav>
-            </div>
+            <nav>
+                <a href="../cadastro_login/professor/signin.php" class="planos-btn">Seja um Professor </a>
+                <a href="../cadastro_login/aluno/signin.php"class="planos-btn">Entrar</a>
+                <a href="../cadastro_login/aluno/signup.php"class="planos-btn">Cadastrar-se</a>
+                
+            </nav>
         </header>
 
         <section class="header-text">
@@ -137,7 +95,7 @@
             </div>
         </section>
     </div>
-
+    
     <!-- Seção de ondas animadas -->
     <section>
         <div class="wave wave1"></div> <!-- Primeira onda -->
@@ -146,5 +104,4 @@
         <div class="wave wave4"></div> <!-- Quarta onda -->
     </section>
 </body>
-
 </html>
