@@ -61,19 +61,29 @@
             <section id="central">
                 <div class="central-header">
                     <h1>Ainda tem alguma dúvida e precisa de ajuda?</h1>
-                    <p>Entre em contato com nosso chat para podermos ajudá-lo!</p>
+                    <p>
+                        Entre em contato conosco para podermos ajudá-lo! Você pode falar com nosso
+                        <a href="#chatraChatExpanded">Chatbot</a>.
+                    </p>
                 </div>
                 <div class="central-main">
-                <h2>Contamos com alguns canais:</h2>
-                <a href="#">Central de Ajuda</a>
-                <a href="#">Chatbot</a>
-                <a href="#">E-mail</a>
-                <a href="#">Whatsapp</a>
+                    <div class="central-subtitle">
+                        <h2>Contamos também com outros canais:</h2>
+                    </div>
+                    <div class="central-buttons">
+                        <div class="central-button">
+                            <a href="../suporte/suporte.php">Central de Ajuda</a>
+                        </div>
+                        <div class="central-button">
+                            <a href="https://wa.me/5511999999999" target="_blank">WhatsApp</a>
+                        </div>
+                    </div>
                 </div>
             </section>
         </main>
     </div>
 </body>
+
 <!--Script para esconder e aparecer a resposta do FAQ-->
 <script>
     document.addEventListener('DOMContentLoaded', function() {

@@ -41,3 +41,52 @@
     display: none; /* Esconde por padrão */
     padding: 0.5em 0; /* Espaçamento interno */
 }
+
+#central{
+    display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
+}
+
+.central-header h1{
+    margin-bottom: 1rem;
+}
+
+.central-header a{
+    text-decoration: none;
+    color: #00e676;
+}
+
+.central-main{
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+}
+
+.central-subtitle h2{
+    margin-bottom: 2rem;
+}
+
+.central-buttons{
+    display: flex;
+}
+
+.central-button{  
+    margin-right: 1rem;
+}
+
+.central-button a{
+    display: flex;
+    justify-content: space-between;
+    background: none; /* Sem fundo */
+    border: none; /* Sem borda */
+    font-size: 1.2em; /* Tamanho da fonte */
+    font-weight: bold; /* Texto em negrito */
+    text-align: left; /* Alinha o texto à esquerda */
+    width: 100%; /* Largura total */
+    padding: 1em; /* Espaçamento interno */
+    cursor: pointer; /* Cursor de ponteiro */
+    color: #ffffff; /* Cor branco */
+    text-decoration: none;
+    border-radius: 8px; /* Bordas arredondadas */
+    border: 1px solid #00d8a4; /* Borda cinza */
+}
