@@ -58,6 +58,19 @@
                     </div>
                 </div>
             </section>
+            <section id="central">
+                <div class="central-header">
+                    <h1>Ainda tem alguma dúvida e precisa de ajuda?</h1>
+                    <p>Entre em contato com nosso chat para podermos ajudá-lo!</p>
+                </div>
+                <div class="central-main">
+                <h2>Contamos com alguns canais:</h2>
+                <a href="#">Central de Ajuda</a>
+                <a href="#">Chatbot</a>
+                <a href="#">E-mail</a>
+                <a href="#">Whatsapp</a>
+                </div>
+            </section>
         </main>
     </div>
 </body>
