@@ -1,0 +1,43 @@
+.faq-title{
+    display: flex;
+    margin: 4rem 0 3rem 0;
+    
+}
+
+.faq-title h1{
+    font-size: 2rem;
+}
+
+/* Estilos para os itens da FAQ */
+.faq-item { 
+    color: #ffffff; /* Cor do texto */
+    padding: 1em; /* Espaçamento interno */
+    border-radius: 8px; /* Bordas arredondadas */
+    margin-bottom: 1em; /* Margem inferior */
+    border: 1px solid #00d8a4; /* Borda cinza */
+}
+
+/* Estilos para as perguntas da FAQ */
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    background: none; /* Sem fundo */
+    border: none; /* Sem borda */
+    font-size: 1.2em; /* Tamanho da fonte */
+    font-weight: bold; /* Texto em negrito */
+    text-align: left; /* Alinha o texto à esquerda */
+    width: 100%; /* Largura total */
+    padding: 0.5em 0; /* Espaçamento interno */
+    cursor: pointer; /* Cursor de ponteiro */
+    color: #ffffff; /* Cor azul */
+}
+
+.faq-question i{
+    color: #00d8a4;
+}
+
+/* Estilos para as respostas da FAQ */
+.faq-answer {
+    display: none; /* Esconde por padrão */
+    padding: 0.5em 0; /* Espaçamento interno */
+}

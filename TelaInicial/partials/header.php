@@ -59,7 +59,7 @@
 
                     <div class="main-container">
                         <div class="main-content">
-                            <a href="#">Ajuda</a>
+                            <a href="ajuda.php">Ajuda</a>
                         </div>
                     </div>
                 </div>

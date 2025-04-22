@@ -1,21 +1,22 @@
-
 <!DOCTYPE html>
-<html lang="pt-br"> 
+<html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>Suporte - Plataforma de Cursos</title> 
-    <link rel="stylesheet" href="styles.css"> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suporte - Plataforma de Cursos</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
         .hidden {
-            display: none; 
+            display: none;
         }
-        
-        #contact-form button { 
-            color: white; 
+
+        #contact-form button {
+            color: white;
         }
     </style>
 </head>
+
 <body>
     <!-- Cabeçalho da página com título e navegação -->
     <header>
@@ -27,7 +28,7 @@
             </ul>
         </nav>
     </header>
-    
+
     <main>
         <!-- Seção de contato -->
         <section id="contact">
@@ -84,43 +85,30 @@
                 </div>
             </div>
         </section>
+
+        <!-- Contêiner do chatbot -->
+        <div id="chatbot-container">
+            <!-- Caixa de chat inicialmente oculta -->
+            <div id="chatbox" class="hidden">
+                <div id="chatbox-header">Chatbot de Suporte</div> <!-- Cabeçalho da caixa de chat -->
+                <div id="chat-messages"></div> <!-- Área onde as mensagens do chat aparecerão -->
+
+                <form action="/chatbot" method='POST'> <!-- Formulário para enviar mensagens ao chatbot -->
+                    <input type="text" name="pergunta" id="chat-input" placeholder="Digite sua mensagem..."> <!-- Campo de entrada de texto para a mensagem -->
+                    <button type="submit" id="chat-send">Enviar</button> <!-- Botão para enviar a mensagem -->
+                </form>
+            </div>
+            <button id="chatbot-toggle">Chat</button> <!-- Botão para abrir/fechar a caixa de chat -->
+        </div>
     </main>
 
     <!-- Rodapé da página -->
     <footer>
-        <p>&copy; 2024 Plataforma de Cursos Online CW. Todos os direitos reservados.</p> 
+        <p>&copy; 2024 Plataforma de Cursos Online CW. Todos os direitos reservados.</p>
     </footer>
 
     <script src="scripts.js"></script> <!-- Link para o arquivo de script JavaScript externo -->
-</body>
-</html>
-
-<!-- Interface do chatbot -->
-
-<!DOCTYPE html>
-<html lang="pt-BR"> <!-- Define o idioma da página como português do Brasil -->
-<head>
-    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura a viewport para dispositivos móveis -->
-    <title>Chatbot de Suporte</title> <!-- Define o título da página -->
-    <link rel="stylesheet" href="styles.css"> <!-- Link para o arquivo de estilos CSS externo -->
-</head>
-<body>
-    <!-- Contêiner do chatbot -->
-    <div id="chatbot-container">
-        <!-- Caixa de chat inicialmente oculta -->
-        <div id="chatbox" class="hidden">
-            <div id="chatbox-header">Chatbot de Suporte</div> <!-- Cabeçalho da caixa de chat -->
-            <div id="chat-messages"></div> <!-- Área onde as mensagens do chat aparecerão -->
-            
-            <form action="/chatbot" method='POST'> <!-- Formulário para enviar mensagens ao chatbot -->
-                <input type="text" name="pergunta" id="chat-input" placeholder="Digite sua mensagem..."> <!-- Campo de entrada de texto para a mensagem -->
-                <button type="submit" id="chat-send">Enviar</button> <!-- Botão para enviar a mensagem -->
-            </form>
-        </div>
-        <button id="chatbot-toggle">Chat</button> <!-- Botão para abrir/fechar a caixa de chat -->
-    </div>
-
     <script src="chat.js"></script> <!-- Link para o arquivo de script JavaScript externo do chatbot -->
 </body>
+
 </html>

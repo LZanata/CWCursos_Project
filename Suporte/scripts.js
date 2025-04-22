@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', function() {
     
     const faqItems = document.querySelectorAll('.faq-item');// Obtém todos os itens de FAQ com a classe 'faq-item'
