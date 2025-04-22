@@ -422,7 +422,7 @@ $data_nascimento = $row['data_nascimento'];
 
         <!-- Botões de ação -->
         <div class="action-buttons">
-            <a href="sistema.php">Ir para a tela inicial</a>
+            <a href="areadoaluno.php">Voltar para Área do Aluno</a>
             <form action="../funcoes/sessoes/logout.php" method="post">
             <button type="submit" class="btn-sair">Sair</button>
         </form>

@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['submit'])) {
 
             // Redireciona para a área do aluno
             if ($user['tipo'] === 'aluno') {
-                header("Location: http://localhost/AAP-CW_Cursos/aluno/sistema.php");
+                header("Location: http://localhost/AAP-CW_Cursos/TelaInicial/index.php");
                 exit;
             } else {
                 $mensagemErro = "Apenas usuários do tipo aluno podem acessar esta área.";

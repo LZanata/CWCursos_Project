@@ -195,11 +195,11 @@ footer {
         </div>
         <nav>
             <ul>
-                <li><a href="abacursos/abacursos.php">Cursos</a></li>
+                <li><a href="abacursos/abacursos.php">Meus Cursos</a></li>
                 <li><a href="abatrofeus.php">Galeria de certificados</a></li>
-                <li><a href="../suporte/suporte.php">Suporte</a></li>
+                <li><a href="../TelaInicial/ajuda.php">Ajuda</a></li>
                 <li><a href="profile.php">Perfil</a></li>
-                <li><a href="sistema.php">Sair</a></li>
+                <li><a href="../TelaInicial/index.php">Sair</a></li>
             </ul>
         </nav>
     </header>

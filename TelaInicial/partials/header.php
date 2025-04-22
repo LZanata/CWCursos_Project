@@ -1,25 +1,3 @@
-<!-- Chatra {literal} -->
-<script>
-    (function(d, w, c) {
-        w.ChatraID = 'igHEh7N4PEvoDEkR7';
-        var s = d.createElement('script');
-        w[c] = w[c] || function() {
-            (w[c].q = w[c].q || []).push(arguments);
-        };
-        s.async = true;
-        s.src = 'https://call.chatra.io/chatra.js';
-        if (d.head) d.head.appendChild(s);
-    })(document, window, 'Chatra');
-    window.ChatraSetup = {
-        colors: {
-            buttonText: '#000000',
-            /* chat button text color */
-            buttonBg: '#00d8a4' /* chat button background color */
-        }
-    };
-</script>
-<!-- /Chatra {/literal} -->
-
 <header class="navbar">
     <div class="nav-header">
         <div class="logo"><a href="#">
@@ -30,9 +8,17 @@
         </div>
 
         <nav class="nav-botoes">
-            <a href="../cadastro_login/professor/signin.php" class="planos-btn">Seja um Professor </a>
-            <a href="../cadastro_login/aluno/signin.php" class="planos-btn">Entrar</a>
-            <a href="../cadastro_login/aluno/signup.php" class="planos-btn">Cadastrar-se</a>
+            <?php if (isset($_SESSION['id']) && $_SESSION['tipo'] === 'aluno'): ?>
+                <div class="btn-alunos">
+                    <a href="../aluno/areadoaluno.php">
+                        <button>Área do Aluno</button>
+                    </a>
+                </div>
+            <?php else: ?>
+                <a href="../cadastro_login/professor/signin.php" class="planos-btn">Seja um Professor</a>
+                <a href="../cadastro_login/aluno/signin.php" class="planos-btn">Entrar</a>
+                <a href="../cadastro_login/aluno/signup.php" class="planos-btn">Cadastrar-se</a>
+            <?php endif; ?>
         </nav>
     </div>
 
@@ -74,3 +60,25 @@
         </nav>
     </div>
 </header>
+
+<!-- Chatra {literal} -->
+<script>
+    (function(d, w, c) {
+        w.ChatraID = 'igHEh7N4PEvoDEkR7';
+        var s = d.createElement('script');
+        w[c] = w[c] || function() {
+            (w[c].q = w[c].q || []).push(arguments);
+        };
+        s.async = true;
+        s.src = 'https://call.chatra.io/chatra.js';
+        if (d.head) d.head.appendChild(s);
+    })(document, window, 'Chatra');
+    window.ChatraSetup = {
+        colors: {
+            buttonText: '#000000',
+            /* chat button text color */
+            buttonBg: '#00d8a4' /* chat button background color */
+        }
+    };
+</script>
+<!-- /Chatra {/literal} -->

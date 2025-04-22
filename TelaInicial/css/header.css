@@ -121,6 +121,20 @@ header a:hover {
     margin-bottom: 20px;
 }
 
+header .btn-alunos button {
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #00d8a4;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+  }
+  
+header .btn-alunos button:hover {
+    box-shadow: 0px 0px 8px #00e676;
+}
+
 .planos-btn {
     padding: 12px 25px;
     background-color: #00d8a4;
