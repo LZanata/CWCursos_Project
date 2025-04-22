@@ -72,7 +72,7 @@
                     </div>
                     <div class="central-buttons">
                         <div class="central-button">
-                            <a href="../suporte/suporte.php">Central de Ajuda</a>
+                            <a href="../suporte/suporte.php" target="_blank">Central de Ajuda</a>
                         </div>
                         <div class="central-button">
                             <a href="https://wa.me/5511999999999" target="_blank">WhatsApp</a>
