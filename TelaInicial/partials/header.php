@@ -10,6 +10,13 @@
         s.src = 'https://call.chatra.io/chatra.js';
         if (d.head) d.head.appendChild(s);
     })(document, window, 'Chatra');
+    window.ChatraSetup = {
+        colors: {
+            buttonText: '#000000',
+            /* chat button text color */
+            buttonBg: '#00d8a4' /* chat button background color */
+        }
+    };
 </script>
 <!-- /Chatra {/literal} -->
 
