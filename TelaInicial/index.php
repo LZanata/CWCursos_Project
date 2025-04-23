@@ -114,7 +114,7 @@
                 <div class="interface">
                     <div class="flex">
                         <div class="img-sobre">
-                            <img src="../images/mktimage.jpg" alt="" />
+                            <img src="../images/mulher-escritorio.png" alt="" />
                         </div>
                         <!--img-sobre-->
 
