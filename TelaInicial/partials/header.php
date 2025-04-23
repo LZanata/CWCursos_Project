@@ -1,7 +1,7 @@
 <header class="navbar">
     <div class="nav-header">
         <div class="logo"><a href="#">
-                <img src="../images/logotipodacw.png" alt="Logo da CW Cursos" />
+                <img src="../images/logocwpreto_transparente.png" alt="Logo da CW Cursos" />
             </a></div>
         <div class="search-bar">
             <input type="text" placeholder="O que você gostaria de aprender?">

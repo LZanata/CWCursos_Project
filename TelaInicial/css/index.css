@@ -1,7 +1,7 @@
 /*Estilo Geral*/
 
 h2.titulo {
-  color: white;
+  color: #202124;
   font-size: 34px;
   text-align: center;
 }
@@ -14,14 +14,15 @@ h2.titulo span {
   padding: 10px 40px;
   font-size: 18px;
   font-weight: 600;
-  background-color: #00d8a4;
+  background-color: #1A73E8;
+  color: #FFB400;
   border: 0;
   border-radius: 30px;
   cursor: pointer;
 }
 
 .btn-cursos button:hover {
-  box-shadow: 0px 0px 8px #00e676;
+  box-shadow: 0px 0px 8px #1a6ce8;
 }
 
 /* Estilo do topo do site*/
@@ -37,13 +38,13 @@ section.topo-do-site {
   }
 
   .topo-do-site h1 {
-    color: #fff;
+    color: #202124;
     font-size: 30px;
     line-height: 40px;
   }
 
   .topo-do-site .txt-topo-site p {
-    color: #fff;
+    color: #202124;
     margin: 40px 0;
   }
 
@@ -74,7 +75,7 @@ section.topo-do-site {
   }
 
   .especialidades .especialidades-box {
-    color: white;
+    color: #202124;
     padding: 40px;
     border-radius: 20px;
     margin-top: 45px;
@@ -107,7 +108,7 @@ section.topo-do-site {
   }
 
   .sobre .txt-sobre {
-    color: white;
+    color: #202124;
   }
 
   .sobre .txt-sobre h2 {
@@ -180,7 +181,7 @@ section.topo-do-site {
     }
 
     .menu-toggle:hover {
-      color: #fff;
+      color: #202124;
       transform: scale(1.2);
     }
 
