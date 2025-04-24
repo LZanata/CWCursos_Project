@@ -66,21 +66,6 @@ body {
     border: none;
 }
 
-nav a {
-    color: #ffffff;
-    text-decoration: none;
-    margin: 0 15px;
-    transition: color 0.3s ease;
-}
-
-nav a:hover {
-    color: #00e676; /* Efeito ao passar o mouse */
-}
-
-.nav-botoes a{
-    color: #000000;
-}
-
 header {
     padding: 40px 4%;
 }
@@ -92,14 +77,14 @@ header > .interface {
 }
 
 header a {
-    color: #b3b3b3;
+    color: #202124;
     text-decoration: none;
     display: inline-block;
     transition: 0.2s;
 }
 
 header a:hover {
-    color: #fff;
+    color: #FFB400;
     transform: scale(1.2);
 }
 
@@ -126,7 +111,7 @@ header .btn-alunos button {
     font-size: 18px;
     font-weight: 600;
     background-color: #1A73E8;
-    color: #FFB400;
+    color: #202124;
     border: 0;
     border-radius: 30px;
     cursor: pointer;
@@ -143,6 +128,9 @@ header .btn-alunos button:hover {
     border-radius: 5px;
     cursor: pointer;
     font-size: 1em;
+    font-weight: bold;
+    margin-right: 1rem;
+    margin-left: 1rem;
 }
 
 .menu-toggle {
