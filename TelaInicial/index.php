@@ -63,7 +63,7 @@
 
             <section class="especialidades">
                 <div class="interface">
-                    <h2 class="titulo">NOSSAS <span>ESPECIALIDADES.</span></h2>
+                    <h2 class="titulo">NOSSAS <span>ESPECIALIDADES</span></h2>
                     <div class="felx">
                         <div class="especialidades-box">
                             <i class="bi bi-code-square"></i>

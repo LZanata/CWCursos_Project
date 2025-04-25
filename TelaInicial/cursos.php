@@ -17,7 +17,7 @@
 
         <div class="content-main">
 
-            <section class="header-text">
+            <section class="planos-text">
                 <h1>Cursos de Marketing Digital!</h1>
                 <p>Aprimore-se com o melhor conteúdo em marketing digital e negócios.</p>
                 <button class="planos-btn">Veja os Planos</button>
