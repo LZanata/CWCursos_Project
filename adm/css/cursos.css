@@ -1,28 +1,24 @@
-/* Reset básico */
+:root {
+    --primary-color: #1A73E8; /* Azul principal */
+    --accent-color: #FFB400;  /* Amarelo destaque */
+    --bg-color: #F1F3F4;      /* Fundo claro */
+    --text-color: #202124;    /* Texto escuro */
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Cores e variáveis */
-:root {
-    --primary-color: #1A73E8;
-    --secondary-color: #F1F3F4;
-    --text-color: #202124;
-    --accent-color: #FFB400;
-    --border-color: #ccc;
-}
-
-/* Estilização geral */
 body {
     font-family: Arial, sans-serif;
-    background-color: var(--secondary-color);
+    background-color: var(--bg-color);
     color: var(--text-color);
-    padding: 20px;
+    padding: 2rem;
 }
 
-/* Container principal */
+/* Container geral */
 .container {
     max-width: 1200px;
     margin: 0 auto;

@@ -24,45 +24,6 @@ body {
     margin: 0 auto;
 }
 
-/* Header */
-header {
-    background-color: var(--primary-color);
-    color: #fff;
-    padding: 1.5rem 2rem;
-    border-radius: 10px;
-    margin-bottom: 2rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-header h1 {
-    font-size: 2.5rem;
-    text-align: center;
-}
-
-header nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-}
-
-header nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    font-size: 1.1rem;
-    transition: color 0.3s, transform 0.3s;
-}
-
-header nav ul li a:hover {
-    color: var(--accent-color);
-    transform: scale(1.1);
-}
-
 /* Seções */
 .section {
     background: #ffffff;

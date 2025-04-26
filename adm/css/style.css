@@ -1,4 +1,4 @@
-/* Estilo para o Header */
+/* Estilo do Header */
 header {
     background-color: var(--primary-color);
     color: #fff;
@@ -11,13 +11,11 @@ header {
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* Título do painel */
 header h1 {
     font-size: 2.5rem;
     text-align: center;
 }
 
-/* Navegação */
 header nav ul {
     list-style: none;
     display: flex;
@@ -26,7 +24,6 @@ header nav ul {
     flex-wrap: wrap;
 }
 
-/* Links de navegação */
 header nav ul li a {
     text-decoration: none;
     color: white;
@@ -35,10 +32,7 @@ header nav ul li a {
     transition: color 0.3s, transform 0.3s;
 }
 
-/* Hover nos links */
 header nav ul li a:hover {
     color: var(--accent-color);
     transform: scale(1.1);
 }
-
-
