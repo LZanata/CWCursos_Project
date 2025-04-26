@@ -26,7 +26,45 @@
     </header>
 
     <main>
+        <section class="help-categories">
+            <div class="categories-grid">
+                <a href="#" class="category-item">
+                    <i class="bi bi-person-lock"></i>
+                    <h3>Acesso e Login</h3>
+                    <p>Problemas para acessar ou redefinir senha.</p>
+                </a>
 
+                <a href="#" class="category-item">
+                    <i class="bi bi-book"></i>
+                    <h3>Cursos e Aulas</h3>
+                    <p>Saiba como acessar seus cursos e conteúdos.</p>
+                </a>
+
+                <a href="#" class="category-item">
+                    <i class="bi bi-credit-card"></i>
+                    <h3>Pagamentos</h3>
+                    <p>Formas de pagamento e pendências financeiras.</p>
+                </a>
+
+                <a href="#" class="category-item">
+                    <i class="bi bi-award"></i>
+                    <h3>Certificados</h3>
+                    <p>Emissão e requisitos para gerar certificados.</p>
+                </a>
+
+                <a href="#" class="category-item">
+                    <i class="bi bi-gear"></i>
+                    <h3>Suporte Técnico</h3>
+                    <p>Problemas técnicos? Estamos aqui para ajudar.</p>
+                </a>
+
+                <a href="ticket.php" class="category-item special">
+                    <i class="bi bi-envelope-plus"></i>
+                    <h3>Abrir um Chamado</h3>
+                    <p>Não encontrou o que precisa? Fale conosco.</p>
+                </a>
+            </div>
+        </section>
     </main>
 
     <?php include 'partials/footer.php'; ?> <!-- Inclui o footer -->

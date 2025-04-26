@@ -16,7 +16,7 @@
          <?php if (isset($_SESSION['id']) && $_SESSION['tipo'] === 'aluno'): ?>
              <div class="btn-alunos">
                  <a href="../aluno/areadoaluno.php">
-                     Área do Aluno</
+                     Aluno
                          </a>
              </div>
          <?php else: ?>
