@@ -1,8 +1,10 @@
+/* Cores e variáveis */
 :root {
-    --primary-color: #1A73E8; /* Azul principal */
-    --accent-color: #FFB400;  /* Amarelo destaque */
-    --bg-color: #F1F3F4;      /* Fundo claro */
-    --text-color: #202124;    /* Texto escuro */
+    --primary-color: #1A73E8;
+    --secondary-color: #F1F3F4;
+    --text-color: #202124;
+    --accent-color: #FFB400;
+    --border-color: #ccc;
 }
 
 * {
