@@ -28,6 +28,10 @@ p, h1, h2, h3{
     padding: 0px;
 }
 
+.header-main{
+   padding: 1rem; 
+}
+
 .navbar {
     width: 100%;
     display: flex;
