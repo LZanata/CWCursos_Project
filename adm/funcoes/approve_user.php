@@ -1,5 +1,5 @@
 <?php
-include 'db_connection.php';
+include '../funcoes/conexao.php';
 
 $user_id = $_GET['id'];
 

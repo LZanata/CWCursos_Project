@@ -1,7 +1,7 @@
 <?php
 // Verifica se o formulário foi submetido
 if (isset($_POST['submit'])) {
-    include_once('db_connection.php'); // Inclui o arquivo de configuração
+    include_once('../funcoes/conexao.php'); // Inclui o arquivo de configuração
 
     // Obtém os dados do formulário
     $nome = $_POST['nome'];

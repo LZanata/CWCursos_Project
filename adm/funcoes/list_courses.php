@@ -1,5 +1,5 @@
 <?php
-include 'db_connection.php';
+include '../funcoes/conexao.php';
 
 // Consulta para listar todos os cursos
 $sql = "SELECT * FROM cursos WHERE status != 'deletado'";

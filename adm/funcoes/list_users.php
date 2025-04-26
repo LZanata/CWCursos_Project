@@ -1,5 +1,5 @@
 <?php
-include 'db_connection.php';
+include '../funcoes/conexao.php';
 
 $type = isset($_GET['type']) ? $_GET['type'] : 'aluno'; // Define o tipo como aluno por padrão
 
