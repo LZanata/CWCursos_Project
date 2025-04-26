@@ -18,9 +18,9 @@
     <header class="navbar">
         <?php include 'partials/header.php'; ?> <!-- Inclui o header -->
         <div class="nav-central">
-            <h1>Como podemos ajuda-lo?</h1> <!-- Título principal da página -->
+            <h1>Como podemos ajudar?</h1> <!-- Título principal da página -->
             <div class="search-bar">
-                <input type="text" placeholder="Pesquisa por ajuda...">
+                <input type="text" id="searchInput" placeholder="Pesquise por ajuda...">
             </div>
         </div>
     </header>
@@ -68,6 +68,26 @@
     </main>
 
     <?php include 'partials/footer.php'; ?> <!-- Inclui o footer -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const searchInput = document.getElementById('searchInput');
+            const cards = document.querySelectorAll('.category-item');
+
+            searchInput.addEventListener('input', function() {
+                const searchText = searchInput.value.toLowerCase();
+
+                cards.forEach(card => {
+                    const cardText = card.textContent.toLowerCase();
+                    if (cardText.includes(searchText)) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+
 </body>
 
 </html>
