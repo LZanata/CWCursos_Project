@@ -99,6 +99,7 @@ header a {
 
 header a:hover {
     transform: scale(1.2);
+    color: var(--amarelo);
 }
 
 
