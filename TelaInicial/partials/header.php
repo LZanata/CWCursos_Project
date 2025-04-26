@@ -9,11 +9,7 @@
 
         <nav class="nav-botoes">
             <?php if (isset($_SESSION['id']) && $_SESSION['tipo'] === 'aluno'): ?>
-                <div class="btn-alunos">
-                    <a href="../aluno/areadoaluno.php">
-                        Área do Aluno</
-                    </a>
-                </div>
+                <a href="../aluno/areadoaluno.php" class="planos-btn">Área do Aluno</a>
             <?php else: ?>
                 <a href="../cadastro_login/professor/signin.php" class="planos-btn">Seja um Professor</a>
                 <a href="../cadastro_login/aluno/signin.php" class="planos-btn">Entrar</a>
