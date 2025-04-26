@@ -5,110 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Suporte - Plataforma de Cursos</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        .hidden {
-            display: none;
-        }
-
-        #contact-form button {
-            color: white;
-        }
-    </style>
+    <link rel="stylesheet" href="partials/style.css">
+    <link rel="stylesheet" href="css/suporte.css">
+    <!--BOOTSTRAPS inicio-->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <!--BOOTSRAPS FIM-->
 </head>
 
 <body>
-    <!-- Cabeçalho da página com título e navegação -->
     <header>
-        <h1>Suporte</h1> <!-- Título principal da página -->
-        <nav>
-            <ul>
-                <li><a href="#contact">Contato</a></li> <!-- Link para a seção de contato -->
-                <li><a href="#faq">FAQ</a></li> <!-- Link para a seção de perguntas frequentes -->
-            </ul>
-        </nav>
+        <?php include 'partials/header.php'; ?> <!-- Inclui o header -->
+        <div class="nav-central">
+            <h1>Central de Ajuda CW Cursos</h1> <!-- Título principal da página -->
+            <div class="search-bar">
+                <input type="text" placeholder="Pesquisa por ajuda">
+            </div>
+        </div>
     </header>
 
     <main>
-        <!-- Seção de contato -->
-        <section id="contact">
-            <h2>Contato</h2> <!-- Subtítulo da seção -->
-            <form id="contact-form" action="#" method="post"> <!-- Formulário de contato -->
-                <label for="name">Nome:</label> <!-- Rótulo para o campo nome -->
-                <input type="text" id="name" name="name" required> <!-- Campo de entrada para o nome -->
-                <label for="email">Email:</label> <!-- Rótulo para o campo email -->
-                <input type="email" id="email" name="email" required> <!-- Campo de entrada para o email -->
-                <label for="message">Mensagem:</label> <!-- Rótulo para o campo mensagem -->
-                <textarea id="message" name="message" required></textarea> <!-- Área de texto para a mensagem -->
-                <button type="submit">Enviar</button> <!-- Botão para enviar o formulário -->
-            </form>
-            <!-- Mensagem de resposta oculta -->
-            <div id="response-message" class="hidden">Sua mensagem foi enviada! O prazo de resposta pode variar de 10 a 30 dias. Caso tenha alguma dúvida mais Urgente, ligue para 11999024689 e fale com nossa Central!</div>
-        </section>
 
-        <!-- Seção de perguntas frequentes -->
-        <section id="faq">
-            <h2>Perguntas Frequentes</h2> <!-- Subtítulo da seção -->
-            <!-- Pergunta e resposta sobre o acesso aos cursos -->
-            <div class="faq-item">
-                <button class="faq-question">Como faço para acessar os cursos?</button>
-                <div class="faq-answer hidden">
-                    <p>Você pode acessar os cursos através do painel do aluno após efetuar login.</p>
-                </div>
-            </div>
-            <!-- Pergunta e resposta sobre recuperação de senha -->
-            <div class="faq-item">
-                <button class="faq-question">Esqueci minha senha. O que devo fazer?</button>
-                <div class="faq-answer hidden">
-                    <p>Clique em "Esqueci minha senha" na página de login e siga as instruções.</p>
-                </div>
-            </div>
-            <!-- Pergunta e resposta sobre contato com o suporte -->
-            <div class="faq-item">
-                <button class="faq-question">Como posso entrar em contato com o suporte?</button>
-                <div class="faq-answer hidden">
-                    <p>Você pode entrar em contato conosco através da seção de contato abaixo ou enviando um email para suporte@plataformadecursos.com.</p>
-                </div>
-            </div>
-            <!-- Pergunta e resposta sobre acesso pelo celular -->
-            <div class="faq-item">
-                <button class="faq-question">Posso acessar os cursos pelo celular?</button>
-                <div class="faq-answer hidden">
-                    <p>Sim, nossos cursos são compatíveis com dispositivos móveis. Basta acessar o site pelo navegador do seu celular.</p>
-                </div>
-            </div>
-            <!-- Pergunta e resposta sobre certificados dos cursos -->
-            <div class="faq-item">
-                <button class="faq-question">Os cursos têm certificado?</button>
-                <div class="faq-answer hidden">
-                    <p>Sim, todos os nossos cursos oferecem certificado de conclusão que você pode baixar e imprimir.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contêiner do chatbot -->
-        <div id="chatbot-container">
-            <!-- Caixa de chat inicialmente oculta -->
-            <div id="chatbox" class="hidden">
-                <div id="chatbox-header">Chatbot de Suporte</div> <!-- Cabeçalho da caixa de chat -->
-                <div id="chat-messages"></div> <!-- Área onde as mensagens do chat aparecerão -->
-
-                <form action="/chatbot" method='POST'> <!-- Formulário para enviar mensagens ao chatbot -->
-                    <input type="text" name="pergunta" id="chat-input" placeholder="Digite sua mensagem..."> <!-- Campo de entrada de texto para a mensagem -->
-                    <button type="submit" id="chat-send">Enviar</button> <!-- Botão para enviar a mensagem -->
-                </form>
-            </div>
-            <button id="chatbot-toggle">Chat</button> <!-- Botão para abrir/fechar a caixa de chat -->
-        </div>
     </main>
 
-    <!-- Rodapé da página -->
-    <footer>
-        <p>&copy; 2024 Plataforma de Cursos Online CW. Todos os direitos reservados.</p>
-    </footer>
-
-    <script src="scripts.js"></script> <!-- Link para o arquivo de script JavaScript externo -->
-    <script src="chat.js"></script> <!-- Link para o arquivo de script JavaScript externo do chatbot -->
+    <?php include 'partials/footer.php'; ?> <!-- Inclui o footer -->
 </body>
 
 </html>

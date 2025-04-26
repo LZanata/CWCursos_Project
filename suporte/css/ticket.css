@@ -1,81 +1,14 @@
-/* Estilos gerais para o corpo da página */
-body {
-    font-family: Arial, sans-serif; /* Define a fonte padrão */
-    margin: 0; /* Remove margem padrão */
-    padding: 0; /* Remove padding padrão */
-    background: url('imagens/background.jpg') no-repeat center center fixed; /* Define a imagem de fundo */
-    background-size: cover; /* Cobre toda a área */
-    color: white; /* Define a cor do texto */
-    min-height: 100vh; /* Define a altura mínima */
-    display: flex; /* Usa flexbox */
-    flex-direction: column; /* Direção da flexbox em coluna */
-}
-
-/* Estilos para o cabeçalho */
-header {
-    background-color: rgba(0, 0, 0, 0.8); /* Fundo preto semitransparente */
-    color: white; /* Cor do texto */
-    padding: 1em 0; /* Espaçamento interno */
-    text-align: center; /* Centraliza o texto */
-}
-
-/* Estilos para o menu de navegação */
-nav ul {
-    list-style: none; /* Remove marcadores */
-    padding: 0; /* Remove padding */
-}
-
-nav ul li {
-    display: inline; /* Exibe os itens em linha */
-    margin: 0 1em; /* Define margem entre os itens */
-}
-
-nav ul li a {
-    color: white; /* Cor do texto */
-    text-decoration: none; /* Remove sublinhado */
-}
-
-/* Estilos para a área principal */
-main {
-    flex: 1; /* Flex cresce para preencher o espaço disponível */
-    padding: 2em; /* Espaçamento interno */
-    display: flex; /* Usa flexbox */
-    flex-direction: column; /* Direção da flexbox em coluna */
-    gap: 2em; /* Adiciona espaçamento entre as seções */
-}
-
 /* Estilos para os títulos */
 h2 {
-    color: #0073e6; /* Cor azul */
+    color: var(--azul); /* Cor azul */
 }
 
-/* Estilos para os itens da FAQ */
-.faq-item {
-    background-color: white; /* Fundo branco */
-    color: black; /* Cor do texto */
-    padding: 1em; /* Espaçamento interno */
-    border-radius: 8px; /* Bordas arredondadas */
-    margin-bottom: 1em; /* Margem inferior */
-    border: 1px solid #ccc; /* Borda cinza */
+.hidden {
+    display: none;
 }
 
-/* Estilos para as perguntas da FAQ */
-.faq-question {
-    background: none; /* Sem fundo */
-    border: none; /* Sem borda */
-    font-size: 1.2em; /* Tamanho da fonte */
-    font-weight: bold; /* Texto em negrito */
-    text-align: left; /* Alinha o texto à esquerda */
-    width: 100%; /* Largura total */
-    padding: 0.5em 0; /* Espaçamento interno */
-    cursor: pointer; /* Cursor de ponteiro */
-    color: #0073e6; /* Cor azul */
-}
-
-/* Estilos para as respostas da FAQ */
-.faq-answer {
-    display: none; /* Esconde por padrão */
-    padding: 0.5em 0; /* Espaçamento interno */
+#contact-form button {
+    color: white;
 }
 
 /* Estilos para o formulário */
@@ -107,14 +40,6 @@ form button {
     cursor: pointer; /* Cursor de ponteiro */
 }
 
-/* Estilos para o rodapé */
-footer {
-    background-color: rgba(0, 0, 0, 0.8); /* Fundo preto semitransparente */
-    color: white; /* Cor do texto */
-    text-align: center; /* Centraliza o texto */
-    padding: 1em 0; /* Espaçamento interno */
-}
-
 /* Estilos para a mensagem de resposta após enviar a dúvida */
 #response-message {
     background-color: white; /* Fundo branco */
@@ -126,23 +51,6 @@ footer {
     text-align: center; /* Centraliza o texto */
     max-width: 400px; /* Largura máxima */
     margin: 0 auto; /* Centraliza horizontalmente */
-}
-
-/* Estilos para o contêiner do chatbot */
-#chatbot-container {
-    position: fixed; /* Posicionamento fixo */
-    bottom: 20px; /* Alinha ao fundo */
-    right: 20px; /* Alinha à direita */
-}
-
-/* Estilos para o botão do chatbot */
-#chatbot-toggle {
-    background-color: #007bff; /* Fundo azul */
-    color: white; /* Cor do texto */
-    border: none; /* Sem borda */
-    padding: 10px 20px; /* Espaçamento interno */
-    border-radius: 5px; /* Bordas arredondadas */
-    cursor: pointer; /* Cursor de ponteiro */
 }
 
 /* Estilos para a caixa de chat */
