@@ -162,7 +162,7 @@ section .wave {
     bottom: 0; /* Alinha ao fundo */
     left: 0; /* Alinha à esquerda */
     width: 100%; /* Largura total */
-    height: 100px; /* Altura fixa */
+    height: 90px; /* Altura fixa */
     background: url(../../images/wave.png); /* Imagem de fundo */
     filter: invert(32%) sepia(91%) saturate(3683%) hue-rotate(204deg) brightness(97%) contrast(101%);
     background-size: 1000px 100px; /* Tamanho da imagem */
