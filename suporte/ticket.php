@@ -24,7 +24,7 @@
 </head>
 
 <body>
-    <header>
+    <header class="navbar">
         <?php include 'partials/header.php'; ?> <!-- Inclui o header -->
     </header>
 

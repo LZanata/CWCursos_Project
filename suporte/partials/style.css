@@ -18,34 +18,6 @@ body {
 }
 
 /* Estilos para o cabeçalho */
-.navbar {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    padding: 0px 0;
-    gap: 10px;
-}
-
-.nav-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 15px;
-}
-
-.nav-support{
-    display: flex;
-    justify-content: center;
-}
-
-.nav-support li{
-    margin-left: 2rem;
-}
-
-.logo {
-    font-size: 2.5em;
-    font-weight: bold;
-}
 
 header {
     background-color: var(--azul); /* Fundo preto semitransparente */
@@ -75,28 +47,60 @@ header a:hover {
     transform: scale(1.2);
 }
 
-
 header .btn-alunos a {
-    padding: 10px 30px;
+    padding: 0.8rem 10px;
     font-size: 18px;
     font-weight: 600;
     background-color: var(--azul);
-    color: #202124;
+    color: var(--cinza-claro);
     border: 0;
     border-radius: 5px;
     cursor: pointer;
-  }
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 0;
+    gap: 10px;
+}
+
+.nav-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 2rem 0 2rem;
+}
+
+.nav-botoes{
+    display: flex;
+}
+
+.nav-support li{
+    margin-left: 1rem;
+}
+
+.logo {
+    display: flex;
+    font-weight: bold;
+}
+
+.logo h1{
+    font-size: 1.5rem;
+    padding: 1.2rem 0 0 0; 
+    margin-left: 1.5rem;
+}
 
 .planos-btn {
-    padding: 12px 0.5rem;
     background-color: var(--azul);
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 1em;
     font-weight: bold;
-    margin-right: 1rem;
-    margin-left: 1rem;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
 }
 
 /* Estilos para o menu de navegação */

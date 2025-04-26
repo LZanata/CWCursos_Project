@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Suporte - Plataforma de Cursos</title>
     <link rel="stylesheet" href="partials/style.css">
-    <link rel="stylesheet" href="css/suporte.css">
+    <link rel="stylesheet" href="css/artigos.css">
     <!--BOOTSTRAPS inicio-->
     <link
         rel="stylesheet"
@@ -15,19 +15,60 @@
 </head>
 
 <body>
-    <header>
+    <header class="navbar">
         <?php include 'partials/header.php'; ?> <!-- Inclui o header -->
         <div class="nav-central">
-            <h1>Central de Ajuda CW Cursos</h1> <!-- Título principal da página -->
+            <h1> Artigos de Ajuda</h1> <!-- Título principal da página -->
             <div class="search-bar">
-                <input type="text" placeholder="Pesquisa por ajuda">
+                <input type="text" placeholder="Pesquise artigos de ajuda...">
             </div>
-            <h2>Artigos</h2>
         </div>
     </header>
 
     <main>
-        
+        <section class="articles-section">
+            <div class="article-category">
+                <h3><i class="bi bi-person-lock"></i> Acesso e Login</h3>
+                <ul>
+                    <li><a href="#">Como redefinir minha senha?</a></li>
+                    <li><a href="#">Esqueci meu e-mail de acesso, o que fazer?</a></li>
+                    <li><a href="#">Como mudar minha senha?</a></li>
+                </ul>
+            </div>
+
+            <div class="article-category">
+                <h3><i class="bi bi-book"></i> Cursos e Aulas</h3>
+                <ul>
+                    <li><a href="#">Como acessar meus cursos?</a></li>
+                    <li><a href="#">Problemas para assistir às aulas</a></li>
+                    <li><a href="#">Como enviar atividades no curso?</a></li>
+                </ul>
+            </div>
+
+            <div class="article-category">
+                <h3><i class="bi bi-credit-card"></i> Pagamentos</h3>
+                <ul>
+                    <li><a href="#">Formas de pagamento aceitas</a></li>
+                    <li><a href="#">Como verificar pendências financeiras?</a></li>
+                </ul>
+            </div>
+
+            <div class="article-category">
+                <h3><i class="bi bi-award"></i> Certificados</h3>
+                <ul>
+                    <li><a href="#">Como emitir meu certificado?</a></li>
+                    <li><a href="#">Requisitos para emissão do certificado</a></li>
+                </ul>
+            </div>
+
+            <div class="article-category">
+                <h3><i class="bi bi-gear"></i> Suporte Técnico</h3>
+                <ul>
+                    <li><a href="#">O vídeo da aula não carrega, o que fazer?</a></li>
+                    <li><a href="#">Problemas de login ou travamento</a></li>
+                </ul>
+            </div>
+        </section>
     </main>
 
     <?php include 'partials/footer.php'; ?> <!-- Inclui o footer -->

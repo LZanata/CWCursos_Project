@@ -15,12 +15,12 @@
 </head>
 
 <body>
-    <header>
+    <header class="navbar">
         <?php include 'partials/header.php'; ?> <!-- Inclui o header -->
         <div class="nav-central">
-            <h1>Central de Ajuda CW Cursos</h1> <!-- Título principal da página -->
+            <h1>Como podemos ajuda-lo?</h1> <!-- Título principal da página -->
             <div class="search-bar">
-                <input type="text" placeholder="Pesquisa por ajuda">
+                <input type="text" placeholder="Pesquisa por ajuda...">
             </div>
         </div>
     </header>
