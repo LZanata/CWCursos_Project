@@ -102,6 +102,7 @@
         </p>
       </section>
     </main>
+    <?php include 'partials/footer.php'; ?> <!-- Inclui o footer -->
   </div>
   <script>
     const menuToggle = document.getElementById("menuToggle");

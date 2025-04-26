@@ -24,7 +24,6 @@ p, h1, h2, h3{
 }
 
 .container {
-    max-width: 1200px;
     width: 100%;
     padding: 0px;
 }
@@ -145,3 +144,61 @@ header .btn-alunos button:hover {
     transition: all 0.3s ease-in-out;
     margin: 2px;
   }
+
+  .waves {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    margin-top: 60px;
+}
+
+/* Estilo para a seção de ondas */
+section .wave {
+    position: absolute; /* Posicionamento absoluto */
+    bottom: 0; /* Alinha ao fundo */
+    left: 0; /* Alinha à esquerda */
+    width: 100%; /* Largura total */
+    height: 100px; /* Altura fixa */
+    background: url(../../images/wave.png); /* Imagem de fundo */
+    filter: invert(32%) sepia(91%) saturate(3683%) hue-rotate(204deg) brightness(97%) contrast(101%);
+    background-size: 1000px 100px; /* Tamanho da imagem */
+}
+/* Animações das ondas */
+section .wave.wave1 {
+    animation: animate 30s linear infinite; /* Animação contínua */
+    z-index: 1000; /* Camada superior */
+    opacity: 1; /* Opacidade total */
+    animation-delay: 0s; /* Sem atraso */
+    bottom: 0; /* Alinha ao fundo */
+}
+section .wave.wave2 {
+    animation: animate2 15s linear infinite; /* Animação contínua */
+    z-index: 999; /* Camada inferior à wave1 */
+    opacity: 0.5; /* Opacidade reduzida */
+    animation-delay: -5s; /* Atraso na animação */
+    bottom: 10px; /* Alinha 10px acima do fundo */
+}
+section .wave.wave3 {
+    animation: animate3 30s linear infinite; /* Animação contínua */
+    z-index: 997; /* Camada inferior à wave2 */
+    opacity: 0.7; /* Opacidade intermediária */
+    animation-delay: -2s; /* Atraso na animação */
+    bottom: 20px; /* Alinha 20px acima do fundo */
+}
+/* Animações */
+@keyframes animate {
+    0% {background-position-x: 0;}
+    100% {background-position-x: 1000px;}
+}
+@keyframes animate2 {
+    0% {background-position-x: 0;}
+    100% {background-position-x: -1000px;}
+}
+@keyframes animate3 {
+    0% {background-position-x: 0;}
+    100% {background-position-x: 1000px;}
+}
+@keyframes animate4 {
+    0% {background-position-x: 0;}
+    100% {background-position-x: -1000px;}
+}

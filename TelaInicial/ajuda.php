@@ -82,6 +82,7 @@
                 </div>
             </section>
         </main>
+        <?php include 'partials/footer.php'; ?> <!-- Inclui o footer -->
     </div>
 </body>
 
