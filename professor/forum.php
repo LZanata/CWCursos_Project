@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang='pt-BR'>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,23 +15,31 @@
             margin: 0;
             padding: 0;
         }
+
         header {
             padding: 20px 0;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
             z-index: 10;
         }
+
         .container {
             max-width: 600px;
-            margin: 40px auto; /* Espaçamento entre o cabeçalho e o contêiner */
-            background: rgba(255, 255, 255, 0.9); /* Fundo branco com transparência das caixas de texto */
+            margin: 40px auto;
+            /* Espaçamento entre o cabeçalho e o contêiner */
+            background: rgba(255, 255, 255, 0.9);
+            /* Fundo branco com transparência das caixas de texto */
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
         }
-        h1, h2 {
+
+        h1,
+        h2 {
             text-align: center;
-            margin-bottom: 20px; /* Espaçamento abaixo dos títulos */
+            margin-bottom: 20px;
+            /* Espaçamento abaixo dos títulos */
         }
+
         .question-input {
             width: 100%;
             padding: 10px;
@@ -39,10 +48,12 @@
             border-radius: 5px;
             transition: border-color 0.3s;
         }
+
         .question-input:focus {
             border-color: #1E7E34;
             outline: none;
         }
+
         .button {
             background-color: #4CAF50;
             color: white;
@@ -53,26 +64,32 @@
             transition: background-color 0.3s;
             width: 100%;
         }
+
         .button:hover {
             background-color: #45a049;
         }
+
         .forum-post {
-            background: rgba(249, 249, 249, 0.9); /* Fundo dos posts com transparência */
+            background: rgba(249, 249, 249, 0.9);
+            /* Fundo dos posts com transparência */
             border: 1px solid #ddd;
             border-radius: 5px;
             padding: 15px;
             margin: 10px 0;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
+
         .delete-button {
             background-color: #f44336;
             margin-top: 10px;
         }
+
         .delete-button:hover {
             background-color: #d32f2f;
         }
     </style>
 </head>
+
 <body>
     <header>
         <nav class='navbar navbar-default customer-nav customer-brand-nav' role='navigation'>
@@ -108,7 +125,7 @@
         </nav>
 
         <a id="sidebar-toggle-white" href="#"><span class='sr-only'>Toggle navigation</span></a>
-        
+
         <nav class='navbar navbar-default brand-nav' role='navigation'>
             <div class='container'>
                 <button class='navbar-toggle' data-target='#navbar-collapse-2' data-toggle='collapse' type='button'>
@@ -167,7 +184,10 @@
             const content = document.getElementById('questionContent').value;
 
             if (title && content) {
-                const post = { title, content };
+                const post = {
+                    title,
+                    content
+                };
                 saveToLocalStorage(post);
                 renderPosts();
                 clearInputs();
@@ -224,4 +244,5 @@
         document.addEventListener('DOMContentLoaded', renderPosts);
     </script>
 </body>
+
 </html>

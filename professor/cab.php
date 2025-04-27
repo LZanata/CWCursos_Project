@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang='pt-BR'>
+
 <head>
     <link rel="stylesheet" media="all" href="S.css" />
     <link rel="shortcut icon" type="image/x-icon" href="https://d2ffu0zq97rhm7.cloudfront.net/fallback/brand_image/default.png" />
@@ -9,6 +10,7 @@
         }
     </style>
 </head>
+
 <body>
     <header>
         <nav class='navbar navbar-default customer-nav customer-brand-nav' role='navigation'>
@@ -44,7 +46,7 @@
         </nav>
 
         <a id="sidebar-toggle-white" href="#"><span class='sr-only'>Toggle navigation</span></a>
-        
+
         <nav class='navbar navbar-default brand-nav' role='navigation'>
             <div class='container'>
                 <button class='navbar-toggle' data-target='#navbar-collapse-2' data-toggle='collapse' type='button'>
@@ -88,4 +90,5 @@
         </div>
     </header>
 </body>
+
 </html>
