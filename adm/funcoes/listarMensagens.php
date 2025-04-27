@@ -21,9 +21,27 @@ if ($result->num_rows > 0) {
         echo "<strong>Data:</strong> " . date('d/m/Y H:i', strtotime($row['data_criacao'])) . "<br>";
         echo "<button onclick=\"responderTicket({$row['id']})\">Responder</button>";
         echo "</div><br>";
+
+        // Buscar respostas associadas (movido dentro do loop)
+        $ticketId = $row['id'];
+        $respostasSql = "SELECT resposta, data_resposta FROM respostas_tickets WHERE ticket_id = $ticketId ORDER BY data_resposta ASC";
+        $respostasResult = $conexao->query($respostasSql);
+
+        if ($respostasResult->num_rows > 0) {
+            echo "<div class='respostas'>";
+            echo "<h4>Respostas:</h4>";
+            while ($resposta = $respostasResult->fetch_assoc()) {
+                echo "<div class='resposta'>";
+                echo "<p>" . nl2br(htmlspecialchars($resposta['resposta'])) . "</p>";
+                echo "<small>Enviado em: " . date('d/m/Y H:i', strtotime($resposta['data_resposta'])) . "</small>";
+                echo "</div>";
+            }
+            echo "</div>";
+        }
     }
 } else {
     echo "<p>Nenhuma mensagem encontrada.</p>";
 }
 
 $conexao->close();
+?>
