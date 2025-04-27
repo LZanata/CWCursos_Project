@@ -2,7 +2,7 @@
  <div class="nav-header">
      <div class="logo">
          <a href="#">
-             <img src="../images/logocwbranco_transparente.png" alt="Logo da CW Cursos" />
+             <img src="../../images/logocwbranco_transparente.png" alt="Logo da CW Cursos" />
          </a>
          <a href="#">
              <h1>Central de Ajuda</h1>
@@ -12,21 +12,21 @@
      <nav class="nav-botoes">
          <nav class="nav-support">
              <ul>
-                 <li><a href="suporte.php">Início</a></li>
-                 <li><a href="artigos.php">Artigos</a></li>
-                 <li><a href="ticket.php">Abrir um Ticket</a></li>
+                 <li><a href="../suporte.php">Início</a></li>
+                 <li><a href="../artigos.php">Artigos</a></li>
+                 <li><a href="../ticket.php">Abrir um Ticket</a></li>
              </ul>
          </nav>
          <?php if (isset($_SESSION['id']) && $_SESSION['tipo'] === 'aluno'): ?>
              <div class="btn-alunos">
-                 <a href="../aluno/areadoaluno.php">
+                 <a href="#">
                      Aluno
                  </a>
              </div>
          <?php else: ?>
              <div class="btn-alunos">
-                 <a href="cadastro_login/signin.php" class="planos-btn">Entrar</a>
-                 <a href="cadastro_login/signup.php" class="planos-btn">Cadastrar-se</a>
+                 <a href="signin.php" class="planos-btn">Entrar</a>
+                 <a href="signup.php" class="planos-btn">Cadastrar-se</a>
              </div>
          <?php endif; ?>
      </nav>
