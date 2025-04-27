@@ -19,9 +19,19 @@
          </nav>
          <?php if (isset($_SESSION['id']) && $_SESSION['tipo'] === 'aluno'): ?>
              <div class="btn-alunos">
-                 <a href="../aluno/areadoaluno.php">
-                     Aluno
-                 </a>
+                 <div id="perfilAlunoBtn" class="perfil-aluno-btn">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#333" viewBox="0 0 24 24">
+                         <path d="M12 12c2.7 0 5-2.3 5-5s-2.3-5-5-5-5 2.3-5 5 2.3 5 5 5zm0 2c-3.3 0-10 1.7-10 5v3h20v-3c0-3.3-6.7-5-10-5z" />
+                     </svg>
+                 </div>
+
+                 <!-- Container de opções -->
+                 <div id="perfilAlunoOpcoes" class="perfil-opcoes">
+                     <a href="perfil.php">Meu Perfil</a>
+                     <a href="configuracoes.php">Configurações</a>
+                     <a href="meusTickets.php">Meus Tickets</a>
+                     <a href="logout.php">Sair</a>
+                 </div>
              </div>
          <?php else: ?>
              <div class="btn-alunos">
@@ -31,6 +41,24 @@
          <?php endif; ?>
      </nav>
  </div>
+ <script>
+     document.addEventListener('DOMContentLoaded', function() {
+         const perfilBtn = document.getElementById('perfilAlunoBtn');
+         const opcoes = document.getElementById('perfilAlunoOpcoes');
+
+         perfilBtn.addEventListener('click', function(e) {
+             e.stopPropagation(); // para não fechar na hora de abrir
+             opcoes.classList.toggle('show');
+         });
+
+         document.addEventListener('click', function(event) {
+             if (!perfilBtn.contains(event.target) && !opcoes.contains(event.target)) {
+                 opcoes.classList.remove('show');
+             }
+         });
+     });
+ </script>
+
 
  <!-- Chatra {literal} -->
  <script>

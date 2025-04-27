@@ -77,6 +77,10 @@ header .btn-alunos a {
     display: flex;
 }
 
+.nav-support{
+    margin-right: 1rem;
+}
+
 .nav-support li{
     margin-left: 1rem;
 }
@@ -117,6 +121,70 @@ nav ul li {
 nav ul li a {
     color: white; /* Cor do texto */
     text-decoration: none; /* Remove sublinhado */
+}
+
+.perfil-aluno-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    background-color: #f5f5f5;
+    padding: 8px 12px;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+}
+
+.perfil-aluno-btn:hover {
+    background-color: #e0e0e0;
+}
+
+.icone-perfil {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+.perfil-opcoes {
+    position: absolute;
+    top: 100px; /* ajusta conforme seu layout */
+    right: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 200px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 100;
+}
+
+.perfil-opcoes.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+.perfil-opcoes a {
+    display: block;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: #333;
+    font-size: 15px;
+}
+
+.perfil-opcoes a:hover {
+    background-color: #f0f0f0;
+    color: #000;
+}
+
+.perfil-aluno-btn svg {
+    transition: fill 0.3s ease;
+}
+
+.perfil-aluno-btn:hover svg {
+    fill: #007bff; /* muda para azul no hover */
 }
 
 /* Estilos para a área principal */
