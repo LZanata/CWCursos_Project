@@ -29,6 +29,7 @@ $data_nascimento = $row['data_nascimento'];
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil do Usuário - Cursos</title>
+    <link rel="shortcut icon" href="../images/logotipocw.png" />
     <style>
         body {
             margin: 0;

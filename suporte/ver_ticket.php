@@ -55,6 +55,7 @@ $respostas = $stmtRespostas->get_result();
 <head>
     <meta charset="UTF-8">
     <title>Detalhes do Ticket</title>
+    <link rel="shortcut icon" href="../images/logotipocw.png" />
     <link rel="stylesheet" href="partials/style.css">
     <link rel="stylesheet" href="css/ver_ticket.css">
 </head>

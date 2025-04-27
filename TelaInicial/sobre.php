@@ -6,6 +6,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CW Cursos - Cursos de Marketing Digital</title>
+  <link rel="shortcut icon" href="../images/logotipocw.png" />
   <link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/sobre.css">
 </head>
