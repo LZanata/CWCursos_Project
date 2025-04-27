@@ -30,12 +30,18 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['submit'])) {
             $_SESSION['tipo'] = $user['tipo'];
             $_SESSION['status'] = $user['status'];
 
-            // Redireciona para a área do aluno
-            if ($user['tipo'] === 'aluno') {
+            // Redireciona para a página conforme o tipo de usuário
+            if ($user['tipo'] === 'administrador') {
+                header("Location: http://localhost/AAP-CW_Cursos/adm/index.php");
+                exit;
+            } elseif ($user['tipo'] === 'professor') {
+                header("Location: http://localhost/AAP-CW_Cursos/index.html");
+                exit;
+            } elseif ($user['tipo'] === 'aluno') {
                 header("Location: http://localhost/AAP-CW_Cursos/TelaInicial/index.php");
                 exit;
             } else {
-                $mensagemErro = "Apenas usuários do tipo aluno podem acessar esta área.";
+                $mensagemErro = "Tipo de usuário desconhecido.";
             }
         } else {
             $mensagemErro = "Senha incorreta.";
@@ -72,7 +78,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['submit'])) {
                     <label for="login">Usuário ou E-mail</label>
                 </div>
 
-
                 <!-- Campo de senha com label flutuante -->
                 <div class="label-float">
                     <input type="password" name="senha" id="senha" placeholder=" " required />
@@ -105,8 +110,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['submit'])) {
             <!-- Link para a página de cadastro -->
             <p>Não tem uma conta? <a href="signup.php">Cadastre-se</a></p>
         </div>
-
     </div>
+
     <script>
         function toggleSenha(id, el) {
             const input = document.getElementById(id);
@@ -122,6 +127,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['submit'])) {
                 icon.classList.add("bi-eye");
             }
         }
+
         // Aguarda o DOM carregar
         document.addEventListener("DOMContentLoaded", function() {
             const msgError = document.querySelector("#msgError .erro");
@@ -145,5 +151,4 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['submit'])) {
         });
     </script>
 </body>
-
 </html>
