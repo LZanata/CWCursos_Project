@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CW Cursos - Plataforma de Cursos Online</title>
-    <link rel="shortcut icon" href="../images/logotipocw.png" />
+    <link rel="shortcut icon" href="../../images/logotipocw.png" />
     <style>
         body {
             font-family: 'Poppins', sans-serif;
