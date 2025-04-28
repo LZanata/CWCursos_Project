@@ -18,10 +18,7 @@
 
  /* Estilo para o corpo da página */
  body {
-     background-image: url(images/cwlogin.png); /* Imagem de fundo */
-     background-repeat: no-repeat; /* Não repetir a imagem */
-     background-size: cover; /* Cobre toda a área */
-     background-attachment: fixed; /* Fixa a imagem no fundo */
+    background-color: var(--cinza-claro);
  }
 
  /* Container principal */

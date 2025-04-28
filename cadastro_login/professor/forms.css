@@ -1,10 +1,3 @@
-    /* Estilo geral */
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
     /*Estilo Geral*/
     :root {
         --azul: #1A73E8;
@@ -13,21 +6,8 @@
         --amarelo: #FFB400;
     }
     
-    body {
-        font-family: Arial, sans-serif;
-        background: url('../images/formsfundo.jpeg') no-repeat center center fixed; /* URL da imagem */
-        background-size: cover;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        min-height: 100vh;
-        margin: 0;
-        filter: brightness(90%) blur(0.1px); /* Leve ajuste de brilho e desfoque */
-    }
-    
-    
         /* Container principal */
-    .container {
+    .container-card {
         display: flex; /* Flexbox */
         justify-content: center; /* Centraliza horizontalmente */
         width: 100%; /* Largura total */

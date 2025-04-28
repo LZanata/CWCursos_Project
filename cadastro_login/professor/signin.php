@@ -46,39 +46,44 @@ if (isset($_POST['submit'])) {
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="signin.css">
+    <link rel="stylesheet" href="partials/style.css">
 </head>
 
 <body>
-    <div class="back-button">
-        <a href="../../TelaInicial/index.php"><i class="bi bi-arrow-left-circle"></i></a>
-    </div>
     <div class="container">
-        <div class="card">
-            <h1>Entrar como Professor</h1>
-            <?php
-            if (!empty($_SESSION['msg'])) {
-                echo "<div class='error-msg'>" . $_SESSION['msg'] . "</div>";
-                unset($_SESSION['msg']);
-            }
-            ?>
-            <form method="POST" action="">
-                <div class="label-float">
-                    <input type="text" name="login" id="login" placeholder=" " required>
-                    <label for="login">Usuário ou E-mail</label>
+
+        <div class="header-main">
+            <?php include 'partials/header.php'; ?> <!-- Inclui o header -->
+            <div class="container-card">
+                <div class="card">
+                    <h1>Entrar como Professor</h1>
+                    <?php
+                    if (!empty($_SESSION['msg'])) {
+                        echo "<div class='error-msg'>" . $_SESSION['msg'] . "</div>";
+                        unset($_SESSION['msg']);
+                    }
+                    ?>
+                    <form method="POST" action="">
+                        <div class="label-float">
+                            <input type="text" name="login" id="login" placeholder=" " required>
+                            <label for="login">Usuário ou E-mail</label>
+                        </div>
+                        <div class="label-float">
+                            <input type="password" name="senha" id="senha" placeholder=" " required>
+                            <label for="senha">Senha</label>
+                            <span class="mostrar-senha" onclick="toggleSenha('senha', this)">
+                                <i class="bi bi-eye" aria-hidden="true"></i>
+                            </span> <!-- Ícone de olho -->
+                        </div>
+                        <div class="justify-center">
+                            <input class="inputSubmit" type="submit" name="submit" value="Entrar">
+                        </div>
+                    </form>
+                    <p>Não mandou o formulário para cadastro?<a href="forms.php"> Clique aqui</a></p>
                 </div>
-                <div class="label-float">
-                    <input type="password" name="senha" id="senha" placeholder=" " required>
-                    <label for="senha">Senha</label>
-                    <span class="mostrar-senha" onclick="toggleSenha('senha', this)">
-                        <i class="bi bi-eye" aria-hidden="true"></i>
-                    </span> <!-- Ícone de olho -->
-                </div>
-                <div class="justify-center">
-                    <input class="inputSubmit" type="submit" name="submit" value="Entrar">
-                </div>
-            </form>
-            <p>Não mandou o formulário para cadastro?<a href="inscricoes/forms.php"> Clique aqui</a></p>
+            </div>
         </div>
+        <?php include 'partials/footer.php'; ?> <!-- Inclui o footer -->
     </div>
 
     <script>

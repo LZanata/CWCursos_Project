@@ -16,16 +16,8 @@
     --amarelo: #FFB400;
 }
 
- /* Estilo para o corpo da página */
- body {
-     background-image: url(images/cwlogin.png); /* Imagem de fundo */
-     background-repeat: no-repeat; /* Não repetir a imagem */
-     background-size: cover; /* Cobre toda a área */
-     background-attachment: fixed; /* Fixa a imagem no fundo */
- }
-
  /* Container principal */
- .container {
+ .container-card {
      display: flex; /* Flexbox */
      justify-content: center; /* Centraliza horizontalmente */
      width: 100%; /* Largura total */
@@ -183,19 +175,4 @@
     border-radius: 8px;
     display: inline-block;
     opacity: 1;
-}
-
-.back-button{
-    position: absolute;
-    left: 7rem;
-    top: 6rem;
-}
-
-.back-button a{
-    text-decoration: none;
-    color: #000000;
-}
-
-.back-button i{
-    font-size: 2rem;
 }

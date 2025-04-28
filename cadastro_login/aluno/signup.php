@@ -74,65 +74,70 @@ if (isset($_POST['submit'])) {
     <link rel="shortcut icon" href="../../images/logotipocw.png" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="signup.css">
+    <link rel="stylesheet" href="partials/style.css">
 </head>
 
 <body>
-    <div class="back-button">
-        <a href="../../TelaInicial/index.php"><i class="bi bi-arrow-left-circle"></i></a>
-    </div>
     <div class="container">
-        <form action="signup.php" method="POST">
-            <div class="card">
-                <h1>Cadastrar</h1>
 
-                <div id="msgError"></div>
-                <div id="msgSuccess"></div>
+        <div class="header-main">
+            <?php include 'partials/header.php'; ?>
+            
+            <div class="container-card">
+                <form action="signup.php" method="POST">
+                    <div class="card">
+                        <h1>Cadastrar</h1>
 
-                <div class="label-float">
-                    <input type="text" name="nome" id="nome" placeholder=" " required />
-                    <label id="labelNome" for="nome">Nome</label>
-                </div>
+                        <div id="msgError"></div>
+                        <div id="msgSuccess"></div>
 
-                <div class="label-float">
-                    <input type="text" name="usuario" id="usuario" placeholder=" " required />
-                    <label id="labelUsuario" for="usuario">Usuário</label>
-                </div>
+                        <div class="label-float">
+                            <input type="text" name="nome" id="nome" placeholder=" " required />
+                            <label id="labelNome" for="nome">Nome</label>
+                        </div>
 
-                <div class="label-float">
-                    <input type="email" name="email" required placeholder=" " />
-                    <label for="email">E-mail</label>
-                </div>
+                        <div class="label-float">
+                            <input type="text" name="usuario" id="usuario" placeholder=" " required />
+                            <label id="labelUsuario" for="usuario">Usuário</label>
+                        </div>
 
-                <div class="label-float">
-                    <input type="date" name="dataNascimento" id="dataNascimento" required />
-                    <label for="dataNascimento">Data de Nascimento</label>
-                </div>
+                        <div class="label-float">
+                            <input type="email" name="email" required placeholder=" " />
+                            <label for="email">E-mail</label>
+                        </div>
+
+                        <div class="label-float">
+                            <input type="date" name="dataNascimento" id="dataNascimento" required />
+                            <label for="dataNascimento">Data de Nascimento</label>
+                        </div>
 
 
-                <div class="label-float">
-                    <input type="password" name="senha" id="senha" placeholder=" " required />
-                    <label id="labelSenha" for="senha">Senha</label>
-                    <span class="mostrar-senha" onclick="toggleSenha('senha', this)">
-                        <i class="bi bi-eye" aria-hidden="true"></i>
-                    </span>
-                    <div id="forcaSenha" class="forca-senha"></div>
-                </div>
+                        <div class="label-float">
+                            <input type="password" name="senha" id="senha" placeholder=" " required />
+                            <label id="labelSenha" for="senha">Senha</label>
+                            <span class="mostrar-senha" onclick="toggleSenha('senha', this)">
+                                <i class="bi bi-eye" aria-hidden="true"></i>
+                            </span>
+                            <div id="forcaSenha" class="forca-senha"></div>
+                        </div>
 
-                <div class="label-float">
-                    <input type="password" name="confirmSenha" id="confirmSenha" placeholder=" " required />
-                    <label id="labelConfirmSenha" for="confirmSenha">Confirmar Senha</label>
-                    <span class="mostrar-senha" onclick="toggleSenha('confirmSenha', this)">
-                        <i class="bi bi-eye" aria-hidden="true"></i>
-                    </span>
-                </div>
+                        <div class="label-float">
+                            <input type="password" name="confirmSenha" id="confirmSenha" placeholder=" " required />
+                            <label id="labelConfirmSenha" for="confirmSenha">Confirmar Senha</label>
+                            <span class="mostrar-senha" onclick="toggleSenha('confirmSenha', this)">
+                                <i class="bi bi-eye" aria-hidden="true"></i>
+                            </span>
+                        </div>
 
-                <div class="justify-center">
-                    <button type="submit" name="submit">Cadastrar</button>
-                </div>
+                        <div class="justify-center">
+                            <button type="submit" name="submit">Cadastrar</button>
+                        </div>
+                    </div>
+                </form>
             </div>
-        </form>
+        </div>
+        <?php include 'partials/footer.php'; ?> <!-- Inclui o footer -->
     </div>
-
     <script>
         function toggleSenha(id, el) {
             const input = document.getElementById(id);
