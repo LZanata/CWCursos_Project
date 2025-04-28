@@ -80,7 +80,7 @@ END;
 
     <div class="container">
         <div class="card">
-            <h1>Redefinir Senha</h1>
+            <h1>Recuperar Senha</h1>
             <p>Informe o e-mail cadastrado e enviaremos um link para redefinição de senha.</p>
             <form action="recuperar_senha.php" method="POST">
                 <div id="msgError"></div>
