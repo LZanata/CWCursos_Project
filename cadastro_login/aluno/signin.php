@@ -35,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['submit'])) {
                 header("Location: http://localhost/AAP-CW_Cursos/adm/index.php");
                 exit;
             } elseif ($user['tipo'] === 'professor') {
-                header("Location: http://localhost/AAP-CW_Cursos/index.html");
+                header("Location: http://localhost/AAP-CW_Cursos/professor/index.php");
                 exit;
             } elseif ($user['tipo'] === 'aluno') {
                 header("Location: http://localhost/AAP-CW_Cursos/TelaInicial/index.php");

@@ -25,7 +25,7 @@
                 <button onclick="window.location.href='list_users.php?type=aluno'">Listar Alunos</button>
 
                 <h3>Professores Pendentes</h3>
-                <button onclick="window.location.href='cadastroAdmTeacher.php?type=professor'">Adicionar Professor</button>
+                <button onclick="window.location.href='cadastro/cadastroAdmTeacher.php?type=professor'">Adicionar Professor</button>
                 <button onclick="window.location.href='list_users.php?type=professor&status=pendente'">Listar Professores</button>
 
                 <h3>Administradores</h3>
