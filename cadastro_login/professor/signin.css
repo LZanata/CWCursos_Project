@@ -6,6 +6,14 @@
     font-family: 'Roboto', sans-serif;
 }
 
+/*Estilo Geral*/
+:root {
+    --azul: #1A73E8;
+    --cinza-claro: #F1F3F4;
+    --cinza-escuro: #202124;
+    --amarelo: #FFB400;
+}
+
 body {
     background-image: url(images/cwlogin.png);
     background-size: cover;
@@ -29,7 +37,7 @@ body {
 h1 {
     text-align: center;
     margin-bottom: 20px;
-    color: #272262;
+    color: var(--azul);
 }
 
 .label-float {
@@ -42,18 +50,18 @@ h1 {
     width: 100%;
     padding: 5px;
     border: none;
-    border-bottom: 2px solid #272262;
+    border-bottom: 2px solid var(--azul);
     background-color: transparent;
     font-size: 16px;
     outline: none;
 }
 
 .label-float input:focus {
-    border-bottom: 4px solid #4038a0;
+    border-bottom: 4px solid var(--azul);
 }
 
 .label-float label {
-    color: #272262;
+    color: var(--cinza-escuro);
     position: absolute;
     top: 13px;
     left: 0;
@@ -65,13 +73,13 @@ h1 {
 .label-float input:valid+label {
     font-size: 13px;
     top: 0;
-    color: #4038a0;
+    color: var(--azul);
 }
 
 .inputSubmit {
     background-color: transparent;
-    border: 2px solid #272262;
-    color: #272262;
+    border: 2px solid var(--azul);
+    color: var(--azul);
     padding: 7px;
     font-weight: bold;
     font-size: 12pt;
@@ -83,7 +91,7 @@ h1 {
 }
 
 .inputSubmit:hover {
-    background-color: #272262;
+    background-color: var(--azul);
     color: #fff;
 }
 
@@ -93,20 +101,20 @@ h1 {
 }
 
 p {
-    color: #272262;
+    color: var(--cinza-escuro);
     font-size: 14pt;
     text-align: center;
     margin-top: 20px;
 }
 
 a {
-    color: #7a3077;
+    color: var(--cinza-escuro);
     font-weight: bold;
     text-decoration: none;
 }
 
 a:hover {
-    color: #272262;
+    color: var(--amarelo);
 }
 
 .error-msg {
@@ -120,7 +128,7 @@ a:hover {
     right: 10px;
     top: 40px;
     cursor: pointer;
-    color: #272262;
+    color: var(--azul);
 }
 
 .mostrar-senha {
@@ -128,7 +136,7 @@ a:hover {
     right: 10px;
     top: 12px;
     cursor: pointer;
-    color: #272262;
+    color: var(--azul);
 }
 
 .back-button{
