@@ -109,10 +109,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário de Inscrição - Professor Voluntário</title>
+     <!-- Font Awesome -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="forms.css">
 </head>
 
 <body>
+    <div class="back-button">
+        <a href="../signin.php"><i class="bi bi-arrow-left-circle"></i></a>
+    </div>
     <div class="container">
         <div class="card">
             <h1>Formulário de Inscrição</h1>

@@ -130,3 +130,18 @@ a:hover {
     cursor: pointer;
     color: #272262;
 }
+
+.back-button{
+    position: absolute;
+    left: 7rem;
+    top: 6rem;
+}
+
+.back-button a{
+    text-decoration: none;
+    color: #000000;
+}
+
+.back-button i{
+    font-size: 2rem;
+}

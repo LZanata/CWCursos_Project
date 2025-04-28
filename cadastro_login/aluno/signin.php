@@ -67,6 +67,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['submit'])) {
 </head>
 
 <body>
+    <div class="back-button">
+        <a href="../../TelaInicial/index.php"><i class="bi bi-arrow-left-circle"></i></a>
+    </div>
     <!-- Container principal -->
     <div class="container">
         <div class="card">
@@ -152,4 +155,5 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['submit'])) {
         });
     </script>
 </body>
+
 </html>

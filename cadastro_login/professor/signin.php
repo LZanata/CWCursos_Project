@@ -48,6 +48,9 @@ if (isset($_POST['submit'])) {
 </head>
 
 <body>
+    <div class="back-button">
+        <a href="../../TelaInicial/index.php"><i class="bi bi-arrow-left-circle"></i></a>
+    </div>
     <div class="container">
         <div class="card">
             <h1>Entrar como Professor</h1>

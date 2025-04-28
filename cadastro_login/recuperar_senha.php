@@ -75,7 +75,7 @@ END;
 
 <body>
     <div class="back-button">
-        <a href="../index.php"><i class="bi bi-arrow-left-circle"></i></a>
+        <a href="aluno/signin.php"><i class="bi bi-arrow-left-circle"></i></a>
     </div>
 
     <div class="container">
