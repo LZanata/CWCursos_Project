@@ -28,7 +28,8 @@
     margin-bottom: 1.5rem;
 }
 
-.planos-text button {
+.planos-text a {
+    text-decoration: none;
     padding: 10px 40px;
     font-size: 18px;
     font-weight: 600;
@@ -39,7 +40,7 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
   
-.planos-text button:hover {
+.planos-text a:hover {
     transform: scale(1.05);
     box-shadow: 0px 0px 8px var(--amarelo);
     color: var(--amarelo);

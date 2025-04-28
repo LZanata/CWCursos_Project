@@ -21,7 +21,7 @@
                 <section class="planos-text">
                     <h1>Cursos de Marketing Digital!</h1>
                     <p>Aprimore-se com o melhor conteúdo em marketing digital e negócios.</p>
-                    <button class="planos-btn">Veja os Planos</button>
+                    <a href="planos.php" class="planos-btn">Veja os Planos</a>
                 </section>
 
                 <section class="courses">
