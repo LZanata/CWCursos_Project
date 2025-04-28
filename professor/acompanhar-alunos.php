@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -26,8 +27,6 @@
 
     <div class="container">
         <section class="list-section">
-            <h2>Alunos Inscritos</h2>
-
             <div class="course-card">
                 <h3>João Silva</h3>
                 <p>Curso: Programação Web do Zero</p>

@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -26,7 +27,6 @@
 
     <div class="container">
         <section class="list-section">
-            <h2>Lista de Cursos</h2>
 
             <div class="course-card">
                 <h3>Programação Web do Zero</h3>
