@@ -133,9 +133,76 @@ header a:hover {
     margin-left: 1rem;
 }
 
-header .nav-botoes a:hover{
+.btn-area a:hover{
     color: var(--amarelo);
     box-shadow: 0px 0px 8px var(--azul);
+}
+
+.perfil-aluno-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    background-color: var(--azul);
+    padding: 8px 12px;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+}
+
+.perfil-aluno-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 8px var(--azul);
+}
+
+.icone-perfil {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+.perfil-opcoes {
+    background-color: var(--cinza-claro);
+    position: absolute;
+    top: 100px; /* ajusta conforme seu layout */
+    right: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 150px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 100;
+}
+
+.perfil-opcoes.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+.perfil-opcoes a {
+    display: block;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: var(--cinza-escuro);
+    font-size: 15px;
+}
+
+.perfil-opcoes a:hover {
+    color: var(--amarelo);
+    transform: scale(1.1);
+}
+
+.perfil-aluno-btn svg {
+    fill: var(--cinza-claro);
+    transition: fill 0.3s ease;
+}
+
+.perfil-aluno-btn:hover svg {
+    fill: var(--amarelo); /* muda para azul no hover */
 }
 
 .main-content a{
