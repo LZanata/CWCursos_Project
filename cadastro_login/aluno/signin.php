@@ -72,54 +72,58 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['submit'])) {
 
         <div class="header-main">
             <?php include 'partials/header.php'; ?> <!-- Inclui o header -->
-            <!-- Container principal -->
-            <main>
-                <div class="container-card">
-                    <div class="card">
-                        <h1>Entrar</h1> <!-- Título do formulário -->
-                        <form action="" method="POST"> <!-- Formulário de login -->
+        </div>
+        <!-- Container principal -->
+        <main class="container-main">
+            <div class="card-image">
+                <img src="../../images/homem-mulher-discutindo2.png" alt="Mulher de oculos sorrindo">
+            </div>
+            <div class="container-card">
+                <div class="card">
+                    <h1>Entrar</h1> <!-- Título do formulário -->
+                    <form action="" method="POST"> <!-- Formulário de login -->
 
-                            <!-- Campo de usuário com label flutuante -->
-                            <div class="label-float">
-                                <input type="text" name="login" id="login" required />
-                                <label for="login">Usuário ou E-mail</label>
+                        <!-- Campo de usuário com label flutuante -->
+                        <div class="label-float">
+                            <input type="text" name="login" id="login" required />
+                            <label for="login">Usuário ou E-mail</label>
+                        </div>
+
+                        <!-- Campo de senha com label flutuante -->
+                        <div class="label-float">
+                            <input type="password" name="senha" id="senha" placeholder=" " required />
+                            <label id="senhaLabel" for="senha">Senha</label>
+                            <span class="mostrar-senha" onclick="toggleSenha('senha', this)">
+                                <i class="bi bi-eye" aria-hidden="true"></i>
+                            </span> <!-- Ícone de olho -->
+                        </div>
+
+                        <!-- Campo de esqueci a senha com link para a página de recuperar a senha -->
+                        <div class="esqueci-group">
+                            <div class="esqueci">
+                                <a href="../recuperar_senha.php">Esqueci minha senha</a>
                             </div>
+                        </div>
 
-                            <!-- Campo de senha com label flutuante -->
-                            <div class="label-float">
-                                <input type="password" name="senha" id="senha" placeholder=" " required />
-                                <label id="senhaLabel" for="senha">Senha</label>
-                                <span class="mostrar-senha" onclick="toggleSenha('senha', this)">
-                                    <i class="bi bi-eye" aria-hidden="true"></i>
-                                </span> <!-- Ícone de olho -->
-                            </div>
+                        <!-- Mensagem de erro -->
+                        <div id="msgError">
+                            <?php if (!empty($mensagemErro)) : ?>
+                                <p class="erro"><?php echo $mensagemErro; ?></p>
+                            <?php endif; ?>
+                        </div>
 
-                            <!-- Campo de esqueci a senha com link para a página de recuperar a senha -->
-                            <div class="esqueci-group">
-                                <div class="esqueci">
-                                    <a href="../recuperar_senha.php">Esqueci minha senha</a>
-                                </div>
-                            </div>
-
-                            <!-- Mensagem de erro -->
-                            <div id="msgError">
-                                <?php if (!empty($mensagemErro)) : ?>
-                                    <p class="erro"><?php echo $mensagemErro; ?></p>
-                                <?php endif; ?>
-                            </div>
-
-                            <!-- Botão de submit centralizado -->
-                            <div class="justify-center">
-                                <input class="inputSubmit" type="submit" name="submit" value="Entrar">
-                            </div>
-                        </form>
-
+                        <!-- Botão de submit centralizado -->
+                        <div class="justify-center">
+                            <input class="inputSubmit" type="submit" name="submit" value="Entrar">
+                        </div>
+                    </form>
+                    <div class="signup-button">
                         <!-- Link para a página de cadastro -->
                         <p>Não tem uma conta? <a href="signup.php">Cadastre-se</a></p>
                     </div>
                 </div>
-            </main>
-        </div>
+            </div>
+        </main>
         <?php include 'partials/footer.php'; ?> <!-- Inclui o footer -->
     </div>
     <script>

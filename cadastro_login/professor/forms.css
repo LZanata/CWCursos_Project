@@ -5,6 +5,17 @@
         --cinza-escuro: #202124;
         --amarelo: #FFB400;
     }
+
+    .container-main{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .card-image img{
+        margin-left: 5rem;
+        width: 500px;
+        height: 500px;
+    }
     
         /* Container principal */
     .container-card {
@@ -16,7 +27,7 @@
 
     /* Cartão de cadastro */
     .card {
-        background-color: #ffffff80; /* Fundo branco semitransparente */
+        background-color: transparent; /* Fundo branco semitransparente */
         padding: 30px; /* Espaçamento interno */
         border-radius: 4%; /* Bordas arredondadas */
         box-shadow: 3px 3px 1px 0px #00000060; /* Sombra */

@@ -82,7 +82,11 @@ if (isset($_POST['submit'])) {
 
         <div class="header-main">
             <?php include 'partials/header.php'; ?>
-            
+        </div>
+        <main class="container-main">
+            <div class="card-image">
+                <img src="../../images/homem-mulher-discutindo3.png" alt="Mulher de oculos sorrindo">
+            </div>
             <div class="container-card">
                 <form action="signup.php" method="POST">
                     <div class="card">
@@ -132,10 +136,14 @@ if (isset($_POST['submit'])) {
                         <div class="justify-center">
                             <button type="submit" name="submit">Cadastrar</button>
                         </div>
+                        <div class="signup-button">
+                            <!-- Link para a página de cadastro -->
+                            <p>Já possui uma conta? <a href="signin.php">Fazer login</a></p>
+                        </div>
                     </div>
                 </form>
             </div>
-        </div>
+        </main>
         <?php include 'partials/footer.php'; ?> <!-- Inclui o footer -->
     </div>
     <script>

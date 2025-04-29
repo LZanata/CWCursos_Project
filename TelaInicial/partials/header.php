@@ -71,7 +71,7 @@
     })(document, window, 'Chatra');
     window.ChatraSetup = {
         colors: {
-            buttonText: '#202124',
+            buttonText: '#F1F3F4',
             /* chat button text color */
             buttonBg: '#1A73E8' /* chat button background color */
         }

@@ -6,27 +6,39 @@
     --amarelo: #FFB400;
 }
 
+.container-main{
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-image img{
+    margin-left: 5rem;
+    width: 500px;
+    height: 500px;
+}
+
  /* Container principal */
  .container-card {
      display: flex; /* Flexbox */
      justify-content: center; /* Centraliza horizontalmente */
      width: 100%; /* Largura total */
+     height: 100%;
      margin-top: 2rem;; /* Margem superior */
  }
 
  /* Cartão de login */
  .card {
-     background-color: #ffffff80; /* Fundo branco semitransparente */
+     background-color: transparent; /* Fundo branco semitransparente */
      padding: 30px; /* Espaçamento interno */
      border-radius: 4%; /* Bordas arredondadas */
-     box-shadow: 3px 3px 1px 0px var(--cinza-escuro); /* Sombra */
+     box-shadow: 3px 3px 1px 0px #00000060; /* Sombra */
  }
 
  /* Estilo para o título */
  .card h1 {
      text-align: center; /* Centraliza o texto */
      margin-bottom: 20px; /* Margem inferior */
-     color: var(--azul); /* Cor do texto */
+     color: var(--cinza-escuro); /* Cor do texto */
  }
 
  /* Estilo para os inputs dentro do label-float */
@@ -117,6 +129,10 @@
      text-align: center; /* Centraliza o texto */
  }
 
+.signup-button {
+    margin-top: 1.2rem;
+}
+ 
  /* Estilo para links */
  .card a {
      color: var(--cinza-escuro); /* Cor do texto */

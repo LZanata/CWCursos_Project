@@ -109,7 +109,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário de Inscrição - Professor Voluntário</title>
-    <link rel="shortcut icon" href="../../../images/logotipocw.png" />
+    <link rel="shortcut icon" href="../../images/logotipocw.png" />
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="forms.css">
@@ -121,51 +121,56 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         <div class="header-main">
             <?php include 'partials/header.php'; ?> <!-- Inclui o header -->
+        </div>
+        <div class="container-main">
+            <div class="card-image">
+                <img src="../../images/homem-mulher-discutindo.png" alt="Mulher de oculos sorrindo">
+            </div>
             <div class="container-card">
                 <div class="card">
-                    <h1>Formulário de Inscrição</h1>
+                    <h1>Seu próximo grande passo como professor da CW começa aqui</h1>
                     <form action="" method="POST" enctype="multipart/form-data">
                         <!-- Seção de Dados Pessoais -->
                         <h3>Dados Pessoais</h3>
 
                         <div class="label-float">
                             <input type="text" id="nome" name="nome" required>
-                            <label for="nome">Nome Completo:</label>
+                            <label for="nome">Nome Completo</label>
                         </div>
 
                         <div class="label-float">
                             <input type="text" id="cpf" name="cpf" maxlength="11" pattern="\d{11}" inputmode="numeric" title="Digite apenas números (11 dígitos)" required>
-                            <label for="cpf">CPF:</label>
+                            <label for="cpf">CPF</label>
                         </div>
 
                         <div class="label-float">
                             <input type="text" id="rg" name="rg" maxlength="9" pattern="\d{7,9}" inputmode="numeric" title="Digite entre 7 e 9 dígitos numéricos" required>
-                            <label for="rg">RG:</label>
+                            <label for="rg">RG</label>
                         </div>
 
                         <div class="label-float">
                             <input type="date" id="data_nascimento" name="data_nascimento" required>
-                            <label for="data_nascimento">Data de Nascimento:</label>
+                            <label for="data_nascimento">Data de Nascimento</label>
                         </div>
 
                         <div class="label-float">
                             <input type="text" id="endereco" name="endereco" required>
-                            <label for="endereco">Endereço Completo:</label>
+                            <label for="endereco">Endereço Completo</label>
                         </div>
 
                         <div class="label-float">
                             <input type="email" id="email" name="email" required>
-                            <label for="email">Email:</label>
+                            <label for="email">Email</label>
                         </div>
 
                         <div class="label-float">
                             <input type="tel" id="telefone" name="telefone" maxlength="11" pattern="\d{10,11}" inputmode="numeric" title="Digite DDD + número (10 ou 11 dígitos)" required>
-                            <label for="telefone">Telefone:</label>
+                            <label for="telefone">Telefone</label>
                         </div>
 
                         <div class="label-float">
                             <input type="url" id="linkedin" name="linkedin" required>
-                            <label for="linkedin">LinkedIn:</label>
+                            <label for="linkedin">LinkedIn</label>
                         </div>
 
                         <!-- Seção de Perguntas -->
@@ -178,19 +183,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                         <div class="label-float">
                             <input type="text" id="area_conhecimento" name="area_conhecimento" required>
-                            <label for="area_conhecimento">Áreas de Conhecimento em Marketing:</label>
+                            <label for="area_conhecimento">Áreas de Conhecimento em Marketing</label>
                         </div>
 
                         <div class="label-float">
                             <input type="text" id="disponibilidade" name="disponibilidade" required>
-                            <label for="disponibilidade">Disponibilidade de Horas por Semana para Produção de Conteúdo:</label>
+                            <label for="disponibilidade">Disponibilidade de Horas por Semana para Produção de Conteúdo</label>
                         </div>
 
                         <!-- Envio de Currículo -->
                         <h3>Envio de Currículo</h3>
 
                         <div class="custom-file">
-                            <span for="curriculo">Currículo (em PDF):</span>
+                            <span for="curriculo">Currículo (em PDF)</span>
                             <input type="file" id="curriculo" name="curriculo" accept=".pdf" required>
                         </div>
 

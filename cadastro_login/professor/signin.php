@@ -39,6 +39,44 @@
                 <img src="../../images/mulher-sorrindo.png" alt="Mulher de oculos sorrindo">
             </div>
         </div>
+        <section class="info-section">
+            <h2>Existem muitos motivos para fazer parte dessa jornada</h2>
+            <div class="card-grid">
+                <div class="info-card">
+                    <h3>Seu estilo de ensino</h3>
+                    <p>Compartilhe sua experiência em marketing e negócios como preferir. Tenha liberdade para criar e controle total sobre seu conteúdo.</p>
+                </div>
+                <div class="info-card">
+                    <h3>Inspire empreendedores</h3>
+                    <p>Ajude profissionais e iniciantes a dominarem estratégias, técnicas e ferramentas do mundo dos negócios.</p>
+                </div>
+                <div class="info-card">
+                    <h3>Ganhe reconhecimento e renda</h3>
+                    <p>Amplie sua visibilidade, construa autoridade no mercado e receba por cada nova inscrição paga em seu curso.</p>
+                </div>
+            </div>
+
+            <h2>Como começar</h2>
+            <div class="card-grid">
+                <div class="info-card">
+                    <h3>Planeje seu conteúdo</h3>
+                    <p>Ensine o que você domina e explore temas em alta no marketing digital. Estruture sua grade com a ajuda da CW.</p>
+                </div>
+                <div class="info-card">
+                    <h3>Grave com o que você tem</h3>
+                    <p>Use celular ou notebook. Com áudio claro e conteúdo de valor, você já pode publicar um curso atrativo.</p>
+                </div>
+                <div class="info-card">
+                    <h3>Lance e promova</h3>
+                    <p>Compartilhe seu curso nas redes sociais. A CW também divulga para uma base de alunos interessados.</p>
+                </div>
+            </div>
+            <div class="info-block">
+                <h2>Conte com suporte</h2>
+                <p>Nosso time está pronto para revisar, orientar e apoiar você em todas as etapas do seu curso.</p>
+            </div>
+        </section>
+
         <?php include 'partials/footer.php'; ?> <!-- Inclui o footer -->
 
     </div>

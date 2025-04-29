@@ -6,6 +6,17 @@
     --amarelo: #FFB400;
 }
 
+.container-main{
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-image img{
+    margin-left: 5rem;
+    width: 500px;
+    height: 500px;
+}
+
 /* Container principal */
 .container-card {
     display: flex; /* Flexbox */
@@ -16,11 +27,11 @@
 
 /* Cartão de cadastro */
 .card {
-    background-color: #ffffff80; /* Fundo branco semitransparente */
+    background-color: transparent; /* Fundo branco semitransparente */
     padding: 30px; /* Espaçamento interno */
     border-radius: 4%; /* Bordas arredondadas */
     box-shadow: 3px 3px 1px 0px #00000060; /* Sombra */
-    width: 300px; /* Largura fixa */
+    width: 100%; /* Largura fixa */
 }
 
 /* Estilo para o título */
@@ -29,6 +40,30 @@ h1 {
     margin-bottom: 20px; /* Margem inferior */
     color: var(--azul); /* Cor do texto */
 }
+
+ /* Estilo para parágrafos */
+ p {
+    color: var(--azul); /* Cor do texto */
+    font-size: 14pt; /* Tamanho da fonte */
+    text-align: center; /* Centraliza o texto */
+}
+
+.signup-button {
+    margin-top: 1.2rem;
+}
+ 
+ /* Estilo para links */
+ .card a {
+     color: var(--cinza-escuro); /* Cor do texto */
+     font-weight: bold; /* Texto em negrito */
+     text-decoration: none; /* Remove sublinhado */
+     transition: all .3s ease-out; /* Transição suave */
+ }
+
+ /* Estilo para links quando o mouse está sobre eles */
+ a:hover {
+     color: var(--amarelo); /* Cor do texto */
+ }
 
 /* Estilo para os inputs dentro do label-float */
 .label-float input {
