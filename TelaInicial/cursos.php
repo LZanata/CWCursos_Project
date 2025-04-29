@@ -8,7 +8,7 @@
     <title>CW Cursos - Marketing Digital</title>
     <link rel="shortcut icon" href="../images/logotipocw.png" />
     <link rel="stylesheet" href="css/cursos.css">
-    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="partials/style.css">
 </head>
 
 <body>

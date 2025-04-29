@@ -94,6 +94,7 @@ header .btn-alunos a {
     font-size: 1.5rem;
     padding: 1.2rem 0 0 0; 
     margin-left: 1.5rem;
+    cursor: default;
 }
 
 .planos-btn {

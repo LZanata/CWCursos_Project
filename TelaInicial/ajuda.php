@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CW Cursos - Cursos de Marketing Digital</title>
     <link rel="shortcut icon" href="../images/logotipocw.png" />
-    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="partials/style.css">
     <link rel="stylesheet" href="css/ajuda.css">
     <link
         rel="stylesheet"

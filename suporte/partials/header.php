@@ -1,12 +1,12 @@
  <!-- Cabeçalho da página com título e navegação -->
  <div class="nav-header">
      <div class="logo">
-         <a href="#">
+         <a href="suporte.php">
              <img src="../images/logocwbranco_transparente.png" alt="Logo da CW Cursos" />
          </a>
-         <a href="#">
+         
              <h1>Central de Ajuda</h1>
-         </a>
+         
      </div>
 
      <nav class="nav-botoes">

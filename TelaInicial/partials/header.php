@@ -1,6 +1,6 @@
 <header class="navbar">
     <div class="nav-header">
-        <div class="logo"><a href="#">
+        <div class="logo"><a href="index.php">
                 <img src="../images/logocwpreto_transparente.png" alt="Logo da CW Cursos" />
             </a></div>
         <div class="search-bar">
