@@ -55,7 +55,6 @@ p, h1, h2, h3{
     min-height: 70px; /* pra ele nunca esticar demais */
 }
 
-
 .menu-desktop {
     display: flex;
     justify-content: center;
@@ -74,7 +73,6 @@ p, h1, h2, h3{
     align-items: center;
     height: 100%;
 }
-
 
 .menu-items {
     list-style-type: none;
@@ -110,7 +108,7 @@ header > .interface {
 }
 
 header a {
-    color: var(--cinza-escuro);
+    color: var(--cinza-claro);
     text-decoration: none;
     display: inline-block;
     transition: 0.2s;

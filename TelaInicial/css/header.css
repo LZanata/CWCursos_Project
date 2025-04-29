@@ -110,7 +110,7 @@ header > .interface {
 }
 
 header a {
-    color: var(--cinza-escuro);
+    color: var(--cinza-claro);
     text-decoration: none;
     display: inline-block;
     transition: 0.2s;
@@ -136,6 +136,10 @@ header a:hover {
 header .nav-botoes a:hover{
     color: var(--amarelo);
     box-shadow: 0px 0px 8px var(--azul);
+}
+
+.main-content a{
+    color: var(--cinza-escuro);
 }
 
 .menu-toggle {

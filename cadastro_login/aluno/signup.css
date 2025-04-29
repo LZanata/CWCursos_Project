@@ -11,7 +11,7 @@
     display: flex; /* Flexbox */
     justify-content: center; /* Centraliza horizontalmente */
     width: 100%; /* Largura total */
-    margin-top: 100px; /* Margem superior */
+    margin-top: 2rem; /* Margem superior */
 }
 
 /* Cartão de cadastro */

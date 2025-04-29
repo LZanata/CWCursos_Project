@@ -6,67 +6,38 @@
     --amarelo: #FFB400;
 }
 
+.container-main{
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-image img{
+    margin-right: 10rem;
+    width: 390px;
+    height: 600px;
+}
+
 .container-card {
     display: flex;
-    justify-content: center;
-    margin-top: 100px;
+    align-items: center;
+    margin: 0 0 0 3rem;
 }
 
 .card {
-    background-color: #ffffffc0;
     padding: 30px;
-    border-radius: 4%;
-    box-shadow: 3px 3px 1px 0px #00000060;
-    width: 300px;
+    width: 450px;
 }
 
-h1 {
-    text-align: center;
+.card h1 {
+    text-align: left;
     margin-bottom: 20px;
-    color: var(--azul);
-}
-
-.label-float {
-    position: relative;
-    padding-top: 13px;
-    margin: 5% 0;
-}
-
-.label-float input {
-    width: 100%;
-    padding: 5px;
-    border: none;
-    border-bottom: 2px solid var(--azul);
-    background-color: transparent;
-    font-size: 16px;
-    outline: none;
-}
-
-.label-float input:focus {
-    border-bottom: 4px solid var(--azul);
-}
-
-.label-float label {
     color: var(--cinza-escuro);
-    position: absolute;
-    top: 13px;
-    left: 0;
-    pointer-events: none;
-    transition: .3s ease-out;
-}
-
-.label-float input:focus+label,
-.label-float input:valid+label {
-    font-size: 13px;
-    top: 0;
-    color: var(--azul);
+    font-size: 2.5rem;
 }
 
 .inputSubmit {
-    background-color: transparent;
-    border: 2px solid var(--azul);
-    color: var(--azul);
-    padding: 7px;
+    background-color: var(--azul);
+    padding: 10px;
     font-weight: bold;
     font-size: 12pt;
     margin-top: 20px;
@@ -74,11 +45,6 @@ h1 {
     cursor: pointer;
     width: 100%;
     transition: 0.4s;
-}
-
-.inputSubmit:hover {
-    background-color: var(--azul);
-    color: #fff;
 }
 
 .justify-center {
@@ -89,18 +55,20 @@ h1 {
 p {
     color: var(--cinza-escuro);
     font-size: 14pt;
-    text-align: center;
+    text-align: left;
     margin-top: 20px;
 }
 
-a {
-    color: var(--cinza-escuro);
+.card a {
+    color: var(--cinza-claro);
     font-weight: bold;
     text-decoration: none;
 }
 
-a:hover {
+.card a:hover {
+    box-shadow: 0px 0px 8px var(--azul);
     color: var(--amarelo);
+    transform: scale(1.1);
 }
 
 .error-msg {
@@ -108,19 +76,4 @@ a:hover {
     font-weight: bold;
     text-align: center;
     margin-bottom: 10px;
-}
-
-.label-float i {
-    right: 10px;
-    top: 40px;
-    cursor: pointer;
-    color: var(--azul);
-}
-
-.mostrar-senha {
-    position: absolute;
-    right: 10px;
-    top: 12px;
-    cursor: pointer;
-    color: var(--azul);
 }

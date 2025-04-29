@@ -1,46 +1,9 @@
-<?php
-session_start();
-include_once('../../funcoes/conexao.php');
-
-if (!isset($_SESSION)) session_start();
-
-if (isset($_POST['submit'])) {
-    $login = trim($_POST['login']);
-    $senha = $_POST['senha'];
-
-    $query = "SELECT * FROM usuarios WHERE (usuario = ? OR email = ?) AND tipo = 'professor'";
-    $stmt = $conexao->prepare($query);
-    $stmt->bind_param("ss", $login, $login);
-    $stmt->execute();
-    $result = $stmt->get_result();
-
-    if ($result->num_rows > 0) {
-        $user = $result->fetch_assoc();
-        if (password_verify($senha, $user['senha'])) {
-            $_SESSION['usuario'] = $user['usuario'];
-            unset($_SESSION['msg']);
-            header('Location: Painel professor/index.html');
-            exit();
-        } else {
-            $_SESSION['msg'] = 'Senha incorreta!';
-        }
-    } else {
-        $_SESSION['msg'] = 'Usuário ou e-mail inválido!';
-    }
-
-    $stmt->close();
-    $conexao->close();
-
-    header("Location: loginprof.php");
-    exit();
-}
-?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
-    <title>Login Professor</title>
+    <title>Venha ensinar</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../../images/logotipocw.png" />
     <!-- Font Awesome -->
@@ -54,54 +17,31 @@ if (isset($_POST['submit'])) {
 
         <div class="header-main">
             <?php include 'partials/header.php'; ?> <!-- Inclui o header -->
+        </div>
+        <div class="container-main">
             <div class="container-card">
                 <div class="card">
-                    <h1>Entrar como Professor</h1>
+                    <h1>Venha dar aulas com a gente</h1>
+                    <p>Seja um professor da CW e transforme vidas ensinando</p>
                     <?php
                     if (!empty($_SESSION['msg'])) {
                         echo "<div class='error-msg'>" . $_SESSION['msg'] . "</div>";
                         unset($_SESSION['msg']);
                     }
                     ?>
-                    <form method="POST" action="">
-                        <div class="label-float">
-                            <input type="text" name="login" id="login" placeholder=" " required>
-                            <label for="login">Usuário ou E-mail</label>
-                        </div>
-                        <div class="label-float">
-                            <input type="password" name="senha" id="senha" placeholder=" " required>
-                            <label for="senha">Senha</label>
-                            <span class="mostrar-senha" onclick="toggleSenha('senha', this)">
-                                <i class="bi bi-eye" aria-hidden="true"></i>
-                            </span> <!-- Ícone de olho -->
-                        </div>
-                        <div class="justify-center">
-                            <input class="inputSubmit" type="submit" name="submit" value="Entrar">
-                        </div>
-                    </form>
-                    <p>Não mandou o formulário para cadastro?<a href="forms.php"> Clique aqui</a></p>
+
+                    <div class="justify-center">
+                        <a href="forms.php" class="inputSubmit" style="text-align: center;">Começar agora</a>
+                    </div>
                 </div>
+            </div>
+            <div class="card-image">
+                <img src="../../images/mulher-sorrindo.png" alt="Mulher de oculos sorrindo">
             </div>
         </div>
         <?php include 'partials/footer.php'; ?> <!-- Inclui o footer -->
+
     </div>
-
-    <script>
-        function toggleSenha(id, el) {
-            const input = document.getElementById(id);
-            const icon = el.querySelector('i');
-
-            if (input.type === "password") {
-                input.type = "text";
-                icon.classList.remove("bi-eye");
-                icon.classList.add("bi-eye-slash");
-            } else {
-                input.type = "password";
-                icon.classList.remove("bi-eye-slash");
-                icon.classList.add("bi-eye");
-            }
-        }
-    </script>
 </body>
 
 </html>
