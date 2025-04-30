@@ -12,10 +12,11 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="header-main">
-            <?php include 'partials/header.php'; ?> <!-- Inclui o header -->
-
+    <div class="header-main">
+        <?php include 'partials/header.php'; ?> <!-- Inclui o header -->
+    </div>
+    <main>
+        <div class="container">
             <div class="content-main">
 
                 <section class="planos-text">
@@ -76,8 +77,8 @@
                 </section>
             </div>
         </div>
-        <?php include 'partials/footer.php'; ?> <!-- Inclui o footer -->
-    </div>
+    </main>
+    <?php include 'partials/footer.php'; ?> <!-- Inclui o footer -->
 </body>
 
 </html>

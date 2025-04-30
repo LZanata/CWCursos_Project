@@ -4,4 +4,7 @@
     <div class="wave wave2"></div> <!-- Segunda onda -->
     <div class="wave wave3"></div> <!-- Terceira onda -->
     <div class="wave wave4"></div> <!-- Quarta onda -->
+    <footer>
+        &copy; 2025 CW Cursos - Todos os direitos reservados.
+    </footer>
 </section>

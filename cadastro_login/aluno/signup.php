@@ -78,11 +78,10 @@ if (isset($_POST['submit'])) {
 </head>
 
 <body>
+    <div class="header-main">
+        <?php include 'partials/header.php'; ?>
+    </div>
     <div class="container">
-
-        <div class="header-main">
-            <?php include 'partials/header.php'; ?>
-        </div>
         <main class="container-main">
             <div class="card-image">
                 <img src="../../images/homem-mulher-discutindo3.png" alt="Mulher de oculos sorrindo">
@@ -144,8 +143,8 @@ if (isset($_POST['submit'])) {
                 </form>
             </div>
         </main>
-        <?php include 'partials/footer.php'; ?> <!-- Inclui o footer -->
     </div>
+    <?php include 'partials/footer.php'; ?> <!-- Inclui o footer -->
     <script>
         function toggleSenha(id, el) {
             const input = document.getElementById(id);

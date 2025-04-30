@@ -11,12 +11,17 @@
     --amarelo: #FFB400;
 }  
 
+ html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
 body {
     font-family: Arial, sans-serif;
     color: var(--cinza-escuro);
     background-color: var(--cinza-claro);
-    display: flex;
-    justify-content: center;
 }
 
 p, h1, h2, h3{
@@ -26,10 +31,16 @@ p, h1, h2, h3{
 .container {
     width: 100%;
     padding: 0px;
+    margin-bottom: 5rem;
+    flex: 1; 
 }
 
 .header-main{
    padding: 0 2rem; 
+}
+
+main{
+   padding: 0 2rem;
 }
 
 .navbar {
@@ -55,16 +66,12 @@ p, h1, h2, h3{
     min-height: 70px; /* pra ele nunca esticar demais */
 }
 
+
 .menu-desktop {
     display: flex;
     justify-content: center;
     align-items: flex-start; 
     height: 100%; 
-}
-
-.logo {
-    font-size: 2.5em;
-    font-weight: bold;
 }
 
 .menu-container {
@@ -73,7 +80,6 @@ p, h1, h2, h3{
     align-items: center;
     height: 100%;
 }
-
 
 .menu-items {
     list-style-type: none;
@@ -132,9 +138,80 @@ header a:hover {
     margin-left: 1rem;
 }
 
-header .nav-botoes a:hover{
+.btn-area a:hover{
     color: var(--amarelo);
     box-shadow: 0px 0px 8px var(--azul);
+}
+
+.perfil-aluno-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    background-color: var(--azul);
+    padding: 8px 12px;
+    border-radius: 30px;
+    transition: 0.2s;
+}
+
+.perfil-aluno-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 8px var(--azul);
+}
+
+.icone-perfil {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+.perfil-opcoes {
+    background-color: var(--cinza-claro);
+    position: absolute;
+    top: 100px; /* ajusta conforme seu layout */
+    right: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 150px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 100;
+}
+
+.perfil-opcoes.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+.perfil-opcoes a {
+    display: block;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: var(--cinza-escuro);
+    font-size: 15px;
+}
+
+.perfil-opcoes a:hover {
+    color: var(--amarelo);
+    transform: scale(1.1);
+}
+
+.perfil-aluno-btn svg {
+    fill: var(--cinza-claro);
+    transition: fill 0.3s ease;
+}
+
+.perfil-aluno-btn:hover svg {
+    fill: var(--amarelo); /* muda para azul no hover */
+}
+
+.main-content a{
+    color: var(--cinza-escuro);
 }
 
 .menu-toggle {
@@ -157,11 +234,22 @@ header .nav-botoes a:hover{
     margin: 2px;
   }
 
-  .waves {
+.waves {
     position: relative;
     width: 100%;
-    height: 100px;
+    height: 100px; /* ou mais, se quiser mais espaço */
     margin-top: 60px;
+}
+
+.waves footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--cinza-claro);
+    padding: 10px 0;
+    z-index: 1001;
 }
 
 /* Estilo para a seção de ondas */

@@ -7,14 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Painel de Administração</title>
     <link rel="shortcut icon" href="../images/logotipocw.png" />
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="partials/style.css">
     <link rel="stylesheet" href="css/usuarios.css">
 </head>
 
 <body>
+    <?php include 'partials/header.php'; ?> <!-- Inclui o header -->
     <div class="container">
-
-        <?php include 'partials/header.php'; ?> <!-- Inclui o header -->
 
         <main>
             <section id="usuarios" class="section">
@@ -34,6 +33,7 @@
             </section>
         </main>
     </div>
+    <?php include 'partials/footer.php'; ?> <!-- Inclui o footer -->
 </body>
 
 </html>

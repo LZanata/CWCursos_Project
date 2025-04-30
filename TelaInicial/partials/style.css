@@ -11,12 +11,17 @@
     --amarelo: #FFB400;
 }  
 
+ html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
 body {
     font-family: Arial, sans-serif;
     color: var(--cinza-escuro);
     background-color: var(--cinza-claro);
-    display: flex;
-    justify-content: center;
 }
 
 p, h1, h2, h3{
@@ -26,10 +31,16 @@ p, h1, h2, h3{
 .container {
     width: 100%;
     padding: 0px;
+    margin-bottom: 5rem;
 }
 
 .header-main{
    padding: 0 2rem; 
+}
+
+main{
+   padding: 0 2rem;
+   flex: 1; 
 }
 
 .navbar {

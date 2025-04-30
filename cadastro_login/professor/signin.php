@@ -13,11 +13,11 @@
 </head>
 
 <body>
-    <div class="container">
 
-        <div class="header-main">
-            <?php include 'partials/header.php'; ?> <!-- Inclui o header -->
-        </div>
+    <div class="header-main">
+        <?php include 'partials/header.php'; ?> <!-- Inclui o header -->
+    </div>
+    <div class="container">
         <div class="container-main">
             <div class="container-card">
                 <div class="card">
@@ -76,10 +76,9 @@
                 <p>Nosso time está pronto para revisar, orientar e apoiar você em todas as etapas do seu curso.</p>
             </div>
         </section>
-
-        <?php include 'partials/footer.php'; ?> <!-- Inclui o footer -->
-
     </div>
+
+    <?php include 'partials/footer.php'; ?> <!-- Inclui o footer -->
 </body>
 
 </html>

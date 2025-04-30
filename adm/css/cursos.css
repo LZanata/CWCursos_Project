@@ -7,38 +7,20 @@
     --border-color: #ccc;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    padding: 2rem;
-}
-
-/* Container geral */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
 /* Seções */
 .section {
     background: #fff;
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    margin-top: 2rem;
+    width: 500px;
+    margin-bottom: 5rem;
 }
 
 /* Títulos */
 .section h2 {
     font-size: 2rem;
-    color: var(--primary-color);
+    color: var(--text-color);
     margin-bottom: 1.5rem;
 }
 

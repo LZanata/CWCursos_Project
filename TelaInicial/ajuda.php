@@ -15,78 +15,77 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="header-main">
-            <?php include 'partials/header.php'; ?> <!-- Inclui o header -->
-
-            <main>
-                <!-- Seção de perguntas frequentes -->
-                <section id="faq">
-                    <div class="faq-title">
-                        <h1>Perguntas Frequentes</h1> <!-- Título da seção -->
-                    </div>
-                    <!-- Pergunta e resposta sobre o acesso aos cursos -->
-                    <div class="faq-item">
-                        <button class="faq-question">Como faço para acessar os cursos?<i class="bi bi-caret-down"></i></button>
-                        <div class="faq-answer hidden">
-                            <p>Você pode acessar os cursos através do painel do aluno após efetuar login.</p>
-                        </div>
-                    </div>
-                    <!-- Pergunta e resposta sobre recuperação de senha -->
-                    <div class="faq-item">
-                        <button class="faq-question">Esqueci minha senha. O que devo fazer?<i class="bi bi-caret-down"></i></button>
-                        <div class="faq-answer hidden">
-                            <p>Clique em "Esqueci minha senha" na página de login e siga as instruções.</p>
-                        </div>
-                    </div>
-                    <!-- Pergunta e resposta sobre contato com o suporte -->
-                    <div class="faq-item">
-                        <button class="faq-question">Como posso entrar em contato com o suporte?<i class="bi bi-caret-down"></i></button>
-                        <div class="faq-answer hidden">
-                            <p>Você pode entrar em contato conosco através da seção de contato abaixo ou enviando um email para suporte@plataformadecursos.com.</p>
-                        </div>
-                    </div>
-                    <!-- Pergunta e resposta sobre acesso pelo celular -->
-                    <div class="faq-item">
-                        <button class="faq-question">Posso acessar os cursos pelo celular?<i class="bi bi-caret-down"></i></button>
-                        <div class="faq-answer hidden">
-                            <p>Sim, nossos cursos são compatíveis com dispositivos móveis. Basta acessar o site pelo navegador do seu celular.</p>
-                        </div>
-                    </div>
-                    <!-- Pergunta e resposta sobre certificados dos cursos -->
-                    <div class="faq-item">
-                        <button class="faq-question">Os cursos têm certificado?<i class="bi bi-caret-down"></i></button>
-                        <div class="faq-answer hidden">
-                            <p>Sim, todos os nossos cursos oferecem certificado de conclusão que você pode baixar e imprimir.</p>
-                        </div>
-                    </div>
-                </section>
-                <section id="central">
-                    <div class="central-header">
-                        <h1>Ainda tem alguma dúvida e precisa de ajuda?</h1>
-                        <p>
-                            Entre em contato conosco para podermos ajudá-lo! Você pode falar com nosso
-                            <a href="#chatraChatExpanded">Chatbot</a>.
-                        </p>
-                    </div>
-                    <div class="central-main">
-                        <div class="central-subtitle">
-                            <h2>Contamos também com outros canais:</h2>
-                        </div>
-                        <div class="central-buttons">
-                            <div class="central-button">
-                                <a href="../suporte/suporte.php" target="_blank">Central de Ajuda</a>
-                            </div>
-                            <div class="central-button">
-                                <a href="https://wa.me/5511999999999" target="_blank">WhatsApp</a>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </main>
-        </div>
-        <?php include 'partials/footer.php'; ?> <!-- Inclui o footer -->
+    <div class="header-main">
+        <?php include 'partials/header.php'; ?> <!-- Inclui o header -->
     </div>
+    <main>
+        <div class="container">
+            <!-- Seção de perguntas frequentes -->
+            <section id="faq">
+                <div class="faq-title">
+                    <h1>Perguntas Frequentes</h1> <!-- Título da seção -->
+                </div>
+                <!-- Pergunta e resposta sobre o acesso aos cursos -->
+                <div class="faq-item">
+                    <button class="faq-question">Como faço para acessar os cursos?<i class="bi bi-caret-down"></i></button>
+                    <div class="faq-answer hidden">
+                        <p>Você pode acessar os cursos através do painel do aluno após efetuar login.</p>
+                    </div>
+                </div>
+                <!-- Pergunta e resposta sobre recuperação de senha -->
+                <div class="faq-item">
+                    <button class="faq-question">Esqueci minha senha. O que devo fazer?<i class="bi bi-caret-down"></i></button>
+                    <div class="faq-answer hidden">
+                        <p>Clique em "Esqueci minha senha" na página de login e siga as instruções.</p>
+                    </div>
+                </div>
+                <!-- Pergunta e resposta sobre contato com o suporte -->
+                <div class="faq-item">
+                    <button class="faq-question">Como posso entrar em contato com o suporte?<i class="bi bi-caret-down"></i></button>
+                    <div class="faq-answer hidden">
+                        <p>Você pode entrar em contato conosco através da seção de contato abaixo ou enviando um email para suporte@plataformadecursos.com.</p>
+                    </div>
+                </div>
+                <!-- Pergunta e resposta sobre acesso pelo celular -->
+                <div class="faq-item">
+                    <button class="faq-question">Posso acessar os cursos pelo celular?<i class="bi bi-caret-down"></i></button>
+                    <div class="faq-answer hidden">
+                        <p>Sim, nossos cursos são compatíveis com dispositivos móveis. Basta acessar o site pelo navegador do seu celular.</p>
+                    </div>
+                </div>
+                <!-- Pergunta e resposta sobre certificados dos cursos -->
+                <div class="faq-item">
+                    <button class="faq-question">Os cursos têm certificado?<i class="bi bi-caret-down"></i></button>
+                    <div class="faq-answer hidden">
+                        <p>Sim, todos os nossos cursos oferecem certificado de conclusão que você pode baixar e imprimir.</p>
+                    </div>
+                </div>
+            </section>
+            <section id="central">
+                <div class="central-header">
+                    <h1>Ainda tem alguma dúvida e precisa de ajuda?</h1>
+                    <p>
+                        Entre em contato conosco para podermos ajudá-lo! Você pode falar com nosso
+                        <a href="#chatraChatExpanded">Chatbot</a>.
+                    </p>
+                </div>
+                <div class="central-main">
+                    <div class="central-subtitle">
+                        <h2>Contamos também com outros canais:</h2>
+                    </div>
+                    <div class="central-buttons">
+                        <div class="central-button">
+                            <a href="../suporte/suporte.php" target="_blank">Central de Ajuda</a>
+                        </div>
+                        <div class="central-button">
+                            <a href="https://wa.me/5511999999999" target="_blank">WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <?php include 'partials/footer.php'; ?> <!-- Inclui o footer -->
 </body>
 
 <!--Script para esconder e aparecer a resposta do FAQ-->

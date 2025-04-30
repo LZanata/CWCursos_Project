@@ -68,12 +68,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['submit'])) {
 </head>
 
 <body>
+    <div class="header-main">
+        <?php include 'partials/header.php'; ?> <!-- Inclui o header -->
+    </div>
+    <!-- Container principal -->
     <div class="container">
-
-        <div class="header-main">
-            <?php include 'partials/header.php'; ?> <!-- Inclui o header -->
-        </div>
-        <!-- Container principal -->
         <main class="container-main">
             <div class="card-image">
                 <img src="../../images/homem-mulher-discutindo2.png" alt="Mulher de oculos sorrindo">
@@ -124,8 +123,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['submit'])) {
                 </div>
             </div>
         </main>
-        <?php include 'partials/footer.php'; ?> <!-- Inclui o footer -->
     </div>
+    <?php include 'partials/footer.php'; ?> <!-- Inclui o footer -->
     <script>
         function toggleSenha(id, el) {
             const input = document.getElementById(id);

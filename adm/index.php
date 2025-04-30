@@ -7,15 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Painel de Administração</title>
     <link rel="shortcut icon" href="../images/logotipocw.png" />
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="partials/style.css">
     <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body>
+    <?php include 'partials/header.php'; ?> <!-- Inclui o header -->
     <div class="container">
-
-        <?php include 'partials/header.php'; ?> <!-- Inclui o header -->
-
         <main>
             <section id="dashboard" class="section active">
                 <h2>Dashboard</h2>
@@ -43,6 +41,7 @@
         </main>
 
     </div>
+    <?php include 'partials/footer.php'; ?> <!-- Inclui o footer -->
 </body>
 
 </html>

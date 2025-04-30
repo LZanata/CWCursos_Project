@@ -117,11 +117,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 
 <body>
+    <div class="header-main">
+        <?php include 'partials/header.php'; ?> <!-- Inclui o header -->
+    </div>
     <div class="container">
-
-        <div class="header-main">
-            <?php include 'partials/header.php'; ?> <!-- Inclui o header -->
-        </div>
         <div class="container-main">
             <div class="card-image">
                 <img src="../../images/homem-mulher-discutindo.png" alt="Mulher de oculos sorrindo">
@@ -216,8 +215,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </div>
             </div>
         </div>
-        <?php include 'partials/footer.php'; ?> <!-- Inclui o footer -->
     </div>
+    <?php include 'partials/footer.php'; ?> <!-- Inclui o footer -->
     <!-- Script para bloquear letras e permitir apenas números -->
     <script>
         function somenteNumeros(event) {
