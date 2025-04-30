@@ -8,10 +8,21 @@
         </div>
 
         <nav class="nav-botoes">
-            <?php if (isset($_SESSION['id']) && $_SESSION['tipo'] === 'aluno'): ?>
-                <div class="btn-area">
-                    <a href="../aluno/areadoaluno.php" class="planos-btn">Área do Aluno</a>
-                </div>
+            <?php if (isset($_SESSION['id'])): ?>
+                <?php if ($_SESSION['tipo'] === 'aluno'): ?>
+                    <div class="btn-area">
+                        <a href="../aluno/areadoaluno.php" class="planos-btn">Área do Aluno</a>
+                    </div>
+                <?php elseif ($_SESSION['tipo'] === 'professor'): ?>
+                    <div class="btn-area">
+                        <a href="../professor/index.php" class="planos-btn">Área do Professor</a>
+                    </div>
+                <?php elseif ($_SESSION['tipo'] === 'administrador'): ?>
+                    <div class="btn-area">
+                        <a href="../adm/index.php" class="planos-btn">Área do Administrador</a>
+                    </div>
+                <?php endif; ?>
+
                 <div class="btn-alunos">
                     <div id="perfilAlunoBtn" class="perfil-aluno-btn">
                         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#333" viewBox="0 0 24 24">
@@ -21,7 +32,7 @@
 
                     <!-- Container de opções -->
                     <div id="perfilAlunoOpcoes" class="perfil-opcoes">
-                        <a href="../aluno/profile.php">Conta</a>
+                        <a href="../<?= $_SESSION['tipo'] ?>/profile.php">Conta</a>
                         <a href="configuracoes.php">Minhas Compras</a>
                         <a href="../funcoes/sessoes/logout.php">Sair</a>
                     </div>
@@ -32,6 +43,7 @@
                 <a href="../cadastro_login/aluno/signup.php" class="planos-btn">Cadastrar-se</a>
             <?php endif; ?>
         </nav>
+
     </div>
 
     <div class="nav-main">
