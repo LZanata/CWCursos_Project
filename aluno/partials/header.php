@@ -4,7 +4,7 @@
     </div>
     <nav class="nav-main">
         <ul>
-            <li><a href="abacursos/abacursos.php">Meus Cursos</a></li>
+            <li><a href="areadoaluno.php">Meus Cursos</a></li>
             <li><a href="abatrofeus.php">Galeria de certificados</a></li>
         </ul>
         <div class="btn-alunos">
@@ -16,9 +16,9 @@
 
             <!-- Container de opções -->
             <div id="perfilAlunoOpcoes" class="perfil-opcoes">
-                <a href="perfil.php">Meu Perfil</a>
-                <a href="configuracoes.php">Configurações</a>
-                <a href="logout.php">Sair</a>
+                <a href="profile.php">Meu Perfil</a>
+                <a href="../suporte/suporte.php" target="_blank">Central de Ajuda</a>
+                <a href="../funcoes/sessoes/logout.php">Sair</a>
             </div>
         </div>
     </nav>

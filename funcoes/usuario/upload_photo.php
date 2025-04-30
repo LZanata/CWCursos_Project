@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once('config.php'); 
+include_once('../conexao.php'); 
 
 if (isset($_FILES['photo']) && isset($_SESSION['usuario'])) {
     $usuario = $_SESSION['usuario'];

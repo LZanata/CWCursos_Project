@@ -27,10 +27,9 @@
 
                  <!-- Container de opções -->
                  <div id="perfilAlunoOpcoes" class="perfil-opcoes">
-                     <a href="perfil.php">Meu Perfil</a>
-                     <a href="configuracoes.php">Configurações</a>
+                     <a href="#">Conta</a>
                      <a href="meusTickets.php">Meus Tickets</a>
-                     <a href="logout.php">Sair</a>
+                     <a href="../funcoes/sessoes/logout_suporte.php">Sair</a>
                  </div>
              </div>
          <?php else: ?>

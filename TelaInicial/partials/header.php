@@ -21,9 +21,9 @@
 
                     <!-- Container de opções -->
                     <div id="perfilAlunoOpcoes" class="perfil-opcoes">
-                        <a href="perfil.php">Meu Perfil</a>
-                        <a href="configuracoes.php">Configurações</a>
-                        <a href="logout.php">Sair</a>
+                        <a href="../aluno/profile.php">Conta</a>
+                        <a href="configuracoes.php">Minhas Compras</a>
+                        <a href="../funcoes/sessoes/logout.php">Sair</a>
                     </div>
                 </div>
             <?php else: ?>
