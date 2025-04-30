@@ -12,22 +12,12 @@
 </head>
 
 <body>
-
-  <header>
-    <div class="header-content">
-      <div class="top-bar">
-        <div class="welcome-text">
-          <h1>Bem-vindo, Professor!</h1>
-          <p>Continue impactando alunos com seus cursos incríveis 🚀</p>
-        </div>
-        <button class="menu-toggle" id="menu-toggle">☰</button>
-      </div>
-      <?php include 'partials/header.php'; ?> <!-- Inclui o header -->
-    </div>
-  </header>
-
+  <?php include 'partials/header.php'; ?> <!-- Inclui o header -->
   <div class="container">
-
+    <div class="welcome-text">
+      <h1>Bem-vindo, Professor!</h1>
+      <p>Continue impactando alunos com seus cursos incríveis 🚀</p>
+    </div>
     <section class="dashboard">
       <div class="card">
         <h2>5</h2>

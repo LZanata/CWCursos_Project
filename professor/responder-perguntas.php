@@ -8,24 +8,18 @@
     <title>Responder Perguntas - CW Cursos</title>
     <link rel="shortcut icon" href="../images/logotipocw.png" />
     <link rel="stylesheet" href="partials/style.css">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body>
 
-    <header>
-        <div class="header-content">
-            <div class="top-bar">
-                <div class="welcome-text">
-                    <h1>Responder Perguntas</h1>
-                    <p>Veja e responda dúvidas dos seus alunos ✏️</p>
-                </div>
-                <button class="menu-toggle" id="menu-toggle">☰</button>
-            </div>
-            <?php include 'partials/header.php'; ?> <!-- Inclui o header -->
-        </div>
-    </header>
+    <?php include 'partials/header.php'; ?> <!-- Inclui o header -->
 
     <div class="container">
+        <div class="welcome-text">
+            <h1>Responder Perguntas</h1>
+            <p>Veja e responda dúvidas dos seus alunos ✏️</p>
+        </div>
         <section class="list-section">
             <div class="question-card">
                 <h3>Curso: Programação Web do Zero</h3>
