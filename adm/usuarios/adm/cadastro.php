@@ -69,14 +69,14 @@ if (isset($_POST['submit'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../../images/logotipocw.png" />
+    <link rel="shortcut icon" href="../../../images/logotipocw.png" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="css/cadastroAdmTeacher.css">
-    <link rel="stylesheet" href="partials/style.css">
+    <link rel="stylesheet" href="css/cadastro.css">
+    <link rel="stylesheet" href="../partials/style.css">
 </head>
 
 <body>
-    <?php include 'partials/header.php'; ?> <!-- Inclui o header -->
+    <?php include '../partials/header.php'; ?> <!-- Inclui o header -->
     <!-- Container principal -->
     <div class="container">
         <form action="cadastroAdm.php" method="POST"> <!-- Formulário de cadastro -->
@@ -136,7 +136,7 @@ if (isset($_POST['submit'])) {
             </div>
         </form>
     </div>
-    <?php include 'partials/footer.php'; ?> <!-- Inclui o footer -->
+    <?php include '../partials/footer.php'; ?> <!-- Inclui o footer -->
     <script>
         function toggleSenha(id, el) {
             const input = document.getElementById(id);

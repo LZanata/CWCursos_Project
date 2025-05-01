@@ -68,8 +68,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['aprovar'])) {
 <head>
     <meta charset="UTF-8">
     <title>Detalhes do Professor</title>
-    <link rel="shortcut icon" href="../../images/logotipocw.png" />
-    <link rel="stylesheet" href="css/detalhes_professor.css">
+    <link rel="shortcut icon" href="../../../images/logotipocw.png" />
+    <link rel="stylesheet" href="css/detalhes.css">
     <link rel="stylesheet" href="../partials/style.css">
 </head>
 
@@ -115,7 +115,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['aprovar'])) {
                     <button type="submit" name="aprovar">Aprovar e Cadastrar</button>
                 </form>
             <?php endif; ?>
-            <a href="add_professor.php?type=professor&status=pendente" class="btn-voltar">Voltar</a>
+            <a href="add.php?type=professor&status=pendente" class="btn-voltar">Voltar</a>
         </div>
     </div>
     <?php include '../partials/footer.php'; ?>

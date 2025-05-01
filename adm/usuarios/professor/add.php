@@ -18,7 +18,7 @@ if ($type === 'professor' && $status === 'pendente') {
     <meta charset="UTF-8">
     <title>Professores Pendentes</title>
     <link rel="shortcut icon" href="../../../images/logotipocw.png" />
-    <link rel="stylesheet" href="css/list_professor.css">
+    <link rel="stylesheet" href="css/add.css">
     <link rel="stylesheet" href="../partials/style.css">
 </head>
 <body>
@@ -45,7 +45,7 @@ if ($type === 'professor' && $status === 'pendente') {
                             <td><?= htmlspecialchars($row['area_conhecimento']) ?></td>
                             <td><?= date('d/m/Y', strtotime($row['data_inscricao'])) ?></td>
                             <td>
-                                <a href="detalhes_professor.php?id=<?= $row['id'] ?>">Ver Detalhes</a>
+                                <a href="detalhes.php?id=<?= $row['id'] ?>">Ver Detalhes</a>
                                 <!-- aqui você pode adicionar botões para 'Aprovar' ou 'Excluir' -->
                             </td>
                         </tr>

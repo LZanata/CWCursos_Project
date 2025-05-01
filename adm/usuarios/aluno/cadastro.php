@@ -39,7 +39,7 @@ if (isset($_POST['submit'])) {
     $senhaHash = password_hash($senha, PASSWORD_DEFAULT);
 
     // Insere os dados no banco de dados
-    $insertQuery = "INSERT INTO usuarios (nome, usuario, email, senha, data_nascimento, tipo, status) VALUES (?, ?, ?, ?, ?, 'professor', 'ativo')";
+    $insertQuery = "INSERT INTO usuarios (nome, usuario, email, senha, data_nascimento, tipo, status) VALUES (?, ?, ?, ?, ?, 'aluno', 'ativo')";
     $stmt = $conexao->prepare($insertQuery);
     $stmt->bind_param("sssss", $nome, $usuario, $email, $senhaHash, $dataNascimento);
 
@@ -69,19 +69,19 @@ if (isset($_POST['submit'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../../images/logotipocw.png" />
+    <link rel="shortcut icon" href="../../../images/logotipocw.png" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="css/cadastroAdmTeacher.css">
-    <link rel="stylesheet" href="partials/style.css">
+    <link rel="stylesheet" href="css/cadastro.css">
+    <link rel="stylesheet" href="../partials/style.css">
 </head>
 
 <body>
     <?php include '../partials/header.php'; ?> <!-- Inclui o header -->
     <!-- Container principal -->
     <div class="container">
-        <form action="cadastroProf.php" method="POST"> <!-- Formulário de cadastro -->
+        <form action="cadastroAluno.php" method="POST"> <!-- Formulário de cadastro -->
             <div class="card">
-                <h1>Cadastrar Professor</h1> <!-- Título do formulário -->
+                <h1>Cadastrar Aluno</h1> <!-- Título do formulário -->
 
                 <div id="msgError"></div> <!-- Mensagem de erro -->
                 <div id="msgSuccess"></div> <!-- Mensagem de sucesso -->
@@ -136,7 +136,7 @@ if (isset($_POST['submit'])) {
             </div>
         </form>
     </div>
-    <?php include 'partials/footer.php'; ?> <!-- Inclui o footer -->
+    <?php include '../partials/footer.php'; ?> <!-- Inclui o footer -->
     <script>
         function toggleSenha(id, el) {
             const input = document.getElementById(id);
