@@ -21,7 +21,7 @@
                     <h2>Gerenciar Cursos</h2>
 
                     <!-- Formulário para adicionar curso -->
-                    <form action="add_course.php" method="POST" enctype="multipart/form-data">
+                    <form action="../funcoes/usuario/salvar_curso.php" method="POST" enctype="multipart/form-data">
                         <label for="nome_curso">Nome do Curso:</label>
                         <input type="text" id="nome_curso" name="nome_curso" required>
 
@@ -37,13 +37,9 @@
                             Escolher Imagem
                         </label>
 
-                        <label for="video_url">Link do Vídeo (URL) ou Arquivo de Vídeo:</label>
+                        <label for="video_url">Link do Vídeo (URL):</label>
                         <input type="text" id="video_url" name="video_url" placeholder="Cole o link do vídeo">
-                        <label class="custom-file-upload">
-                            <input type="file" id="video_file" name="video_file" accept="video/*">
-                            Escolher Vídeo
-                        </label>
-
+        
                         <button type="submit">Adicionar Curso</button>
                     </form>
 

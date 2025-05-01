@@ -4,13 +4,6 @@
   --cinza-escuro: #202124;
   --amarelo: #FFB400;
 }
-.container {
-  flex: 1; /* Ocupa o espaço restante entre header e footer */
-  padding: 2rem;
-  display: grid;
-  gap: 2rem;
-}
-
 .welcome-text {
   display: flex;
   flex-direction: column;

@@ -1,15 +1,15 @@
 <header>
     <div class="logo">
-        <a href="../TelaInicial/index.php"><img src="../images/logocwbranco_transparente.png" alt="Logo CW Cursos"></a>
+        <a href="../../TelaInicial/index.php"><img src="../../images/logocwbranco_transparente.png" alt="Logo CW Cursos"></a>
     </div>
     <nav class="nav-main">
         <ul>
-            <li><a href="index.php">Tela Inicial</a></li>
-            <li><a href="cursos/cursos.php">Criar Curso</a></li>
-            <li><a href="adicionar-aula.php">Adicionar Aula</a></li>
-            <li><a href="cursos/meus_cursos.php">Meus Cursos</a></li>
-            <li><a href="responder-perguntas.php">Responder Perguntas</a></li>
-            <li><a href="acompanhar-alunos.php">Acompanhar Alunos</a></li>
+            <li><a href="../index.php">Tela Inicial</a></li>
+            <li><a href="cursos.php">Criar Curso</a></li>
+            <li><a href="../adicionar-aula.php">Adicionar Aula</a></li>
+            <li><a href="meus_cursos.php">Meus Cursos</a></li>
+            <li><a href="../responder-perguntas.php">Responder Perguntas</a></li>
+            <li><a href="../acompanhar-alunos.php">Acompanhar Alunos</a></li>
         </ul>
         <div class="btn-alunos">
             <div id="perfilAlunoBtn" class="perfil-aluno-btn">
@@ -21,8 +21,8 @@
             <!-- Container de opções -->
             <div id="perfilAlunoOpcoes" class="perfil-opcoes">
                 <a href="profile.php">Meu Perfil</a>
-                <a href="../suporte/suporte.php" target="_blank">Central de Ajuda</a>
-                <a href="../funcoes/sessoes/logout.php">Sair</a>
+                <a href="../../suporte/suporte.php" target="_blank">Central de Ajuda</a>
+                <a href="../../funcoes/sessoes/logout.php">Sair</a>
             </div>
         </div>
     </nav>

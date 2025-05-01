@@ -18,6 +18,15 @@ body {
   color: var(--cinza-escuro);
 }
 
+.container {
+  flex: 1; /* Ocupa o espaço restante entre header e footer */
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+  padding: 2rem;
+}
 header {
   background: linear-gradient(90deg, #000000, var(--azul));
   color: var(--cinza-claro);
@@ -174,7 +183,7 @@ section .wave {
   left: 0; /* Alinha à esquerda */
   width: 100%; /* Largura total */
   height: 90px; /* Altura fixa */
-  background: url(../../images/wave.png); /* Imagem de fundo */
+  background: url(../../../images/wave.png); /* Imagem de fundo */
   filter: invert(32%) sepia(91%) saturate(3683%) hue-rotate(204deg) brightness(97%) contrast(101%);
   background-size: 1000px 100px; /* Tamanho da imagem */
 }
