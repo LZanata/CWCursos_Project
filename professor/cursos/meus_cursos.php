@@ -25,7 +25,7 @@ $resultado = $stmt->get_result();
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Meus Cursos - CW Cursos</title>
-  <link rel="shortcut icon" href="../images/logotipocw.png" />
+  <link rel="shortcut icon" href="../../images/logotipocw.png" />
   <link rel="stylesheet" href="partials/style.css">
   <link rel="stylesheet" href="funcoes/css/cursos.css">
 </head>

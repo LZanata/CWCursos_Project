@@ -1,14 +1,14 @@
 <header>
     <div class="logo">
-        <a href="../TelaInicial/index.php"><img src="../images/logocwbranco_transparente.png" alt="Logo CW Cursos"></a>
+        <a href="../../TelaInicial/index.php"><img src="../../images/logocwbranco_transparente.png" alt="Logo CW Cursos"></a>
     </div>
     <nav class="nav-main">
         <ul>
-            <li><a href="index.php">Dashboard</a></li>
-            <li><a href="cursos/cursos.php">Cursos</a></li>
-            <li><a href="usuarios.php">Usuários</a></li>
-            <li><a href="suporte.php">Suporte</a></li>
-            <li><a href="acessibilidade.php">Acessibilidade</a></li>
+            <li><a href="../index.php">Dashboard</a></li>
+            <li><a href="cursos.php">Cursos</a></li>
+            <li><a href="../usuarios.php">Usuários</a></li>
+            <li><a href="../suporte.php">Suporte</a></li>
+            <li><a href="../acessibilidade.php">Acessibilidade</a></li>
         </ul>
         <div class="btn-alunos">
             <div id="perfilAlunoBtn" class="perfil-aluno-btn">

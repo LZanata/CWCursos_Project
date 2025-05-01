@@ -39,7 +39,6 @@ $curso = $result->fetch_assoc();
   <link rel="shortcut icon" href="../../images/logotipocw.png" />
   <link rel="stylesheet" href="partials/style.css">
   <link rel="stylesheet" href="css/index.css">
-  <link rel="stylesheet" href="funcoes/css/cursos.css">
 </head>
 
 <body>
@@ -48,7 +47,7 @@ $curso = $result->fetch_assoc();
   <div class="container">
     <div class="welcome-text">
       <h1>Editar Curso</h1>
-      <p>Atualize as informações do seu curso ✏️</p>
+      <p>Atualize as informações do curso ✏️</p>
     </div>
 
     <form class="course-form" action="funcoes/atualizar_curso.php" method="POST" enctype="multipart/form-data">
@@ -89,6 +88,7 @@ $curso = $result->fetch_assoc();
 
       <div class="form-group">
         <button type="submit" class="btn-publicar">Salvar Alterações</button>
+        <a href="list_courses.php">Cancelar</a>
       </div>
     </form>
   </div>

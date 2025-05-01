@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   if ($res->num_rows === 0) {
     $_SESSION['mensagem'] = 'Acesso negado ou curso não encontrado.';
     $_SESSION['mensagem_tipo'] = 'erro';
-    header('Location: ../meus_cursos.php');
+    header('Location: ../list_courses.php');
     exit;
   }
 
@@ -53,6 +53,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
   $_SESSION['mensagem'] = 'Curso atualizado com sucesso!';
   $_SESSION['mensagem_tipo'] = 'sucesso';
-  header('Location: ../meus_cursos.php');
+  header('Location: ../list_courses.php');
   exit;
 }
