@@ -28,7 +28,7 @@
                 <button onclick="window.location.href='abas/list_professor.php?type=professor&status=pendente'">Listar Professores</button>
 
                 <h3>Administradores</h3>
-                <button onclick="window.location.href='abas/cadastroAdmTeacher.php?type=administrador'">Adicionar Administrador</button>
+                <button onclick="window.location.href='abas/cadastroAdm.php?type=administrador'">Adicionar Administrador</button>
                 <button onclick="window.location.href='list_users.php?type=administrador'">Listar Administradores</button>
             </section>
         </main>
