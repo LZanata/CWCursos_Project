@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Suporte - Plataforma de Cursos</title>
+    <title>CW Cursos - Suporte</title>
     <link rel="shortcut icon" href="../images/logotipocw.png" />
     <link rel="stylesheet" href="partials/style.css">
     <link rel="stylesheet" href="css/ticket.css">

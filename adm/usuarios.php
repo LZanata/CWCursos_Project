@@ -24,11 +24,11 @@
                 <button onclick="window.location.href='list_users.php?type=aluno'">Listar Alunos</button>
 
                 <h3>Professores Pendentes</h3>
-                <button onclick="window.location.href='cadastro/cadastroAdmTeacher.php?type=professor'">Adicionar Professor</button>
-                <button onclick="window.location.href='list_users.php?type=professor&status=pendente'">Listar Professores</button>
+                <button onclick="window.location.href='abas/cadastroProf.php?type=professor'">Adicionar Professor</button>
+                <button onclick="window.location.href='abas/list_professor.php?type=professor&status=pendente'">Listar Professores</button>
 
                 <h3>Administradores</h3>
-                <button onclick="window.location.href='cadastroAdmTeacher.php?type=administrador'">Adicionar Administrador</button>
+                <button onclick="window.location.href='abas/cadastroAdmTeacher.php?type=administrador'">Adicionar Administrador</button>
                 <button onclick="window.location.href='list_users.php?type=administrador'">Listar Administradores</button>
             </section>
         </main>
