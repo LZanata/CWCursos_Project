@@ -1,7 +1,7 @@
 <?php
 // Verifica se o formulário foi submetido
 if (isset($_POST['submit'])) {
-    include_once('../funcoes/conexao.php'); // Inclui o arquivo de configuração
+    include_once('../../../funcoes/conexao.php'); // Inclui o arquivo de configuração
 
     // Obtém os dados do formulário
     $nome = $_POST['nome'];
@@ -76,7 +76,7 @@ if (isset($_POST['submit'])) {
 </head>
 
 <body>
-    <?php include 'partials/header.php'; ?> <!-- Inclui o header -->
+    <?php include '../partials/header.php'; ?> <!-- Inclui o header -->
     <!-- Container principal -->
     <div class="container">
         <form action="cadastroProf.php" method="POST"> <!-- Formulário de cadastro -->

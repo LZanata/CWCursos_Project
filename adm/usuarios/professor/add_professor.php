@@ -1,6 +1,6 @@
 <?php
 session_start();
-include '../../funcoes/conexao.php'; // ajuste o caminho conforme necessário
+include '../../../funcoes/conexao.php'; // ajuste o caminho conforme necessário
 
 $type = $_GET['type'] ?? '';
 $status = $_GET['status'] ?? '';
@@ -17,12 +17,12 @@ if ($type === 'professor' && $status === 'pendente') {
 <head>
     <meta charset="UTF-8">
     <title>Professores Pendentes</title>
-    <link rel="shortcut icon" href="../../images/logotipocw.png" />
+    <link rel="shortcut icon" href="../../../images/logotipocw.png" />
     <link rel="stylesheet" href="css/list_professor.css">
-    <link rel="stylesheet" href="partials/style.css">
+    <link rel="stylesheet" href="../partials/style.css">
 </head>
 <body>
-    <?php include 'partials/header.php'; ?>
+    <?php include '../partials/header.php'; ?>
     <div class="container">
         <h2>Professores Pendentes</h2>
 
@@ -56,6 +56,6 @@ if ($type === 'professor' && $status === 'pendente') {
             <p>Nenhum professor pendente encontrado.</p>
         <?php endif; ?>
     </div>
-    <?php include 'partials/footer.php'; ?>
+    <?php include '../partials/footer.php'; ?>
 </body>
 </html>

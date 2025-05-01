@@ -20,16 +20,16 @@
                 <h2>Gerenciar Usuários</h2>
 
                 <h3>Alunos</h3>
-                <button onclick="window.location.href='../signup.php?type=aluno'">Adicionar Aluno</button>
-                <button onclick="window.location.href='list_users.php?type=aluno'">Listar Alunos</button>
+                <button onclick="window.location.href='../signup.php?type=aluno'">Adicionar</button>
+                <button onclick="window.location.href='list_users.php?type=aluno'">Listar Cadastrados</button>
 
-                <h3>Professores Pendentes</h3>
-                <button onclick="window.location.href='abas/cadastroProf.php?type=professor'">Adicionar Professor</button>
-                <button onclick="window.location.href='abas/list_professor.php?type=professor&status=pendente'">Listar Professores</button>
+                <h3>Professores</h3>
+                <button onclick="window.location.href='usuarios/professor/add_professor.php?type=professor&status=pendente'">Visualizar e Adicionar</button>
+                <button onclick="window.location.href='usuarios/professor/cadastroProf.php?type=professor'">Listar Cadastrados</button>
 
                 <h3>Administradores</h3>
-                <button onclick="window.location.href='abas/cadastroAdm.php?type=administrador'">Adicionar Administrador</button>
-                <button onclick="window.location.href='list_users.php?type=administrador'">Listar Administradores</button>
+                <button onclick="window.location.href='usuarios/adm/cadastroAdm.php?type=administrador'">Adicionar</button>
+                <button onclick="window.location.href='list_users.php?type=administrador'">Listar Cadastrados</button>
             </section>
         </main>
     </div>

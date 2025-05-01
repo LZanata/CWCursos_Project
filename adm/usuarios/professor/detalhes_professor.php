@@ -1,6 +1,6 @@
 <?php
 session_start();
-require '../../funcoes/conexao.php';
+require '../../../funcoes/conexao.php';
 
 if (!isset($_GET['id'])) {
     echo "ID do professor não fornecido.";
@@ -70,11 +70,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['aprovar'])) {
     <title>Detalhes do Professor</title>
     <link rel="shortcut icon" href="../../images/logotipocw.png" />
     <link rel="stylesheet" href="css/detalhes_professor.css">
-    <link rel="stylesheet" href="partials/style.css">
+    <link rel="stylesheet" href="../partials/style.css">
 </head>
 
 <body>
-    <?php include 'partials/header.php'; ?>
+    <?php include '../partials/header.php'; ?>
     <div class="container">
         <div class="detail-header">
             <h2>Detalhes do Professor</h2>
@@ -115,10 +115,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['aprovar'])) {
                     <button type="submit" name="aprovar">Aprovar e Cadastrar</button>
                 </form>
             <?php endif; ?>
-            <a href="list_professor.php?type=professor&status=pendente" class="btn-voltar">Voltar</a>
+            <a href="add_professor.php?type=professor&status=pendente" class="btn-voltar">Voltar</a>
         </div>
     </div>
-    <?php include 'partials/footer.php'; ?>
+    <?php include '../partials/footer.php'; ?>
     <script>
         function confirmarAprovacao() {
             return confirm("Tem certeza que deseja aprovar este professor e cadastrá-lo na plataforma?");
