@@ -3,7 +3,7 @@ session_start();
 include '../../../funcoes/conexao.php';
 include '../funcoes/listagemUsuarios.php';
 
-$type = $_GET['type'] ?? 'professor';
+$type = $_GET['type'] ?? 'administrador';
 $busca = $_GET['busca'] ?? '';
 ?>
 

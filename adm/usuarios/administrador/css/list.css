@@ -48,3 +48,17 @@ td, th {
 .form-busca button:hover {
     background-color: #218838;
 }
+
+.btn-acao {
+    margin-right: 6px;
+    padding: 4px 8px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+.btn-acao:hover {
+    background-color: #2980b9;
+}

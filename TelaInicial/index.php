@@ -45,7 +45,7 @@
                             </p>
 
                             <div class="btn-cursos">
-                                <a href="abacursos.html">
+                                <a href="cursos.php">
                                     <button>Acesse os Planos</button>
                                 </a>
                             </div>
