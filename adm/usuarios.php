@@ -28,7 +28,7 @@
                 <button onclick="window.location.href='usuarios/professor/list.php?type=professor'">Listar Cadastrados</button>
 
                 <h3>Administradores</h3>
-                <button onclick="window.location.href='usuarios/adm/cadastro.php?type=administrador'">Adicionar</button>
+                <button onclick="window.location.href='usuarios/administrador/cadastro.php?type=administrador'">Adicionar</button>
                 <button onclick="window.location.href='usuarios/administrador/list.php?type=administrador'">Listar Cadastrados</button>
             </section>
         </main>

@@ -50,7 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="UTF-8">
     <title>Editar <?= ucfirst($type) ?></title>
-    <link rel="shortcut icon" href="../../images/logotipocw.png" />
+    <link rel="shortcut icon" href="../../../images/logotipocw.png" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/editar.css">
     <link rel="stylesheet" href="../partials/style.css">

@@ -13,6 +13,7 @@ $busca = $_GET['busca'] ?? '';
 <head>
     <meta charset="UTF-8">
     <title><?= ucfirst($type) ?>es Cadastrados</title>
+    <link rel="shortcut icon" href="../../../images/logotipocw.png" />
     <link rel="stylesheet" href="css/list.css">
     <link rel="stylesheet" href="../partials/style.css">
 </head>
