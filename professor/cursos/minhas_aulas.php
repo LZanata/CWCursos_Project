@@ -61,7 +61,7 @@ $result = $stmt->get_result();
             </div>
         </form>
 
-        <a href="adicionar-aula.php" class="btn-voltar">➕ Adicionar nova aula</a>
+        <a href="add_aula.php" class="btn-voltar">➕ Adicionar nova aula</a>
 
         <?php if (isset($_SESSION['mensagem'])): ?>
             <p class="mensagem <?= $_SESSION['mensagem_tipo'] ?>">

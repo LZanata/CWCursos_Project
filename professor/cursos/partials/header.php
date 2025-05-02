@@ -7,8 +7,8 @@
             <li><a href="../index.php">Tela Inicial</a></li>
             <li><a href="add_cursos.php">Criar Curso</a></li>
             <li><a href="add_aula.php">Adicionar Aula</a></li>
-            <li><a href="minhas_aulas.php">Minhas Aulas</a></li>
             <li><a href="meus_cursos.php">Meus Cursos</a></li>
+            <li><a href="minhas_aulas.php">Minhas Aulas</a></li>
             <li><a href="../responder-perguntas.php">Responder Perguntas</a></li>
             <li><a href="../acompanhar-alunos.php">Acompanhar Alunos</a></li>
         </ul>

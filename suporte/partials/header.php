@@ -4,9 +4,9 @@
          <a href="suporte.php">
              <img src="../images/logocwbranco_transparente.png" alt="Logo da CW Cursos" />
          </a>
-         
-             <h1>Central de Ajuda</h1>
-         
+
+         <h1>Central de Ajuda</h1>
+
      </div>
 
      <nav class="nav-botoes">
@@ -17,7 +17,10 @@
                  <li><a href="ticket.php">Abrir um Ticket</a></li>
              </ul>
          </nav>
-         <?php if (isset($_SESSION['id']) && $_SESSION['tipo'] === 'aluno'): ?>
+         <?php
+            $tiposPermitidos = ['aluno', 'professor', 'administrador'];
+            if (isset($_SESSION['id']) && in_array($_SESSION['tipo'], $tiposPermitidos)):
+            ?>
              <div class="btn-alunos">
                  <div id="perfilAlunoBtn" class="perfil-aluno-btn">
                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#333" viewBox="0 0 24 24">

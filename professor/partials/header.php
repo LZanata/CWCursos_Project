@@ -7,6 +7,7 @@
             <li><a href="index.php">Tela Inicial</a></li>
             <li><a href="cursos/add_cursos.php">Criar Curso</a></li>
             <li><a href="cursos/add_aula.php">Adicionar Aula</a></li>
+            <li><a href="cursos/meus_cursos.php">Meus Cursos</a></li>
             <li><a href="cursos/minhas_aulas.php">Minhas Aulas</a></li>
             <li><a href="responder-perguntas.php">Responder Perguntas</a></li>
             <li><a href="acompanhar-alunos.php">Acompanhar Alunos</a></li>

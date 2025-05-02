@@ -30,12 +30,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['submit'])) {
             $_SESSION['tipo'] = $user['tipo'];
             $_SESSION['status'] = $user['status'];
 
-            // Redireciona para a área do aluno
-            if ($user['tipo'] === 'aluno') {
+            // Redireciona para a área do suporte
+            $tiposPermitidos = ['aluno', 'professor', 'administrador'];
+
+            if (in_array($user['tipo'], $tiposPermitidos)) {
                 header("Location: http://localhost/AAP-CW_Cursos/suporte/suporte.php");
                 exit;
             } else {
-                $mensagemErro = "Apenas usuários do tipo aluno podem acessar esta área.";
+                $mensagemErro = "Apenas usuários autorizados podem acessar esta área.";
             }
         } else {
             $mensagemErro = "Senha incorreta.";
