@@ -79,6 +79,7 @@
   .form-group input[type="text"],
   .form-group input[type="file"],
   .form-group select,
+  .form-group a,
   .form-group textarea {
     padding: 0.75rem;
     border: 1px solid #ccc;
@@ -86,6 +87,14 @@
     font-size: 1rem;
   }
   
+  .form-group a{
+    background-color: var(--azul);
+    text-decoration: none;
+    color: var(--cinza-claro);
+    text-align: center;
+    margin-top: 1rem;
+  }
+
   textarea {
     resize: vertical;
   }

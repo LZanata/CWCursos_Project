@@ -39,7 +39,7 @@ $curso = $result->fetch_assoc();
   <link rel="shortcut icon" href="../../images/logotipocw.png" />
   <link rel="stylesheet" href="partials/style.css">
   <link rel="stylesheet" href="css/index.css">
-  <link rel="stylesheet" href="funcoes/css/cursos.css">
+  <link rel="stylesheet" href="css/cursos.css">
 </head>
 
 <body>
@@ -89,6 +89,7 @@ $curso = $result->fetch_assoc();
 
       <div class="form-group">
         <button type="submit" class="btn-publicar">Salvar Alterações</button>
+        <a href="meus_cursos.php" class="btn-voltar">Cancelar</a>
       </div>
     </form>
   </div>

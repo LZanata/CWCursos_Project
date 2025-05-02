@@ -21,14 +21,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (empty($nome) || empty($categoria) || empty($descricao) || empty($dificuldade)) {
         $_SESSION['mensagem'] = "Preencha todos os campos obrigatórios.";
         $_SESSION['mensagem_tipo'] = "erro";
-        header("Location: ../cursos.php");
+        header("Location: ../meus_cursos.php");
         exit;
     }
 
     if (!isset($_FILES['imagem']) || $_FILES['imagem']['error'] !== UPLOAD_ERR_OK) {
         $_SESSION['mensagem'] = "Imagem é obrigatória.";
         $_SESSION['mensagem_tipo'] = "erro";
-        header("Location: ../cursos.php");
+        header("Location: ../meus_cursos.php");
         exit;
     }
 
@@ -36,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (!in_array($tipo_mime, ['image/jpeg', 'image/png', 'image/gif'])) {
         $_SESSION['mensagem'] = "Tipo de imagem inválido. Envie JPEG, PNG ou GIF.";
         $_SESSION['mensagem_tipo'] = "erro";
-        header("Location: ../cursos.php");
+        header("Location: ../meus_cursos.php");
         exit;
     }
 
@@ -51,7 +51,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (!move_uploaded_file($_FILES['imagem']['tmp_name'], $caminho_destino)) {
         $_SESSION['mensagem'] = "Falha ao enviar a imagem.";
         $_SESSION['mensagem_tipo'] = "erro";
-        header("Location: ../cursos.php");
+        header("Location: ../meus_cursos.php");
         exit;
     }
 
@@ -72,11 +72,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $stmt->close();
     $conexao->close();
 
-    header("Location: ../cursos.php");
+    header("Location: ../meus_cursos.php");
     exit;
 } else {
     $_SESSION['mensagem'] = "Requisição inválida.";
     $_SESSION['mensagem_tipo'] = "erro";
-    header("Location: ../cursos.php");
+    header("Location: ../meus_cursos.php");
     exit;
 }

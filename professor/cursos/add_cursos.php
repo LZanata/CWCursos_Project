@@ -9,7 +9,7 @@
   <link rel="shortcut icon" href="../../images/logotipocw.png" />
   <link rel="stylesheet" href="partials/style.css">
   <link rel="stylesheet" href="css/index.css">
-  <link rel="stylesheet" href="funcoes/css/cursos.css">
+  <link rel="stylesheet" href="css/cursos.css">
 </head>
 
 <body>
