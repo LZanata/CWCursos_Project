@@ -4,7 +4,8 @@
                 <img src="../images/logocwpreto_transparente.png" alt="Logo da CW Cursos" />
             </a></div>
         <div class="search-bar">
-            <input type="text" placeholder="O que você gostaria de aprender?">
+            <input type="text" id="searchInput" placeholder="O que você gostaria de aprender?" autocomplete="off" />
+            <ul id="searchResults" class="search-results"></ul>
         </div>
 
         <nav class="nav-botoes">
@@ -19,7 +20,7 @@
                     </div>
                 <?php elseif ($_SESSION['tipo'] === 'administrador'): ?>
                     <div class="btn-area">
-                        <a href="../adm/index.php" class="planos-btn">Área do Administrador</a>
+                        <a href="../administrador/index.php" class="planos-btn">Área do Administrador</a>
                     </div>
                 <?php endif; ?>
 
@@ -32,15 +33,17 @@
 
                     <!-- Container de opções -->
                     <div id="perfilAlunoOpcoes" class="perfil-opcoes">
-                        <a href="../<?= $_SESSION['tipo'] ?>/profile.php">Conta</a>
-                        <a href="configuracoes.php">Minhas Compras</a>
+                        <a href="../<?= $_SESSION['tipo'] ?>/profile.php">Meu Perfil</a>
+                        <?php if ($_SESSION['tipo'] === 'aluno'): ?>
+                            <a href="../aluno/meuplano.php">Meu Plano</a>
+                        <?php endif; ?>
                         <a href="../funcoes/sessoes/logout.php">Sair</a>
                     </div>
                 </div>
             <?php else: ?>
                 <a href="../cadastro_login/professor/signin.php" class="planos-btn">Seja um Professor</a>
-                <a href="../cadastro_login/aluno/signin.php" class="planos-btn">Entrar</a>
-                <a href="../cadastro_login/aluno/signup.php" class="planos-btn">Cadastrar-se</a>
+                <a href="../cadastro_login/usuario/signin.php" class="planos-btn">Entrar</a>
+                <a href="../cadastro_login/usuario/signup.php" class="planos-btn">Cadastrar-se</a>
             <?php endif; ?>
         </nav>
 
@@ -85,6 +88,9 @@
     </div>
 </header>
 
+<?php include '../funcoes/usuario/acessibilidade.php'; ?>
+
+<!--perfil-->
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         const perfilBtn = document.getElementById('perfilAlunoBtn');
@@ -103,24 +109,65 @@
     });
 </script>
 
-<!-- Chatra {literal} -->
+<!--Barra de Pesquisa-->
 <script>
-    (function(d, w, c) {
-        w.ChatraID = 'igHEh7N4PEvoDEkR7';
-        var s = d.createElement('script');
-        w[c] = w[c] || function() {
-            (w[c].q = w[c].q || []).push(arguments);
-        };
-        s.async = true;
-        s.src = 'https://call.chatra.io/chatra.js';
-        if (d.head) d.head.appendChild(s);
-    })(document, window, 'Chatra');
-    window.ChatraSetup = {
-        colors: {
-            buttonText: '#F1F3F4',
-            /* chat button text color */
-            buttonBg: '#1A73E8' /* chat button background color */
+    document.addEventListener('DOMContentLoaded', () => {
+        const input = document.getElementById('searchInput');
+        const results = document.getElementById('searchResults');
+        let cursos = [];
+
+        // Função para carregar cursos via fetch
+        async function carregarCursos() {
+            try {
+                const resposta = await fetch('funcoes/obter_cursos.php');
+                if (resposta.ok) {
+                    cursos = await resposta.json();
+                } else {
+                    console.error('Erro ao carregar cursos');
+                }
+            } catch (error) {
+                console.error('Erro na requisição:', error);
+            }
         }
-    };
+
+        // Carrega cursos assim que a página carregar
+        carregarCursos();
+
+        input.addEventListener('input', () => {
+            const termo = input.value.trim().toLowerCase();
+            if (!termo) {
+                results.style.display = 'none';
+                results.innerHTML = '';
+                return;
+            }
+
+            const filtrados = cursos.filter(curso =>
+                curso.nome.toLowerCase().includes(termo)
+            );
+
+            if (filtrados.length === 0) {
+                results.innerHTML = '<li>Nenhum curso encontrado</li>';
+            } else {
+                results.innerHTML = filtrados.map(curso => `
+                <li data-link="${curso.link}">${curso.nome} <small style="color:#777;">(${curso.categoria})</small></li>
+            `).join('');
+            }
+            results.style.display = 'block';
+        });
+
+        results.addEventListener('click', (e) => {
+            if (e.target.tagName === 'LI' && e.target.dataset.link) {
+                window.location.href = e.target.dataset.link;
+            }
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!input.contains(e.target) && !results.contains(e.target)) {
+                results.style.display = 'none';
+            }
+        });
+    });
 </script>
-<!-- /Chatra {/literal} -->
+
+<!-- Chatra {literal} -->
+<script src="../funcoes/chatbot/usuarios/chatra.js"> </script>

@@ -1,8 +1,7 @@
 <?php
     session_start();
     
-    if (!isset($_SESSION['aluno_id'])) {
-        header("Location: http://localhost/Projeto_CrowdGym/cadastro_login/login_aluno.php");
-        exit;
-    }
-?>
+    if (!isset($_SESSION['id']) || $_SESSION['tipo'] !== 'aluno') {
+    header('Location: ../../cadastro_login/usuario/signin.php');
+    exit();
+}
