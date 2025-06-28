@@ -47,7 +47,7 @@ if (isset($_POST['submit'])) {
     $tokenAtivacao = bin2hex(random_bytes(32)); // Gera um token seguro
 
     // Caminho da imagem padrão
-    $fotoPadrao = '/AAP-5_3306/funcoes/uploads/profile/default_profile.jpg';
+    $fotoPadrao = '/CWCursos_Project/funcoes/uploads/profile/default_profile.jpg';
 
     $aceitouTermos = 1; // Como já validou o checkbox, pode setar 1 direto
 
@@ -62,7 +62,7 @@ if (isset($_POST['submit'])) {
         // Envia e-mail de ativação
         require_once('../../lib/phpmailer/mailer.php');
 
-        $ativacaoLink = "http://localhost/AAP-5_3306/cadastro_login/usuario/ativar.php?email=" . urlencode($email) . "&token=" . urlencode($tokenAtivacao);
+        $ativacaoLink = "http://localhost:8080/CWCursos_Project/cadastro_login/usuario/ativar.php?email=" . urlencode($email) . "&token=" . urlencode($tokenAtivacao);
 
         $mail->CharSet = 'UTF-8';
 

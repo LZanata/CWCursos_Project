@@ -33,13 +33,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['submit'])) {
 
                 // Redirecionamento conforme o tipo
                 if ($user['tipo'] === 'administrador') {
-                    header("Location: http://localhost/AAP-5_3306/administrador/index.php");
+                    header("Location: ../../administrador/index.php");
                     exit;
                 } elseif ($user['tipo'] === 'professor') {
-                    header("Location: http://localhost/AAP-5_3306/professor/index.php");
+                    header("Location: ../../professor/index.php");
                     exit;
                 } elseif ($user['tipo'] === 'aluno') {
-                    header("Location: http://localhost/AAP-5_3306/TelaInicial/index.php");
+                    header("Location: ../../TelaInicial/index.php");
                     exit;
                 } else {
                     $mensagemErro = "Tipo de usuário desconhecido.";
