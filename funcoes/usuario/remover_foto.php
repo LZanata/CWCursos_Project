@@ -1,10 +1,10 @@
 <?php
 session_start();
-include_once('../../funcoes/conexao.php');
-include_once('../../funcoes/config.php'); // Aqui está definido DEFAULT_PROFILE_PHOTO corretamente
+include_once('../conexao.php');
+include_once('../config.php'); // Aqui está definido DEFAULT_PROFILE_PHOTO corretamente
 
 if (!isset($_SESSION['usuario'])) {
-    header('Location: http://localhost/AAP-5_3306/cadastro_login/aluno/signin.php');
+    header('Location: ../../cadastro_login/aluno/signin.php');
     exit();
 }
 
