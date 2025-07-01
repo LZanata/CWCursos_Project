@@ -2,5 +2,6 @@
 session_start();
 
 if (!isset($_SESSION['id']) || $_SESSION['tipo'] !== 'professor') {
-  die("Acesso negado.");
+  header('Location: ../../cadastro_login/professor/forms.php');
+  exit();
 }

@@ -1,4 +1,6 @@
 <?php
+include_once(__DIR__ . '/../funcoes/config.php');
+
 // Verifica se o formulário foi enviado
 if (isset($_POST['SendRecupSenha'])) {
     if (isset($_POST["email"])) {
@@ -35,7 +37,7 @@ if (isset($_POST['SendRecupSenha'])) {
             $mail->Subject = "CW Cursos - Alterar Senha"; // Assunto do email
 
             // Cria o link com o token
-            $link = "http://localhost:8080/CWCursos_Project/cadastro_login/redefinir_senha.php?token=$token";
+            $link = BASE_URL . "cadastro_login/redefinir_senha.php?token=$token";
 
             // Corpo do e-mail com o link de recuperação
             $mail->Body = <<<END

@@ -29,9 +29,9 @@ if (isset($_FILES['photo']) && $_FILES['photo']['error'] === UPLOAD_ERR_OK) {
     $nomeUnico = uniqid('profile_', true) . '.' . $extensao;
 
     // Caminhos
-    $pastaUpload = $_SERVER['DOCUMENT_ROOT'] . '/AAP-5_3306/funcoes/uploads/profile/';
+    $pastaUpload = PROFILE_UPLOAD_DIR;
     $caminhoCompleto = $pastaUpload . $nomeUnico;
-    $caminhoRelativoBanco = '/AAP-5_3306/funcoes/uploads/profile/' . $nomeUnico;
+    $caminhoRelativoBanco = PROFILE_UPLOAD_PATH . $nomeUnico;
 
     // Buscar foto antiga do usuário no banco
     $sqlFoto = "SELECT photo FROM usuarios WHERE usuario = ?";

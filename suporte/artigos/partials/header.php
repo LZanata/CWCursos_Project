@@ -1,7 +1,7 @@
  <!-- Cabeçalho da página com título e navegação -->
  <div class="nav-header">
      <div class="logo">
-         <a href="suporte.php">
+         <a href="../suporte.php">
              <img src="../../images/logocwbranco_transparente.png" alt="Logo da CW Cursos" />
          </a>
 

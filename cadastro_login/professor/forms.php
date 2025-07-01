@@ -1,5 +1,6 @@
 <?php
 include '../../funcoes/conexao.php';
+include '../../funcoes/config.php';
 
 // Função para limpar e proteger os dados recebidos
 function limpar($dado)
@@ -65,7 +66,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $verificar->close();
 
     // Caminho absoluto no servidor (para salvar o arquivo fisicamente)
-    $caminho_fisico = $_SERVER['DOCUMENT_ROOT'] . "/CWCursos_Project/administrador/usuarios/professor/uploads/curriculos/";
+    $caminho_fisico = CURRICULO_UPLOAD_DIR;
     $curriculo_tipo = strtolower(pathinfo($_FILES["curriculo"]["name"], PATHINFO_EXTENSION));
 
     if ($_FILES["curriculo"]["error"] !== UPLOAD_ERR_OK) {
@@ -79,7 +80,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nome_arquivo = uniqid("curriculo_", true) . ".pdf";
 
     // Caminho para o navegador (este será salvo no banco e usado no link)
-    $curriculo_path = "/CWCursos_Project/administrador/usuarios/professor/uploads/curriculos/" . $nome_arquivo;
+    $curriculo_path = CURRICULO_UPLOAD_PATH . $nome_arquivo;
 
     if (!move_uploaded_file($_FILES["curriculo"]["tmp_name"], $caminho_fisico . $nome_arquivo)) {
         die("Erro ao salvar o currículo.");
