@@ -102,10 +102,33 @@ $stmt->bind_param($tipos, ...$parametros);
 if ($stmt->execute()) {
     if (!empty($novo_usuario)) {
         $_SESSION['usuario'] = $novo_usuario;
+        $usuario_atual = $novo_usuario;
     }
-    header('Location: ../profile.php');
-    exit();
+    $stmt->close();
+
+    // Busca o tipo atualizado do usuário para redirecionar corretamente
+    $stmt_tipo = $conexao->prepare("SELECT tipo FROM usuarios WHERE usuario = ?");
+    $stmt_tipo->bind_param("s", $usuario_atual);
+    $stmt_tipo->execute();
+    $stmt_tipo->bind_result($tipo_usuario);
+    $stmt_tipo->fetch();
+    $stmt_tipo->close();
+
+    // Redirecionamento conforme o tipo
+    if ($tipo_usuario === 'administrador') {
+        header("Location: ../../administrador/profile.php");
+        exit;
+    } elseif ($tipo_usuario === 'professor') {
+        header("Location: ../../professor/profile.php");
+        exit;
+    } elseif ($tipo_usuario === 'aluno') {
+        header("Location: ../../aluno/profile.php");
+        exit;
+    } else {
+        echo "<p style='color:red;'>Tipo de usuário desconhecido.</p>";
+    }
 } else {
     echo "Erro ao atualizar dados: " . $stmt->error;
 }
+$conexao->close();
 ?>

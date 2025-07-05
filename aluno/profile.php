@@ -161,7 +161,7 @@ $resultProgresso = $stmtProgresso->get_result();
             <hr>
 
             <h4>Editar Dados</h4>
-            <form action="funcoes/atualizar_dados.php" method="post" class="edit-form">
+            <form action="../funcoes/usuario/atualizar_dados.php" method="post" class="edit-form">
                 <label for="novo_nome">Novo nome:</label>
                 <input type="text" name="novo_nome" id="novo_nome" placeholder="Seu nome completo">
 

@@ -30,7 +30,7 @@
 
                  <!-- Container de opções -->
                  <div id="perfilAlunoOpcoes" class="perfil-opcoes">
-                     <a href="#">Conta</a>
+                     <a href="profile.php">Conta</a>
                      <a href="meusTickets.php">Meus Tickets</a>
                      <a href="../funcoes/sessoes/logout_suporte.php">Sair</a>
                  </div>

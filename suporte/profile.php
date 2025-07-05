@@ -1,5 +1,5 @@
 <?php
-include_once('../funcoes/sessoes/check_professor.php');
+session_start();
 include_once('../funcoes/conexao.php');
 include_once('../funcoes/config.php');
 
@@ -24,6 +24,35 @@ $nome = $row['nome']; // <-- Adicione isso
 $profile_photo = !empty($row['photo']) ? $row['photo'] : DEFAULT_PROFILE_PHOTO;
 $email = $row['email'];
 $data_nascimento = $row['data_nascimento'];
+$aluno_id = $row['id'];
+
+// Busca cursos concluídos
+$sqlConcluidos = "SELECT c.nome, cc.data_conclusao FROM cursos c
+                  INNER JOIN cursos_concluidos cc ON cc.curso_id = c.id
+                  WHERE cc.aluno_id = ?";
+$stmtConcluidos = $conexao->prepare($sqlConcluidos);
+$stmtConcluidos->bind_param("i", $aluno_id);
+$stmtConcluidos->execute();
+$resultConcluidos = $stmtConcluidos->get_result();
+
+// Consulta para calcular o progresso atual por curso
+$sqlProgresso = "
+    SELECT 
+        c.id AS curso_id,
+        c.nome AS curso_nome,
+        COUNT(a.id) AS total_aulas,
+        SUM(CASE WHEN pa.concluida = 1 THEN 1 ELSE 0 END) AS aulas_concluidas
+    FROM inscricoes i
+    JOIN cursos c ON i.curso_id = c.id
+    JOIN aulas a ON c.id = a.curso_id
+    LEFT JOIN progresso_aula pa ON pa.aula_id = a.id AND pa.aluno_id = i.aluno_id
+    WHERE i.aluno_id = ?
+    GROUP BY c.id, c.nome
+";
+$stmtProgresso = $conexao->prepare($sqlProgresso);
+$stmtProgresso->bind_param("i", $aluno_id);
+$stmtProgresso->execute();
+$resultProgresso = $stmtProgresso->get_result();
 
 ?>
 
@@ -66,13 +95,12 @@ $data_nascimento = $row['data_nascimento'];
         <!-- Informações -->
         <div class="profile-info">
             <h1><?= htmlspecialchars($usuario) ?></h1>
-            <p>Bem-vindo ao seu perfil, aqui verá seu dados em nossa plataforma!</p>
+            <p>Bem-vindo ao seu perfil, aqui verá seu progresso em nossa plataforma!</p>
         </div>
 
         <!-- Botões -->
         <div class="action-buttons">
-            <a href="index.php">Ir para Área do Professor</a>
-            <a href="../TelaInicial/index.php">Ir para Menu Inicial</a>
+            <a href="suporte.php">Ir para o Suporte</a>
             <form action="../funcoes/sessoes/logout.php" method="post">
                 <button type="submit" class="btn-sair">Sair da Conta</button>
             </form>
@@ -90,7 +118,7 @@ $data_nascimento = $row['data_nascimento'];
             <hr>
 
             <h4>Editar Dados</h4>
-            <form action="../funcoes/usuario/atualizar_dados.php" method="post" class="edit-form">
+            <form action="funcoes/atualizar_dados.php" method="post" class="edit-form">
                 <label for="novo_nome">Novo nome:</label>
                 <input type="text" name="novo_nome" id="novo_nome" placeholder="Seu nome completo">
 
