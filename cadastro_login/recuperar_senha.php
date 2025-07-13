@@ -1,4 +1,6 @@
 <?php
+include_once(__DIR__ . '/../funcoes/config.php');
+
 // Verifica se o formulário foi enviado
 if (isset($_POST['SendRecupSenha'])) {
     if (isset($_POST["email"])) {
@@ -30,12 +32,12 @@ if (isset($_POST['SendRecupSenha'])) {
             // Carrega e configura o PHPMailer
             $mail = require __DIR__ . "/../lib/phpmailer/mailer.php";
 
-            $mail->setFrom("cwcursos21@gmail.com"); // Remetente
+            $mail->setFrom("suportecwcursos@gmail.com"); // Remetente
             $mail->addAddress($email);              // Destinatário
             $mail->Subject = "CW Cursos - Alterar Senha"; // Assunto do email
 
             // Cria o link com o token
-            $link = "http://localhost/AAP-CW_Cursos/cadastro_login/redefinir_senha.php?token=$token";
+            $link = BASE_URL . "cadastro_login/redefinir_senha.php?token=$token";
 
             // Corpo do e-mail com o link de recuperação
             $mail->Body = <<<END
@@ -74,10 +76,6 @@ END;
 </head>
 
 <body>
-    <div class="back-button">
-        <a href="aluno/signin.php"><i class="bi bi-arrow-left-circle"></i></a>
-    </div>
-
     <div class="container">
         <div class="card">
             <h1>Recuperar Senha</h1>

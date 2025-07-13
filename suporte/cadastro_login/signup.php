@@ -50,7 +50,7 @@ if (isset($_POST['submit'])) {
         // Exibe mensagem de sucesso e redireciona para home.html
         echo "<script>
                     alert('Usuário cadastrado com sucesso!');
-                    window.location.href = 'http://localhost/AAP-CW_Cursos/suporte/suporte.php';
+                    window.location.href = '../suporte.php';
                     </script>";
     } else {
         echo "<script>alert('Erro ao cadastrar o usuário.');</script>";
@@ -112,7 +112,7 @@ if (isset($_POST['submit'])) {
 
 
                     <div class="label-float">
-                        <input type="password" name="senha" id="senha" placeholder=" " required />
+                        <input type="password" name="senha" id="senha" placeholder=" " maxlength="15" required />
                         <label id="labelSenha" for="senha">Senha</label>
                         <span class="mostrar-senha" onclick="toggleSenha('senha', this)">
                             <i class="bi bi-eye" aria-hidden="true"></i>
@@ -121,15 +121,28 @@ if (isset($_POST['submit'])) {
                     </div>
 
                     <div class="label-float">
-                        <input type="password" name="confirmSenha" id="confirmSenha" placeholder=" " required />
+                        <input type="password" name="confirmSenha" id="confirmSenha" placeholder=" " maxlength="15" required />
                         <label id="labelConfirmSenha" for="confirmSenha">Confirmar Senha</label>
                         <span class="mostrar-senha" onclick="toggleSenha('confirmSenha', this)">
                             <i class="bi bi-eye" aria-hidden="true"></i>
                         </span>
                     </div>
 
+                    <div class="label-float-checkbox" style="margin-bottom: 1rem;">
+                        <input type="checkbox" name="termo" id="termo" required />
+                        <label for="termo" style="display: inline;">
+                            Eu li e concordo com os
+                            <a href="../../cadastro_login/termos-de-uso.php" target="_blank">Termos de Uso</a> e a
+                            <a href="../../cadastro_login/politica-de-privacidade.php" target="_blank">Política de Privacidade</a>.
+                        </label>
+                    </div>
+
                     <div class="justify-center">
                         <button type="submit" name="submit">Cadastrar</button>
+                    </div>
+                    <div class="signup-button">
+                        <!-- Link para a página de cadastro -->
+                        <p>Já possui uma conta? <a href="signin.php">Fazer login</a></p>
                     </div>
                 </div>
             </form>

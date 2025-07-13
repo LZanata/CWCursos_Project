@@ -40,21 +40,18 @@
               </li>
               <li>
                 Jonathans Yoshioka Olsen:
-                <span>Diretor Financeiro. Responsável pela gestão financeira da
+                <span>Gerente Financeiro. Responsável pela gestão financeira da
                   empresa, incluindo planejamento financeiro, gestão de riscos,
                   relatórios financeiros, e análise de dados financeiros para
                   orientar as decisões estratégicas da empresa.</span>
               </li>
               <li>
                 Denilson Conceição de Oliveira:
-                <span>Diretor de Operações. Responsável pelas operações diárias da
-                  empresa, incluindo a produção, logística, recursos humanos, e
-                  outros aspectos operacionais. Atua para garantir que as
-                  operações da empresa sejam eficientes e eficazes.</span>
+                <span>Gerente de Marketing. Responsável por todas as atividades de marketing dentro da empresa, incluindo estratégias de publicidade, pesquisa de mercado, desenvolvimento de produtos e comunicação com o cliente.</span>
               </li>
               <li>
                 Leonardo Zanata de Jesus:
-                <span>Diretor de Tecnologia. Responsável por supervisionar a gestão e
+                <span>Gerente de Tecnologia. Responsável por supervisionar a gestão e
                   as estratégias tecnológicas da empresa, além de estar
                   encarregado de implementar novas tecnologias que possam melhorar
                   os produtos ou serviços da empresa.</span>
@@ -92,16 +89,6 @@
             <p>CTO</p>
           </div>
         </div>
-      </section>
-
-      <section id="accessibility" class="accessibility">
-        <h2>Acessibilidade</h2>
-        <p>
-          Na CW Cursos, acreditamos que a educação deve ser acessível para
-          todos. Por isso, todos os nossos cursos são projetados com recursos de
-          acessibilidade para pessoas surdas, incluindo vídeos com interpretação
-          em Libras e legendas em todos os materiais audiovisuais.
-        </p>
       </section>
     </div>
   </main>

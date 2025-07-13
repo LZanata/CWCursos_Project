@@ -144,8 +144,8 @@
                             </p>
                             <div class="btn-social">
                                 <a href="#"><button><i class="bi bi-instagram"></i></button></a>
-                                <a href="#"><button><i class="bi bi-twitter-x"></i></button></a>
-                                <a href="#"><button><i class="bi bi-facebook"></i></button></a>
+                                <a href="https://www.youtube.com/watch?v=lwuVOQTNxkA" target="_blank"><button><i class="bi bi-youtube"></i></button></a>
+                                <a href="#"><button><i class="bi bi-tiktok"></i></button></a>
                             </div>
                             <!--btn-social-->
                         </div>
